@@ -244,10 +244,11 @@ function createTradeException(world, s, tradeId) {
 /**
  * Aplica a troca. Toda validação é anterior a qualquer mutação.
  * @param opts.by         'user' | 'ai' | 'commissioner'
+ * @param opts.reviewed   true quando o comissário aprova uma troca que a IA já tinha aceito na fila de revisão (dispensa nova avaliação)
  * @param opts.force      "Forçar aceitação": ignora a vontade da IA, mantém a legalidade
  * @param opts.override   'total': ignora as regras (exige God Mode; os itens ignorados vão para o histórico)
  */
-export function executeProposal(world, rawProposal, { by = 'user', force = false, override = null, label = null } = {}) {
+export function executeProposal(world, rawProposal, { by = 'user', force = false, override = null, label = null, reviewed = false } = {}) {
   const p = normalizeProposal(rawProposal);
   if (override === 'total' && !overrideActive(world.career)) throw new Error('Override Total exige God Mode com ativação explícita.');
   if ((force || override) && !godModeAllowed(world.career)) throw new Error('Forçar uma troca exige God Mode (modo Commissioner).');
@@ -259,7 +260,7 @@ export function executeProposal(world, rawProposal, { by = 'user', force = false
     throw err;
   }
   const acceptance = evaluateAcceptanceAll(world, p);
-  if (!acceptance.accepted && !force && !override && by !== 'commissioner') {
+  if (!acceptance.accepted && !force && !override && !reviewed) {
     const refuse = Object.values(acceptance.decisions).find((d) => !d.human && !d.accept);
     const err = new Error(`${world.teams.get(refuse.teamId).fullName} recusou a proposta.`);
     err.details = [refuse];

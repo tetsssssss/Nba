@@ -229,7 +229,7 @@
     },
     {
       "path": "docs/CODEX-RELATORIO-GESTAO-2026-10-14.md",
-      "sha256": "0f482966160cfdeb97c6f33b59bb7ab08eb53ce328644b28b4dbcd24fad73dd1"
+      "sha256": "eb917d0d60562d3cc2a7cff72daec724ed8123583dbec4ed0932aa75e75c0318"
     },
     {
       "path": "docs/EVOLUCAO-ARCADE-WNBA-2026-10-13.md",
@@ -477,7 +477,7 @@
     },
     {
       "path": "src/contracts/trade-engine.js",
-      "sha256": "5ee24a5adc2c22010556487837749fa2d09a7c83b03092c05419f2945f267d13"
+      "sha256": "35f431838469e6dc6b83d5378fdddc735622e8f28d572a2b3a85d7ca08e1ffc9"
     },
     {
       "path": "src/contracts/trade-rules.js",
@@ -597,7 +597,7 @@
     },
     {
       "path": "src/gm/ai-gm.js",
-      "sha256": "ab56451296d7aeb3bfe3844e81a4be83b8bc67c85c4c653548304761d00677a6"
+      "sha256": "7907cfc4e536a9b318589454d85472732640cdfcaea668b8decc5f3d22502ceb"
     },
     {
       "path": "src/gm/ai-offseason.js",
@@ -1209,7 +1209,7 @@
     },
     {
       "path": "tests/godmode.test.mjs",
-      "sha256": "1d4a6365d1b40dd9ecaa63cdec52fb8fc2b14d18738fd84e071eda9115b25523"
+      "sha256": "4009b38104ca0ba2067dc0e908b3d5a4b076561cb3cb3d0b66d46964d49181c4"
     },
     {
       "path": "tests/graphics3d.test.mjs",

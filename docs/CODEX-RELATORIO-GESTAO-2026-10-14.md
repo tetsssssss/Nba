@@ -75,6 +75,7 @@ Infraestrutura: `tests/helpers/{env,career}.js` e **`tests/vendor/fake-indexeddb
 - `render()` da offseason depois do rollover lia `world.offseason` nulo → guarda.
 - Classes `.left/.right` colidiam com CSS global → `tm-left/tm-right`.
 - Grades do Draft infladas → mock absoluto sobre a turma inteira.
+- `adminTrade(..., 'approve')` do comissário ignorava a recusa da IA (`by !== 'commissioner'` em `executeProposal`) → agora só a aprovação de itens da fila de revisão (`reviewed:true`) dispensa nova avaliação. Descoberto porque o teste correspondente dependia da semente do save e passava vazio; passou a procurar uma troca legal recusada e a falhar se não achar.
 
 ## 6. Limitações e pontos de atenção
 - Testes DOM são de **fumaça** (FakeNode). Fluxos completos foram verificados à mão com Playwright; não há suíte E2E automatizada no repositório.

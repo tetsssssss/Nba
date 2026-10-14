@@ -48,21 +48,27 @@ test('Forçar aceitação ignora a IA mas mantém a legalidade; Override Total p
   const G2 = await G();
   const T = await import('../src/contracts/trade-engine.js');
   const { rosterOf } = await import('../src/gm/team-context.js');
-  // proposta ruim para a IA (MEM entrega seu melhor jogador por nada de valor), mas legal em salário
-  const mem = rosterOf(world, 'MEM').filter((p) => p.rosterStatus === 'standard');
-  const mine = rosterOf(world, 'BOS').filter((p) => p.rosterStatus === 'standard');
-  const star = mem[0];
+  // proposta ruim para a IA (MEM entrega um dos melhores jogadores por pouco valor), mas legal em salário.
+  // Procura a combinação em vez de depender da semente do save: o teste nunca pode ficar vazio.
+  const { checkLegality } = await import('../src/contracts/trade-rules.js');
   const sal = (p) => world.contracts.get(p.id).years[0].salary;
-  const filler = mine.reverse().find((p) => sal(p) >= sal(star) * 0.5 && sal(p) <= sal(star) * 1.3) ?? mine[0];
-  const proposal = { assets: [T.playerAsset(star.id, 'MEM', 'BOS'), T.playerAsset(filler.id, 'BOS', 'MEM')] };
-  const legal = (await import('../src/contracts/trade-rules.js')).checkLegality(world, proposal);
-  if (legal.ok && !T.evaluateAcceptanceAll(world, proposal).accepted) {
-    assert.throws(() => G2.adminTrade(world, proposal, 'approve'), /recusou/);
-    const done = G2.adminTrade(world, proposal, 'force');
-    assert.equal(world.players.get(star.id).teamId, 'BOS');
-    assert.equal(done.ignored.length, 0, 'legalidade mantida, nada ignorado');
-    assert.equal(world.market.adminLog[0].action, 'trade-force');
+  const mem = rosterOf(world, 'MEM').filter((p) => p.rosterStatus === 'standard').slice(0, 5);
+  const mine = rosterOf(world, 'BOS').filter((p) => p.rosterStatus === 'standard').reverse();
+  let proposal = null;
+  for (const star of mem) {
+    for (const filler of mine.filter((p) => sal(p) >= sal(star) * 0.5 && sal(p) <= sal(star) * 1.3)) {
+      const candidate = { assets: [T.playerAsset(star.id, 'MEM', 'BOS'), T.playerAsset(filler.id, 'BOS', 'MEM')] };
+      if (checkLegality(world, candidate).ok && !T.evaluateAcceptanceAll(world, candidate).accepted) { proposal = candidate; break; }
+    }
+    if (proposal) break;
   }
+  assert.ok(proposal, 'existe uma troca legal que a IA recusa');
+  const star = world.players.get(proposal.assets[0].playerId);
+  assert.throws(() => G2.adminTrade(world, proposal, 'approve'), /recusou/, 'aprovar respeita a recusa da IA');
+  const done = G2.adminTrade(world, proposal, 'force');
+  assert.equal(world.players.get(star.id).teamId, 'BOS');
+  assert.equal(done.ignored.length, 0, 'legalidade mantida, nada ignorado');
+  assert.equal(world.market.adminLog[0].action, 'trade-force');
   // ilegal (dinheiro acima do limite): force não basta
   const illegal = { assets: [T.cashAsset(world.league.cap.tradeCashLimit * 3, 'MEM', 'CHA')] };
   assert.throws(() => G2.adminTrade(world, illegal, 'force'), /dinheiro/);

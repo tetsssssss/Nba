@@ -286,7 +286,7 @@ export function approveReview(world, reviewId) {
   const market = ensureMarket(world);
   const review = market.review.find((r) => r.id === reviewId);
   if (!review) throw new Error('Trade não encontrada na fila de revisão.');
-  const done = executeProposal(world, { assets: review.assets }, { by: 'commissioner', label: 'aprovada pelo comissário' });
+  const done = executeProposal(world, { assets: review.assets }, { by: 'commissioner', reviewed: true, label: 'aprovada pelo comissário' });
   market.review = market.review.filter((r) => r.id !== reviewId);
   markDirty('meta', 'market');
   return done;
