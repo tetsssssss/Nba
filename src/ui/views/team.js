@@ -2,7 +2,7 @@
 import { h, icon, mount } from '../dom.js';
 import { CONFERENCE_LABEL, height, money, number, record } from '../format.js';
 import { navigate, parseHash, setQuery } from '../router.js';
-import { card, emptyState, favStar, futureBox, ovrBadge, playerCell, posLabel, segmented, stat, statusBadge } from '../components/widgets.js';
+import { card, chip, emptyState, favStar, futureBox, ovrBadge, playerCell, posLabel, segmented, stat, statusBadge } from '../components/widgets.js';
 import { dataTable } from '../components/table.js';
 import { tabView, toast } from '../components/feedback.js';
 import { menuButton } from '../components/overlay.js';
@@ -14,7 +14,12 @@ import { careerStatsOf, getWorld, markDirty, payrollOf, playerAge, teamRoster } 
 import { CAP_STATUS_LABEL, CONTRACT_TYPE_LABEL, capLines, contractSummary, salaryIn, seasonLabel } from '../../contracts/cap.js';
 import { autoDepthChart } from '../../players/depth.js';
 import { makeRotation, validateRotation } from '../../players/rotation.js';
-import { executeTrade, evaluateTrade, signFreeAgent } from '../../contracts/market.js';
+import { capSeason } from '../../contracts/rules-config.js';
+import { picksOwnedBy, pickLabel, protectionLabel, PICK_STATUS_LABEL } from '../../contracts/picks.js';
+import { ARCHETYPES } from '../../gm/personality.js';
+import { teamNeeds } from '../../gm/team-context.js';
+import { financeOverview } from '../../contracts/finance.js';
+import { godModeAllowed } from '../../core/godmode-permissions.js';
 import { modeShows } from '../../core/modes.js';
 import { seasonAwards, teamSeasonSummary } from '../../season/narrative.js';
 import { POSITIONS, POSITION_LABELS } from '../../players/attributes.js';
@@ -47,8 +52,9 @@ const DEFAULT_OPTIONAL = ['jersey', 'pts', 'reb', 'ast'];
 const AVAILABILITY = [['', 'Todos'], ['ok', 'Disponíveis'], ['injured', 'Lesionados'], ['two-way', 'Two-way'], ['camp', 'Training camp'], ['expiring', 'Último ano de contrato']];
 
 async function rosterTab(team, roster) {
-  const { contracts, calendar } = getWorld();
-  if (!roster.length) return emptyState('Elenco vazio', 'Franquia de expansão: os primeiros jogadores chegam no Expansion Draft (Fase 3).', h('a', { class: 'btn', href: '#/players' }, 'Ver jogadores da liga'));
+  const { contracts } = getWorld();
+  const calendar = { season: capSeason(getWorld()) };
+  if (!roster.length) return emptyState('Elenco vazio', 'Franquia de expansão: os primeiros jogadores chegam no Expansion Draft (automático na abertura da temporada).', h('a', { class: 'btn', href: '#/players' }, 'Ver jogadores da liga'));
 
   const lines = new Map(await Promise.all(roster.map(async (p) => [p.id, lastSeasonLine(await careerStatsOf(p.id))])));
   const line = (p) => lines.get(p.id);
@@ -169,7 +175,8 @@ async function rosterTab(team, roster) {
 
 function payrollTab(team, roster) {
   const world = getWorld();
-  const { contracts, calendar, league } = world;
+  const { contracts, league } = world;
+  const calendar = { season: capSeason(world) };
   const seasons = Array.from({ length: 5 }, (_, i) => calendar.season + i);
   const payroll = payrollOf(team.id);
   const lines = capLines(world.career.capMode);
@@ -226,6 +233,7 @@ function payrollTab(team, roster) {
       h(
         'div',
         null,
+        world.career.teamId === team.id && modeShows(world.career, 'cap') ? h('p', { class: 'row wrap', style: { marginBottom: '8px' } }, h('a', { class: 'btn small primary', href: '#/finance' }, icon('finance'), 'Abrir central de finanças e contratos'), h('a', { class: 'btn small', href: '#/finance?tab=free-agency' }, 'Free agency'), h('a', { class: 'btn small', href: '#/finance?tab=contratos' }, 'Extensões e opções')) : null,
         h(
           'div',
           { class: 'stats-row' },
@@ -318,37 +326,30 @@ function expansionTab(team) {
 
 function marketTab(team) {
   const world = getWorld();
-  if (!modeShows(world.career, 'market')) return emptyState('Mercado indisponível', 'Seu cargo não permite negociações.');
-  if (team.id !== world.career.teamId && !world.career.godMode) return emptyState('Sem permissão', 'Você só pode propor trocas pela sua franquia.');
-  const candidates = teamRoster(team.id).filter((p) => p.rosterStatus === 'standard');
-  const opponents = [...world.teams.values()].filter((t) => t.id !== team.id);
-  let other = opponents[0]?.id;
-  let own = candidates[0]?.id;
-  let theirs = teamRoster(other).find((p) => p.rosterStatus === 'standard')?.id;
-  const theirsHost = h('div', null);
-  const outcome = h('p', { class: 'muted small' }, 'Esta interface oferece apenas trocas diretas 1 por 1. Não representa todo o CBA.');
-  const free = [...world.players.values()].filter((p) => !p.teamId && p.rosterStatus !== 'two-way').sort((a,b) => b.ovr-a.ovr).slice(0,100);
-  let freeId = free[0]?.id;
-  let salaryOffer = 3000000;
-  let yearsOffer = 1;
-  const selectPlayer = (players, value, action) => h('select', { onchange: (e) => action(players.find((p) => String(p.id) === e.target.value)?.id) }, players.map((p) => h('option', { value: p.id, selected: String(p.id) === String(value) }, `${p.name} · ${p.ovr} OVR`)));
-  const drawOther = () => {
-    const arr = teamRoster(other).filter((p) => p.rosterStatus === 'standard');
-    if (!arr.some((p) => p.id === theirs)) theirs = arr[0]?.id;
-    mount(theirsHost, arr.length ? selectPlayer(arr, theirs, (id) => (theirs = id)) : h('span', { class: 'muted' }, 'Sem jogadores elegíveis'));
-  };
-  drawOther();
-  return card('Troca direta 1 por 1 (experimental)', h('div', { class: 'stack' },
-    h('label', { class: 'field' }, 'Enviar', selectPlayer(candidates, own, (id) => (own = id))),
-    h('label', { class: 'field' }, 'Franquia adversária', h('select', { onchange: (e) => { other = e.target.value; drawOther(); } }, opponents.map((t) => h('option', { value: t.id }, t.fullName)))),
-    h('label', { class: 'field' }, 'Receber', theirsHost), outcome,
-    h('div', { class: 'row wrap' }, h('button', { class: 'btn', onclick: () => { const r = evaluateTrade(world, { fromTeamId: team.id, toTeamId: other, sendId: own, receiveId: theirs }); outcome.textContent = r.reason; } }, 'Avaliar proposta'),
-    h('button', { class: 'btn primary', onclick: () => { try { executeTrade({ fromTeamId: team.id, toTeamId: other, sendId: own, receiveId: theirs }); toast('Troca registrada.'); window.dispatchEvent(new Event('hashchange')); } catch (err) { outcome.textContent = err.message; toast(err.message, 'warn'); } } }, 'Executar troca')),
-    free.length ? h('div', { class: 'stack' }, h('h3', null, 'Contratação de free agent'),
-      h('label', { class: 'field' }, 'Jogador livre', selectPlayer(free, freeId, (id) => (freeId = id))),
-      h('label', { class: 'field' }, 'Salário inicial (US$)', h('input', { type: 'number', min: 1000000, step: 100000, value: salaryOffer, oninput: (e) => salaryOffer = Number(e.target.value) })),
-      h('label', { class: 'field' }, 'Duração', h('select', { onchange: (e) => yearsOffer = Number(e.target.value) }, [1,2,3,4].map((n) => h('option', { value: n }, `${n} ano(s)`)))),
-      h('button', { class: 'btn primary', onclick: () => { try { signFreeAgent({teamId: team.id, playerId:freeId,salary:salaryOffer,years:yearsOffer}); toast('Contratação registrada.'); window.dispatchEvent(new Event('hashchange')); } catch(err) { toast(err.message,'warn'); } } }, 'Oferecer contrato')) : h('p', { class: 'muted small' }, 'Não há atletas livres para contratação direta.')));
+  if (!modeShows(world.career, 'market')) return emptyState('Mercado indisponível', 'Seu cargo ou modo de jogo não conduz negociações.');
+  const mine = team.id === world.career.teamId;
+  if (!mine && !godModeAllowed(world.career)) return card('Trade Machine', h('div', { class: 'stack' }, h('p', { class: 'muted' }, `Abra a mesa de negociação com ${team.fullName} para propor uma troca.`), h('a', { class: 'btn primary', href: `#/market?with=${team.id}` }, icon('trade'), `Negociar com ${team.name}`)));
+  const profile = ARCHETYPES[team.gm?.archetype];
+  const needs = teamNeeds(world, team.id);
+  return h('div', { class: 'stack' },
+    card('Trade Machine 3.0', h('div', { class: 'stack' },
+      h('p', { class: 'muted' }, mine ? 'A central de negociação completa: arraste jogadores e picks entre dois painéis, veja legalidade, equilíbrio e chance de aceitação em tempo real e envie propostas às outras 31 diretorias.' : `Como comissário você pode negociar em nome de ${team.fullName}.`),
+      h('div', { class: 'row wrap' }, h('a', { class: 'btn primary large', href: mine ? '#/market' : `#/market?team=${team.id}` }, icon('trade'), 'Abrir a Trade Machine'), h('a', { class: 'btn', href: '#/finance?tab=free-agency' }, icon('market'), 'Free agency'), h('a', { class: 'btn', href: '#/draft?aba=picks' }, icon('draft'), 'Picks e Draft')))),
+    card('Perfil da diretoria', h('dl', { class: 'facts' }, h('dt', null, 'Estratégia'), h('dd', null, profile ? `${profile.label} — ${profile.summary}` : 'Em definição'), h('dt', null, 'Carências'), h('dd', null, needs.top.length ? needs.top.join(', ') : 'Elenco equilibrado'), h('dt', null, 'Profundidade'), h('dd', null, `${needs.healthyCount} jogadores saudáveis em ${needs.standardCount} contratos padrão`))));
+}
+
+function picksTab(team) {
+  const world = getWorld();
+  const owned = picksOwnedBy(world, team.id);
+  const away = [...world.draftPicks.values()].filter((p) => p.originalTeamId === team.id && p.ownerTeamId !== team.id && p.status !== 'exercised').sort((a, b) => a.season - b.season || a.round - b.round);
+  const actionable = team.id === world.career.teamId && modeShows(world.career, 'market');
+  const row = (k) => h('tr', null, h('td', null, `${k.season}`), h('td', null, k.round === 1 ? '1ª rodada' : '2ª rodada'), h('td', null, k.number ? `#${k.number}` : '—'), h('td', null, k.originalTeamId === team.id ? 'própria' : world.teams.get(k.originalTeamId)?.fullName), h('td', null, h('span', { class: 'small muted' }, [k.kind === 'expansion-reserved' ? 'reservada da expansão' : '', k.protection ? protectionLabel(k.protection) : '', k.swapRights?.length ? `swap com ${k.swapRights.map((s) => s.holderTeamId).join(', ')}` : ''].filter(Boolean).join(' · ') || '—')), h('td', null, chip(PICK_STATUS_LABEL[k.status], k.status === 'negotiated' ? 'info' : '')),
+    h('td', null, actionable ? h('a', { class: 'btn small', href: `#/market?team=${team.id}&offer=${k.id}` }, icon('trade'), 'Negociar') : null));
+  const head = h('thead', null, h('tr', null, ['Draft', 'Rodada', 'Posição', 'Origem', 'Condições', 'Status', ''].map((t) => h('th', null, t))));
+  return h('div', { class: 'stack' },
+    card(`Escolhas em posse de ${team.name}`, owned.length ? h('div', { class: 'table-wrap' }, h('table', { class: 'data' }, head, h('tbody', null, owned.map(row)))) : h('p', { class: 'muted pad' }, 'Nenhuma escolha de Draft em posse desta franquia.'), { flush: true }),
+    away.length ? card('Escolhas próprias que pertencem a outras franquias', h('table', { class: 'data' }, h('thead', null, h('tr', null, ['Draft', 'Rodada', 'Dono atual', 'Condições'].map((t) => h('th', null, t)))), h('tbody', null, away.map((k) => h('tr', null, h('td', null, k.season), h('td', null, `${k.round}ª`), h('td', null, world.teams.get(k.ownerTeamId)?.fullName), h('td', { class: 'small muted' }, k.protection ? protectionLabel(k.protection) : 'sem proteção')))))) : null,
+    h('p', { class: 'faint small' }, `Horizonte de negociação de picks: ${world.market?.prefs?.futurePickYearsAhead ?? world.league.trade.futurePickYearsAhead} ano(s) à frente (decisão de design configurável). Uma pick pertence sempre a uma só franquia; o histórico de cada transferência fica registrado.`));
 }
 
 function franchiseTab(team) {
@@ -402,7 +403,13 @@ function franchiseTab(team) {
           h('div', { class: 'stats-row' }, stat('Exigência', team.fans.expectation), stat('Paixão', team.fans.passion), stat('Paciência', team.fans.patience)),
         ),
       ),
-      futureBox('Finanças da franquia', 'Receitas, bilheteria, patrocínios, reformas de arena e pressão do proprietário.', 8),
+      (() => {
+        const f = financeOverview(world, team.id);
+        return card('Finanças da franquia (estimadas)', h('div', { class: 'stack', style: { gap: '10px' } },
+          h('div', { class: 'stats-row' }, stat('Receita', money(f.revenue.total)), stat('Folha + imposto', money(f.payroll.total + f.tax)), stat('Resultado', money(f.profit), f.profit >= 0 ? 'lucro' : 'prejuízo')),
+          h('p', { class: 'muted small' }, `Proprietário ${f.owner.label.toLowerCase()}: aceita folha até ${money(f.owner.ceiling)}. Valores de receita e despesa são estimativas do jogo.`),
+          isUser ? h('a', { class: 'btn small primary', href: '#/finance' }, icon('finance'), 'Abrir central de finanças') : null));
+      })(),
     ),
   );
 }
@@ -501,7 +508,7 @@ export function teamView({ id }) {
     { id: 'expansion', label: 'Expansion Draft', render: () => expansionTab(team) },
     { id: 'franquia', label: 'Franquia', render: () => franchiseTab(team) },
     { id: 'historia', label: 'História', render: () => historyTab(team) },
-    { id: 'picks', label: 'Picks', render: () => futureBox('Picks de draft', 'Escolhas próprias e adquiridas, proteções (Top 1/3/5/10, loteria), swaps e conversões. Os dados reais de posse de picks serão importados na Fase 3.', 3) },
+    { id: 'picks', label: 'Picks', render: () => picksTab(team) },
   ];
   const active = parseHash().query.get('tab') ?? 'elenco';
   return h('div', { class: 'page' }, hero, tabView(tabs, { active, onChange: (tab) => setQuery({ tab: tab === 'elenco' ? null : tab, ...(tab === 'elenco' ? {} : { pos: null, status: null }) }) }));

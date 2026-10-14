@@ -43,7 +43,9 @@ export function announce(events) {
   }
   if (events.some((e) => e.type === 'season-start')) toast('Começa a temporada regular.');
   if (events.some((e) => e.type === 'season-over')) toast('Temporada regular concluída. Play-in e playoffs iniciados.');
-  if (events.some((e) => e.type === 'champion')) toast('Campeão definido! A offseason está disponível.');
+  if (events.some((e) => e.type === 'champion')) toast('Campeão definido! Abra a offseason: aposentadorias, loteria, Draft e free agency.');
+  const market = events.filter((e) => e.type === 'market');
+  if (market.length) toast(`Mercado: ${market.reduce((a, e) => a + e.offers, 0)} oferta(s) recebida(s), ${market.reduce((a, e) => a + e.trades, 0)} troca(s) entre franquias da IA${market.some((e) => e.review) ? ', trades aguardando sua revisão' : ''}.`, 'info');
   if (events.some((e) => e.type === 'playoff-round')) toast('Nova fase da pós-temporada.', 'info');
 }
 

@@ -54,6 +54,33 @@ export function validateSavePayload(payload, { schemaVersion, storeNames }) {
   if (orphan) errors.push(`${orphan} contrato(s) apontam para jogadores que não estão no save.`);
   const lost = stores.players.filter((p) => p?.teamId && !teamIds.has(p.teamId)).length;
   if (lost) errors.push(`${lost} jogador(es) pertencem a franquias que não existem no save.`);
+  // ---- stores de gestão (picks, prospectos, mercado, Draft, offseason): ausentes em backups antigos, validadas quando presentes
+  if (Array.isArray(stores.draftPicks) && stores.draftPicks.length) {
+    const pickIds = stores.draftPicks.map((k) => k?.id);
+    if (pickIds.includes(undefined) || new Set(pickIds).size !== pickIds.length) errors.push('Picks de Draft com ID ausente ou duplicado.');
+    const badPicks = stores.draftPicks.filter((k) => !teamIds.has(k?.ownerTeamId) || !teamIds.has(k?.originalTeamId));
+    if (badPicks.length) errors.push(`${badPicks.length} pick(s) de Draft pertencem a franquias que não existem no save.`);
+    const slots = new Map();
+    for (const k of stores.draftPicks) if (k?.number != null) slots.set(`${k.season}:${k.number}`, (slots.get(`${k.season}:${k.number}`) ?? 0) + 1);
+    if ([...slots.values()].some((n) => n > 1)) errors.push('Há duas picks ocupando a mesma posição de um Draft.');
+    const exercised = stores.draftPicks.filter((k) => k?.status === 'exercised');
+    if (new Set(exercised.map((k) => k.prospectId)).size !== exercised.length) errors.push('Um prospecto aparece selecionado em mais de uma pick.');
+  }
+  if (Array.isArray(stores.prospects) && stores.prospects.length) {
+    const prospectIds = stores.prospects.map((x) => x?.id);
+    if (prospectIds.includes(undefined) || new Set(prospectIds).size !== prospectIds.length) errors.push('Prospectos com ID ausente ou duplicado.');
+    const brokenProspect = stores.prospects.filter((x) => !x?.attributes || !Array.isArray(x?.positions)).length;
+    if (brokenProspect) errors.push(`${brokenProspect} prospecto(s) sem atributos ou posição.`);
+  }
+  const market = meta.get('market');
+  if (market != null && (typeof market !== 'object' || Array.isArray(market))) errors.push('Documento do mercado (market) corrompido.');
+  const draftDoc = meta.get('draft');
+  if (draftDoc != null) {
+    if (typeof draftDoc !== 'object' || !Array.isArray(draftDoc.order)) errors.push('Documento do Draft corrompido.');
+    else if (new Set(draftDoc.order.map((o) => o?.number)).size !== draftDoc.order.length) errors.push('A ordem do Draft contém números repetidos.');
+  }
+  const offDoc = meta.get('offseason');
+  if (offDoc != null && (typeof offDoc !== 'object' || !Array.isArray(offDoc.steps))) errors.push('Documento da offseason corrompido.');
   if (payload.schemaVersion < schemaVersion) warnings.push(`Save de formato anterior (${payload.schemaVersion}): será migrado para o formato ${schemaVersion} ao importar.`);
 
   info.teams = stores.teams.length;

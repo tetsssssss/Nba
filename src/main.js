@@ -32,6 +32,11 @@ import { calendarView } from './ui/views/calendar.js';
 import { gameView } from './ui/views/game.js';
 import { ensureSchedule } from './season/season.js';
 import { watchlistView } from './ui/views/watchlist.js';
+import { tradeMachineView } from './ui/views/trade-machine.js';
+import { draftView } from './ui/views/draft.js';
+import { financeView } from './ui/views/finance.js';
+import { offseasonView } from './ui/views/offseason.js';
+import { commissionerView } from './ui/views/commissioner.js';
 import { arcadeView } from './ui/views/arcade.js';
 import { wnbaView } from './ui/views/wnba.js';
 import { internationalView } from './ui/views/international.js';
@@ -72,6 +77,11 @@ defineRoute('/playoffs', playoffsView);
 defineRoute('/calendar', calendarView);
 defineRoute('/game/:id', gameView);
 defineRoute('/watchlist', watchlistView);
+defineRoute('/market', tradeMachineView);
+defineRoute('/draft', draftView);
+defineRoute('/finance', financeView);
+defineRoute('/offseason', offseasonView);
+defineRoute('/commissioner', commissionerView);
 
 function teardownShell() {
   shell?.destroy();

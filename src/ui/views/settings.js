@@ -283,7 +283,7 @@ export function settingsView() {
             h('dt', null, 'Modo'), h('dd', null, mode.label, ' ', h('span', { class: 'muted' }, `— ${mode.description}`)),
             h('dt', null, 'Salary cap'), h('dd', null, `${capMode.label} — ${capMode.description}`),
             h('dt', null, 'Duração'), h('dd', null, `${career.careerLength} temporadas (começou em ${career.startedOn.split('-').reverse().join('/')})`),
-            h('dt', null, 'Picks futuras em trades'), h('dd', null, `até ${league.trade.futurePickYearsAhead} ano(s) à frente`),
+            h('dt', null, 'Picks futuras em trades'), h('dd', null, `até ${world.market?.prefs?.futurePickYearsAhead ?? league.trade.futurePickYearsAhead} ano(s) à frente${world.market?.prefs?.futurePickYearsAhead != null ? ' (preferência desta carreira)' : ' (regra da liga)'}`),
           ),
           h('div', { class: 'field' }, h('label', { for: 'set-role' }, 'Seu cargo'), select('set-role', ROLES.filter((r) => rules.roles.includes(r.id)).map((r) => [r.id, r.label]), career.role, (v) => updateCareer({ role: v }, 'Cargo alterado.')), h('span', { class: 'hint' }, rules.roles.length > 1 ? 'Você pode assumir outro cargo a qualquer momento.' : `No modo ${mode.label} o cargo é fixo.`)),
           h('div', { class: 'field' }, h('label', { for: 'set-len' }, 'Limite de temporadas'), h('input', { id: 'set-len', type: 'number', min: 1, max: 30, value: career.careerLength, style: { maxWidth: '120px' }, onchange: (e) => updateCareer({ careerLength: Math.max(1, Math.min(30, Number(e.target.value) || 10)) }, 'Duração da carreira atualizada.') })),
@@ -294,7 +294,7 @@ export function settingsView() {
         h(
           'div',
           { class: 'stack' },
-          h('p', { class: 'muted' }, 'Com ele ativo, o potencial exato dos jogadores fica visível e as ferramentas de edição do universo (Dev Tools) valem como decisões de comissário. Forçar trades e editar contratos entram na Fase 2.'),
+          h('p', { class: 'muted' }, 'Com ele ativo, o potencial exato dos jogadores fica visível e as ferramentas de edição do universo (Dev Tools) valem como decisões de comissário. Forçar trades, editar contratos, picks e atributos, controlar aposentadorias e simular eventos ficam no Painel do Comissário.'),
           rules.lockGodMode
             ? h('p', { class: 'faint small' }, `O modo ${mode.label} não permite God Mode. Para editar o universo, crie uma carreira Commissioner.`)
             : mode.id === 'commissioner'
@@ -303,7 +303,9 @@ export function settingsView() {
                   if (!career.godMode && !(await confirmDialog({ title: 'Ativar God Mode?', message: 'A carreira passa a ser marcada como God Mode na lista de saves. Você pode desligar depois.', confirmLabel: 'Ativar' }))) return;
                   updateCareer({ godMode: !career.godMode }, career.godMode ? 'God Mode desligado.' : 'God Mode ativado.');
                 } }, career.godMode ? 'Desligar God Mode' : 'Ativar God Mode')),
+          career.godMode && !rules.lockGodMode ? h('a', { class: 'btn', href: '#/commissioner' }, 'Abrir o Painel do Comissário') : null,
           h('label', { class: 'check' }, h('input', { type: 'checkbox', checked: career.autoApproveAiTrades, onchange: (e) => updateCareer({ autoApproveAiTrades: e.target.checked }) }), 'Aprovar automaticamente trades da IA'),
+          h('span', { class: 'hint' }, 'Desligado: as trades válidas entre franquias da IA vão para a fila de revisão do comissário (God Mode). Sem comissário, elas não acontecem. "Trades entre franquias da IA" (sistemas) desliga o mercado da IA por completo.'),
         ),
       ),
       card('Sessão', h('div', { class: 'row wrap' }, h('button', { class: 'btn', onclick: async () => (await duplicateCareer(getWorld().saveId, { kind: 'checkpoint' }), toast('Ponto de restauração criado.')), tip: 'Cópia de segurança desta carreira num slot à parte.' }, 'Criar ponto de restauração'), h('button', { class: 'btn', onclick: async () => (await closeCareer(), (location.hash = '#/start')) }, 'Salvar e voltar ao menu inicial'))),

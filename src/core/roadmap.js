@@ -7,16 +7,16 @@ export const PHASES = [
     items: ['Shell do aplicativo e navegação', 'Banco de dados IndexedDB com múltiplos saves e autosave', '32 franquias (expansão com Seattle e Las Vegas, conferências 16/16)', 'Banco de jogadores reais com 45 atributos e tendências', 'Sistema central de fotos com auditoria'],
   },
   {
-    id: 2, title: 'Elenco, contratos e trades', status: 'partial',
-    items: ['Elenco, depth chart automático e perfil do jogador ✔', 'Contratos reais ano a ano, folha salarial e linhas de cap ✔', 'Dispensas, renovações e negociação com agentes', 'Trade Machine (multi-times, picks, swaps, salary matching)', 'IA de trades e 15 estilos de GM'],
+    id: 2, title: 'Elenco, contratos e trades', status: 'done',
+    items: ['Elenco, depth chart automático e perfil do jogador ✔', 'Contratos reais ano a ano, folha salarial e linhas de cap ✔', 'Dispensas, renovações e negociação com agentes ✔', 'Trade Machine (multi-times, picks, swaps, salary matching) ✔', 'IA de trades e personalidades de GM (7 arquétipos) ✔'],
   },
   {
     id: 3, title: 'Expansão e Draft', status: 'partial',
-    items: ['Expansion Draft automático na véspera da noite de abertura (7 protegidos, máx. 2 perdidos) ✔', 'Listas de protegidos escolhidas pelo usuário', 'Expansion Draft interativo com acordos laterais', 'Picks de draft reais e proteções', 'Prospects reais de 2027, Big Board, Mock Drafts e scouting com margem de erro', 'Combine, workouts e Draft Night', 'Free agency'],
+    items: ['Expansion Draft automático na véspera da noite de abertura (7 protegidos, máx. 2 perdidos) ✔', 'Listas de protegidos escolhidas pelo usuário', 'Expansion Draft interativo com acordos laterais', 'Picks de draft com propriedade, proteções e swaps ✔', 'Big Board, mock e scouting com margem de erro (turmas fictícias; sem dados verificados de prospectos reais de 2027) ✔', 'Treinos individuais e Draft Night ✔', 'Free agency ✔'],
   },
   {
     id: 4, title: 'Calendário e simulação', status: 'partial',
-    items: ['Calendário de 32 equipes: 82 jogos por franquia ✔', 'Avançar dia e simular até um marco ✔', 'Simulação estatística das partidas da liga ✔', 'Jogo oficial do usuário no motor 2D valendo para a campanha ✔', 'Classificação por conferência, líderes e box scores ✔', 'Play-in, playoffs e prêmios', 'Virada de temporada (offseason)'],
+    items: ['Calendário de 32 equipes: 82 jogos por franquia ✔', 'Avançar dia e simular até um marco ✔', 'Simulação estatística das partidas da liga ✔', 'Jogo oficial do usuário no motor 2D valendo para a campanha ✔', 'Classificação por conferência, líderes e box scores ✔', 'Play-in, playoffs e prêmios estatísticos ✔', 'Offseason completa (aposentadorias, loteria, Draft, free agency) ✔'],
   },
   {
     id: 5, title: 'Motor de partida 2D', status: 'partial',
@@ -32,7 +32,7 @@ export const PHASES = [
   },
   {
     id: 8, title: 'Finanças e universo de longo prazo', status: 'todo',
-    items: ['Receitas, ingressos, patrocínios e luxury tax', 'Arenas: reforma, ampliação e nova arena', 'Proprietários e segurança do emprego', 'Votações da liga, nova expansão e relocação', 'História completa navegável após 10 temporadas'],
+    items: ['Receitas, ingressos, patrocínios e luxury tax (modelo estimado) ✔', 'Arenas: reforma, ampliação e nova arena', 'Proprietários e segurança do emprego', 'Votações da liga, nova expansão e relocação', 'História completa navegável após 10 temporadas'],
   },
 ];
 

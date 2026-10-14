@@ -23,7 +23,7 @@ for (const file of files) await cp(join(root, file), join(dest, file));
 const paths = (await Promise.all(dirs.map(dir => walk(join(dest, dir))))).flat()
   .map(path => relative(dest, path).replaceAll('\\', '/'))
   .filter(path => !path.endsWith('/README.txt'));
-const offline = { version: 'nuv-street-insights-20261014-r1',
+const offline = { version: 'nuv-management-20261014-r1',
   files: ['index.html', 'manifest.webmanifest', 'sw.js', ...paths].sort() };
 await writeFile(join(dest, 'offline-assets.json'), JSON.stringify(offline, null, 2) + '\n');
 await writeFile(join(root, 'offline-assets.json'), JSON.stringify(offline, null, 2) + '\n');

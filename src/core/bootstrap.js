@@ -6,6 +6,7 @@ import { ensureDraftPicks, nextDraftSeason } from '../contracts/picks.js';
 import { ensureProspectClasses } from '../draft/prospects.js';
 import { ensureMarket } from '../contracts/market-state.js';
 import { assignGmProfiles } from '../gm/personality.js';
+import { ensureOffseason } from '../season/offseason.js';
 
 export function ensureWorldSystems(world) {
   const report = { picks: 0, prospects: 0 };
@@ -15,6 +16,7 @@ export function ensureWorldSystems(world) {
     assignGmProfiles(world, { markDirty }); // só preenche quem ainda não tem perfil
     report.picks = ensureDraftPicks(world);
     report.prospects = ensureProspectClasses(world, nextDraftSeason(world), { markDirty });
+    if (world.calendar.phase === 'offseason') ensureOffseason(world); // saves antigos parados na offseason
   } finally {
     world.quiet = false;
   }

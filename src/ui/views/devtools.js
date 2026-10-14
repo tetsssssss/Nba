@@ -11,6 +11,8 @@ import { resetSettings } from '../../core/settings.js';
 import { ATTRIBUTES } from '../../players/attributes.js';
 import { auditWorld } from '../../dev/audit.js';
 import { runDbSelfTest } from '../../dev/selftest.js';
+import { godModeAllowed } from '../../core/godmode-permissions.js';
+import { adminMovePlayer } from '../../core/godmode.js';
 
 const checkList = (checks) =>
   h(
@@ -183,7 +185,8 @@ function toolsSection(rerender) {
                 if (movePlayerTarget.teamId === teamSelect.value) return toast('O jogador já está nessa franquia.', 'warn');
                 const from = world.teams.get(movePlayerTarget.teamId);
                 const to = world.teams.get(teamSelect.value);
-                movePlayer(movePlayerTarget, to.id, { type: 'dev-transfer', note: 'Transferência via Dev Tools' });
+                if (godModeAllowed(world.career)) adminMovePlayer(world, movePlayerTarget.id, to.id); // registra a intervenção no histórico do comissário
+                else movePlayer(movePlayerTarget, to.id, { type: 'dev-transfer', note: 'Transferência via Dev Tools' });
                 addNews({ category: 'trade', title: `${movePlayerTarget.name} agora é do ${to.name}`, body: `Movimentação administrativa: ${movePlayerTarget.name} deixa o ${from?.name ?? 'mercado'} e passa a integrar o elenco do ${to.fullName}.`, teamIds: [from?.id, to.id].filter(Boolean), playerIds: [movePlayerTarget.id] });
                 toast(`${movePlayerTarget.name}: ${from?.id ?? '—'} → ${to.id}.`);
                 rerender();
@@ -215,7 +218,7 @@ function toolsSection(rerender) {
           ),
         ),
       ),
-      h('div', { class: 'stack', style: { gap: '8px', paddingTop: '12px' } }, h('strong', null, 'Ainda não disponíveis'), h('div', { class: 'row wrap' }, [['Gerar trade', 2], ['Testar Free Agency', 3], ['Testar Draft', 3], ['Editar standings', 4]].map(([label, phase]) => chip(`${label} · Fase ${phase}`, 'future')))),
+      h('div', { class: 'stack', style: { gap: '8px', paddingTop: '12px' } }, h('strong', null, 'Sistemas de gestão'), h('div', { class: 'row wrap' }, [['Trade Machine', '/market'], ['Draft', '/draft'], ['Finanças e free agency', '/finance'], ['Offseason', '/offseason'], ['Painel do Comissário', '/commissioner']].map(([label, path]) => h('a', { class: 'btn small', href: `#${path}` }, label)))),
     ),
   );
 }

@@ -1,5 +1,5 @@
 /* NBA Universe Manager PWA. Somente arquivos do próprio domínio: jamais acessa IndexedDB, saves ou APIs externas. */
-const VERSION = 'nuv-street-insights-20261014-r1';
+const VERSION = 'nuv-management-20261014-r1';
 const CACHE = `nba-universe-${VERSION}`;
 const ROOT = new URL('./', self.registration.scope);
 const local = path => new URL(path, ROOT).href;

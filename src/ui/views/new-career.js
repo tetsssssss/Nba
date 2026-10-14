@@ -185,7 +185,7 @@ export async function newCareerView() {
           { class: 'grid cols-3' },
           h('div', { class: 'field' }, h('label', { for: 'nc-len' }, 'Duração da carreira (temporadas)'), h('input', { id: 'nc-len', type: 'number', min: 1, max: 30, value: options.careerLength, oninput: (e) => (options.careerLength = Number(e.target.value)) }), h('span', { class: 'hint' }, 'Padrão: 10 temporadas.')),
           h('div', { class: 'field' }, h('label', { class: 'check' }, h('input', { type: 'checkbox', checked: options.godMode, disabled: options.mode !== 'universe', onchange: (e) => (options.godMode = e.target.checked) }), 'God Mode / Commissioner'), h('span', { class: 'hint' }, 'Libera edição livre do universo (jogadores, contratos, times). Fica claramente separado do modo normal e pode ser alterado depois.')),
-          h('div', { class: 'field' }, h('label', { class: 'check' }, h('input', { type: 'checkbox', checked: options.autoApproveAiTrades, onchange: (e) => (options.autoApproveAiTrades = e.target.checked) }), 'Aprovar automaticamente trades da IA'), h('span', { class: 'hint' }, 'Desligado, o comissário aprova ou rejeita cada troca entre franquias da IA (Fase 2).')),
+          h('div', { class: 'field' }, h('label', { class: 'check' }, h('input', { type: 'checkbox', checked: options.autoApproveAiTrades, onchange: (e) => (options.autoApproveAiTrades = e.target.checked) }), 'Aprovar automaticamente trades da IA'), h('span', { class: 'hint' }, 'Desligado, o comissário (God Mode) aprova ou veta cada troca entre franquias da IA em Trade Machine › Revisão da liga; sem comissário, essas trocas não acontecem.')),
         ),
       ),
     );

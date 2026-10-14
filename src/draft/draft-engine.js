@@ -10,7 +10,7 @@ import { createRng } from '../core/rng.js';
 import { emit } from '../core/events.js';
 import { godModeAllowed } from '../core/godmode-permissions.js';
 import { computeStandings } from '../season/standings.js';
-import { nextDraftSeason, picksOfSeason, resolveConveyance } from '../contracts/picks.js';
+import { picksOfSeason, resolveConveyance } from '../contracts/picks.js';
 import { draftRules } from '../contracts/rules-config.js';
 import { rookieContract, secondRoundContract } from '../contracts/contracts-engine.js';
 import { ovrValue, projectOvr } from '../contracts/valuation.js';
@@ -25,7 +25,11 @@ const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
 const LOG_LIMIT = 160;
 
 // ------------------------------------------------------------------ estado
-export function ensureDraft(world, season = nextDraftSeason(world)) {
+/**
+ * Documento do Draft do ano de calendário (o evento da temporada em curso: 2027 durante toda a temporada
+ * 2026-27 e sua offseason, concluído ou não). O documento só é substituído quando a temporada seguinte começa.
+ */
+export function ensureDraft(world, season = world.calendar.season) {
   if (world.draft?.season === season) return world.draft;
   world.draft = {
     season, status: 'pending', createdOn: world.calendar.date, lottery: null, order: [], cursor: 0, picks: [], log: [], paused: false,
@@ -270,6 +274,10 @@ export function finalizeDraft(world) {
     markDirty('prospects', p.id);
     if (p.ovr >= 58) { createUndraftedPlayer(world, p); undrafted++; }
   }
+  // arquivo compacto: o documento do Draft é substituído no ano seguinte, a nota e a ordem ficam no histórico
+  world.career.draftLog ??= {};
+  world.career.draftLog[draft.season] = draft.picks.map((m) => ({ number: m.number, round: m.round, teamId: m.teamId, originalTeamId: m.originalTeamId, prospectId: m.prospectId, playerId: m.playerId, grade: m.grade }));
+  markDirty('meta', 'career');
   say(world, `Draft ${draft.season} concluído: ${draft.picks.length} escolhas; ${undrafted} não selecionados entram no mercado.`);
   addNews({ category: 'draft', title: `Draft ${draft.season} termina com ${draft.picks.length} escolhas`, body: `${undrafted} jogadores sem escolha assinam como agentes livres. Primeiro escolhido: ${draft.picks[0] ? `${world.prospects.get(draft.picks[0].prospectId).name} (${world.teams.get(draft.picks[0].teamId).name})` : '—'}.` });
   ensureProspectClasses(world, draft.season + 1, { markDirty });

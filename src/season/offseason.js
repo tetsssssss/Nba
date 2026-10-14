@@ -8,7 +8,7 @@
 import { addNews, bumpRosters, getWorld, markDirty, setCalendarDate } from '../core/world.js';
 import { emit } from '../core/events.js';
 import { godModeAllowed } from '../core/godmode-permissions.js';
-import { addDays } from '../ui/format.js';
+import { addDays, money } from '../ui/format.js';
 import { COL } from '../players/statline.js';
 import { applyOffseasonDevelopment } from '../players/offseason-integration.js';
 import { decideRetirements, retirePlayer } from '../players/retirement.js';
@@ -21,7 +21,6 @@ import { aiFreeAgencyDay, aiReSign, aiRosterAdjust, resolveOptions } from '../gm
 import { rosterOf } from '../gm/team-context.js';
 import { runAiMarketTick } from '../gm/ai-gm.js';
 import { ensureDraft, lotteryReady, runLottery, simAll, startDraft } from '../draft/draft-engine.js';
-import { ensureWorldSystems } from '../core/bootstrap.js';
 
 export const OFFSEASON_STEPS = [
   { id: 'finals', label: 'Encerramento das finais', mandatory: true, description: 'A temporada termina: estatísticas arquivadas e contas do ano fechadas.' },
@@ -108,7 +107,7 @@ export function requirements(world, stepId) {
     case 'contracts': {
       const list = [];
       const mine = off.leagueYearStarted ? [] : pendingOptions(world, off.season + 1).filter((o) => o.teamId === teamId && o.kind === 'team');
-      for (const o of mine) list.push({ id: `opt-${o.playerId}`, blocking: true, level: 'warn', text: `Team option de ${world.players.get(o.playerId).name} (${o.salary.toLocaleString('pt-BR')} dólares): exercer ou recusar.`, link: '/finance?tab=contratos' });
+      for (const o of mine) list.push({ id: `opt-${o.playerId}`, blocking: true, level: 'warn', text: `Team option de ${world.players.get(o.playerId).name} (${money(o.salary)}): exercer ou recusar.`, link: '/finance?tab=contratos' });
       if (!off.leagueYearStarted) list.push({ id: 'year', blocking: false, level: 'info', text: 'Ao concluir, o novo ano de liga começa: contratos vencidos viram agentes livres com direitos de renovação para o time de origem.' });
       return list;
     }
@@ -121,6 +120,7 @@ export function requirements(world, stepId) {
 // ------------------------------------------------------------------ entrada em cada fase
 function enterStep(world, id) {
   const off = world.offseason;
+  off.date = world.calendar.date;
   const st = stepOf(off, id);
   st.status = 'active';
   off.current = id;
@@ -133,10 +133,10 @@ function enterStep(world, id) {
     }
     case 'awards': computeAwards(world); break;
     case 'retirements': off.retirements = { list: decideRetirements(world, off.season), forced: [], kept: [], applied: false }; break;
-    case 'lottery': setCalendarDate(addDays(off.finalsEnd, 14)); ensureDraft(world); break;
-    case 'scouting': setCalendarDate(addDays(world.calendar.date, 10)); break;
-    case 'draft': setCalendarDate(addDays(off.finalsEnd, 30)); break;
-    case 'contracts': setCalendarDate(addDays(world.calendar.date, 5)); break;
+    case 'lottery': setCalendarDate(addDays(off.finalsEnd, 10)); ensureDraft(world); break;
+    case 'scouting': setCalendarDate(addDays(off.finalsEnd, 18)); break;
+    case 'draft': setCalendarDate(addDays(off.finalsEnd, 21)); break;
+    case 'contracts': setCalendarDate(addDays(off.finalsEnd, 26)); break;
     case 'free-agency': off.faDay = 0; break;
     case 'roster': {
       for (const team of world.teams.values()) if (team.id !== world.career.teamId) aiRosterAdjust(world, team.id, { minimum: world.league.roster.regularSeasonMin });
@@ -174,6 +174,7 @@ export function completeStep(world, id = world.offseason?.current) {
     case 'next-season': finishOffseason(world); return;
     default: break;
   }
+  off.date = world.calendar.date;
   const st = stepOf(off, id);
   st.status = 'done';
   st.doneOn = world.calendar.date;
@@ -284,6 +285,7 @@ export function startLeagueYear(world) {
   for (const o of userPending) decideUserOption(world, o.playerId, true); // conservador: quem esqueceu mantém (só chega aqui com Override)
   advanceLeagueCap(world, next);
   off.leagueYearStarted = true; // a partir daqui capSeason(world) = próxima temporada
+  off.date = world.calendar.date;
   const decided = resolveOptions(world, { skipTeamId: null });
   ensureRights(world);
   let expired = 0;

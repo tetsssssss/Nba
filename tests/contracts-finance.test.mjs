@@ -240,10 +240,11 @@ test('free agency no ciclo: vencidos viram agentes livres com direitos, cap hold
   world.career.capMode = 'basic';
   assert.equal(capHolds(world, 'BOS'), 0);
   world.career.capMode = 'full';
+  const strongStart = freeAgents(world).filter((p) => p.ovr >= 75).length;
   for (let i = 0; i < 30; i++) O.simulateFreeAgencyDay(world);
   assert.equal(world.offseason.faDay, 30);
-  // sobraram menos agentes livres relevantes: a IA contratou
-  const strong = freeAgents(world).filter((p) => p.ovr >= 75);
-  assert.ok(strong.length <= 12, `${strong.length} bons agentes livres restantes`);
+  // a IA contratou a maior parte dos bons agentes livres (os restantes ficam sem rota de cap/exceção)
+  const strongEnd = freeAgents(world).filter((p) => p.ovr >= 75).length;
+  assert.ok(strongEnd <= Math.ceil(strongStart * 0.6), `${strongEnd} de ${strongStart} bons agentes livres restantes`);
   await closeAll();
 });

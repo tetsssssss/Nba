@@ -14,6 +14,8 @@ import { userTasks } from '../core/tasks.js';
 import { applyUiPreferences, getSetting, setSetting } from '../core/settings.js';
 import { advanceControl } from './sim-control.js';
 import { MODE_BY_ID, careerRules, modeShows } from '../core/modes.js';
+import { canSwitchTeams, godModeAllowed } from '../core/godmode-permissions.js';
+import { takeControl } from '../core/godmode.js';
 
 /**
  * Menu principal. Só entra nos grupos de cima o que funciona; o que ainda não existe fica
@@ -30,6 +32,16 @@ const NAV = (teamId) => [
       { label: 'Contratos e cap', icon: 'cap', path: `/team/${teamId}?tab=folha`, match: (p, q) => p === `/team/${teamId}` && q.get('tab') === 'folha', keys: 'F', area: 'cap' },
       { label: 'Staff e franquia', icon: 'settings', path: `/team/${teamId}?tab=franquia`, match: (p, q) => p === `/team/${teamId}` && q.get('tab') === 'franquia' },
       { label: 'Partida 2D', icon: 'court', path: '/match', keys: 'G' },
+    ],
+  },
+  {
+    id: 'mgmt', title: 'Gestão',
+    items: [
+      { label: 'Trade Machine', icon: 'trade', path: '/market', keys: 'M', area: 'market' },
+      { label: 'Draft e scouting', icon: 'draft', path: '/draft', keys: 'P', area: 'talent' },
+      { label: 'Finanças e contratos', icon: 'finance', path: '/finance', area: 'cap' },
+      { label: 'Offseason', icon: 'calendar', path: '/offseason', keys: 'E', badge: (w) => (w.calendar.phase === 'offseason' ? 'ativa' : null) },
+      { label: 'Painel do Comissário', icon: 'dev', path: '/commissioner', godOnly: true },
     ],
   },
   {
@@ -66,11 +78,7 @@ const NAV = (teamId) => [
     id: 'soon', title: 'Em breve', defaultClosed: true,
     items: [
       { label: 'Táticas e treino', icon: 'tactics', phase: 6 },
-      { label: 'Trades', icon: 'trade', phase: 2, area: 'market' },
-      { label: 'Free agency', icon: 'market', phase: 3, area: 'market' },
-      { label: 'Draft e scouting', icon: 'eye', phase: 3, area: 'talent' },
-      { label: 'Expansion Draft', icon: 'expansion', phase: 3, area: 'talent' },
-      { label: 'Finanças', icon: 'finance', phase: 8, area: 'cap' },
+      { label: 'Expansion Draft interativo', icon: 'expansion', phase: 3, area: 'talent' },
     ],
   },
 ];
@@ -131,7 +139,7 @@ export function createShell() {
 
     clear(nav);
     for (const group of NAV(team.id)) {
-      const items = group.items.filter((i) => !i.area || modeShows(world.career, i.area));
+      const items = group.items.filter((i) => (!i.area || modeShows(world.career, i.area)) && (!i.godOnly || godModeAllowed(world.career)));
       if (!items.length) continue;
       const isClosed = Boolean(group.title) && closed.has(group.id) !== Boolean(group.defaultClosed);
       const box = h('div', { class: ['nav-group', isClosed && 'closed'] });
@@ -159,7 +167,8 @@ export function createShell() {
           box.append(h('a', { class: 'nav-item future', href: `#/roadmap?fase=${item.phase}`, tip: `${item.label}: ainda não implementado — previsto para a Fase ${item.phase}.` }, icon(item.icon), h('span', { class: 'nav-label' }, item.label), h('span', { class: 'phase' }, `F${item.phase}`)));
         } else {
           const active = item.match ? item.match(path, query) : path === item.path;
-          box.append(h('a', { class: ['nav-item', active && 'active'], href: `#${item.path}`, 'aria-current': active ? 'page' : null, tip: item.label, dataset: { nav: '1' } }, icon(item.icon), h('span', { class: 'nav-label' }, item.label)));
+          const badge = item.badge?.(world);
+          box.append(h('a', { class: ['nav-item', active && 'active'], href: `#${item.path}`, 'aria-current': active ? 'page' : null, tip: item.label, dataset: { nav: '1' } }, icon(item.icon), h('span', { class: 'nav-label' }, item.label), badge ? h('span', { class: 'phase' }, badge) : null));
         }
       }
       nav.append(box);
@@ -205,12 +214,10 @@ export function createShell() {
   }
 
   function godFlag(world) {
-    if (!careerRules(world.career).switchTeams) return h('a', { class: 'god-flag', href: '#/settings?tab=carreira', tip: 'God Mode ativo: as regras podem ser quebradas e o potencial exato fica visível.' }, 'COMMISSIONER MODE');
+    if (!canSwitchTeams(world.career)) return h('a', { class: 'god-flag', href: '#/settings?tab=carreira', tip: 'God Mode ativo: as regras podem ser quebradas e o potencial exato fica visível.' }, 'COMMISSIONER MODE');
     const teams = [...world.teams.values()].sort((x, y) => x.fullName.localeCompare(y.fullName, 'pt-BR'));
     const take = (t) => {
-      world.career.teamId = t.id;
-      markDirty('meta', 'career');
-      emit('career:changed');
+      takeControl(world, t.id); // registra a intervenção no histórico do comissário
       toast(`Você agora controla o ${t.fullName}.`);
       navigate('/home');
     };

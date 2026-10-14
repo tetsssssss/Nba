@@ -83,7 +83,9 @@ export function classRetrospective(world, season) {
     for (const pick of picks.sort((a, b) => a.number - b.number)) {
       const prospect = world.prospects.get(pick.prospectId);
       const player = prospect?.playerId ? world.players.get(prospect.playerId) : null;
-      rows.push(rowFor(world, { number: pick.number, round: pick.round, teamId: pick.exercisedBy ?? pick.ownerTeamId, name: prospect?.name, player, prospect, college: prospect?.school }));
+      const row = rowFor(world, { number: pick.number, round: pick.round, teamId: pick.exercisedBy ?? pick.ownerTeamId, name: prospect?.name, player, prospect, college: prospect?.school });
+      row.gradeAtDraft = world.career.draftLog?.[season]?.find((x) => x.number === pick.number)?.grade ?? null;
+      rows.push(row);
     }
   } else {
     // turmas anteriores ao início do universo: dados reais do seed (player.draft)

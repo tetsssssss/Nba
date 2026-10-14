@@ -24,8 +24,9 @@ export function auditWorld(world) {
   add('8 divisões de 4 equipes', byDiv.size === 8 && [...byDiv.values()].every((n) => n === 4), [...byDiv.entries()].map(([k, n]) => `${k}: ${n}`).join(' · '));
   add('Expansão no Oeste e Pelicans no Leste', world.teams.get('SEA')?.conference === 'West' && world.teams.get('LVJ')?.conference === 'West' && world.teams.get('NOP')?.conference === 'East' && world.teams.get('MIN')?.conference === 'West');
 
-  const orphans = players.filter((p) => !world.teams.has(p.teamId));
-  add('Todo jogador pertence a uma franquia existente', orphans.length === 0, orphans.length ? list(orphans) : `${players.length} jogadores`);
+  // Agentes livres (teamId nulo) e aposentados (registro `retired`) são válidos; teamId apontando para franquia inexistente não.
+  const orphans = players.filter((p) => (p.teamId ? !world.teams.has(p.teamId) : !p.retired && world.contracts.get(p.id)?.teamId));
+  add('Todo jogador pertence a uma franquia existente, é agente livre ou está aposentado', orphans.length === 0, orphans.length ? list(orphans) : `${players.filter((p) => p.teamId).length} em elencos · ${players.filter((p) => !p.teamId && !p.retired).length} livres · ${players.filter((p) => p.retired).length} aposentados`);
 
   const badAttrs = players.filter((p) => ATTRIBUTE_KEYS.some((k) => !Number.isInteger(p.attributes?.[k]) || p.attributes[k] < 0 || p.attributes[k] > 100));
   add(`${ATTRIBUTE_KEYS.length} atributos válidos (0-100) por jogador`, badAttrs.length === 0, badAttrs.length ? list(badAttrs) : '');
@@ -38,7 +39,7 @@ export function auditWorld(world) {
   const badPot = players.filter((p) => p.potential < p.ovr || p.potential > 99);
   add('Potencial entre o Overall e 99', badPot.length === 0, badPot.length ? list(badPot) : '');
 
-  const noContract = players.filter((p) => !world.contracts.has(p.id));
+  const noContract = players.filter((p) => !world.contracts.has(p.id) && !p.retired && p.teamId);
   add('Todo jogador tem contrato', noContract.length === 0, noContract.length ? list(noContract) : `${world.contracts.size} contratos`);
   const mismatched = [...world.contracts.values()].filter((c) => world.players.get(c.playerId)?.teamId !== c.teamId);
   add('Contratos apontam para o time atual do jogador', mismatched.length === 0, mismatched.length ? `${mismatched.length} divergentes` : '');
@@ -46,8 +47,32 @@ export function auditWorld(world) {
   add('Contratos com anos e salários positivos', emptyContracts.length === 0, emptyContracts.length ? `${emptyContracts.length} inválidos` : '');
 
   const sizes = teams.map((t) => [t, players.filter((p) => p.teamId === t.id).length]);
-  const badSize = sizes.filter(([t, n]) => (t.expansion ? false : n < 13 || n > world.league.roster.offseasonMax + 1));
-  add('Elencos dentro do tamanho esperado', badSize.length === 0, badSize.length ? badSize.map(([t, n]) => `${t.id}: ${n}`).join(', ') : `${Math.min(...sizes.filter(([t]) => !t.expansion).map(([, n]) => n))} a ${Math.max(...sizes.map(([, n]) => n))} jogadores`);
+  const offseason = world.calendar.phase === 'offseason';
+  const badSize = sizes.filter(([t, n]) => (t.expansion && !world.career.expansionDraft ? false : (offseason ? false : n < 13) || n > world.league.roster.offseasonMax + 1));
+  add('Elencos dentro do tamanho esperado', badSize.length === 0, badSize.length ? badSize.map(([t, n]) => `${t.id}: ${n}`).join(', ') : `${Math.min(...sizes.filter(([t]) => !t.expansion).map(([, n]) => n))} a ${Math.max(...sizes.map(([, n]) => n))} jogadores${offseason ? ' (offseason: o mínimo só vale na abertura)' : ''}`);
+
+  // ---- Prompt mestre: picks, Draft e prospectos
+  const picks = [...(world.draftPicks?.values() ?? [])];
+  const badOwner = picks.filter((k) => !world.teams.has(k.ownerTeamId) || !world.teams.has(k.originalTeamId));
+  add('Toda pick de Draft tem dono e origem em franquias existentes', badOwner.length === 0, badOwner.length ? list(badOwner, (k) => k.id) : `${picks.length} picks`);
+  const numbered = new Map();
+  for (const k of picks.filter((x) => x.number != null)) { const key = `${k.season}:${k.number}`; numbered.set(key, (numbered.get(key) ?? 0) + 1); }
+  const dupNumber = [...numbered.entries()].filter(([, n]) => n > 1);
+  add('Nenhuma posição de Draft ocupada por duas picks', dupNumber.length === 0, dupNumber.length ? dupNumber.map(([k]) => k).join(', ') : '');
+  const historic = picks.filter((k) => k.season < world.league.startSeason);
+  add('O Draft anterior ao início do universo não foi recriado', historic.length === 0, historic.length ? list(historic, (k) => k.id) : '');
+  const used = picks.filter((k) => k.status === 'exercised');
+  const prospectIds = used.map((k) => k.prospectId);
+  add('Cada prospecto foi selecionado uma única vez', new Set(prospectIds).size === prospectIds.length && prospectIds.every((id) => world.prospects.get(id)?.status === 'drafted'), `${used.length} picks exercidas`);
+  const reserved = world.league.expansion?.initialDraftPicks ?? {};
+  const reservedOk = Object.entries(reserved).every(([teamId, slots]) => slots.every((slot) => picks.some((k) => k.season === world.league.expansion.initialDraftSeason && k.originalTeamId === teamId && k.slotLocked && k.number === slot)));
+  add('Picks reservadas da expansão (league.json) preservadas', reservedOk, Object.entries(reserved).map(([t, s]) => `${t} #${s.join('/#')}`).join(' · '));
+  const sixty = (world.draft?.picks ?? []).length;
+  add('Draft persistente coerente com as picks exercidas', !world.draft || sixty === used.filter((k) => k.season === world.draft.season).length, world.draft ? `Draft ${world.draft.season}: ${sixty} escolhas, ${world.draft.status}` : 'sem Draft ativo');
+  const retiredOnTeam = players.filter((p) => p.retired && p.teamId);
+  add('Aposentados não estão em elencos', retiredOnTeam.length === 0, retiredOnTeam.length ? list(retiredOnTeam) : '');
+  const cap = world.league.cap;
+  add('Linhas de cap em ordem (cap < tax ≤ 1º apron < 2º apron)', cap.salaryCap < cap.luxuryTax && cap.luxuryTax <= cap.firstApron && cap.firstApron < cap.secondApron, `${cap.season}${cap.projected ? ' (projeção do jogo)' : ' (oficial)'}`);
 
   const noAge = players.filter((p) => p.age == null && !p.birthDate);
   add('Idade conhecida', noAge.length === 0, noAge.length ? list(noAge) : '', 'warn');
