@@ -1,3 +1,16 @@
+## 2026-10-14 | Gestão: Trade Machine 3.0, Draft Night, Finanças, Offseason e God Mode
+
+- Trade Machine (`#/market`): dois painéis, mesa central, drag-and-drop e botões, trocas multi-jogador/multi-time, picks protegidas, swaps, dinheiro e TPE; relatório de legalidade, equilíbrio e aceitação; rascunhos, travas e histórico.
+- IA dos GMs: 7 personalidades, contrapropostas, ofertas ao usuário e trades IA×IA com checkpoints (sem reprocessar ao abrir a tela).
+- Draft (`#/draft`): loteria, ordem, Draft Night persistente, prospectos fictícios, scouting com ruído, big board, análise ao vivo e histórico. Picks reservadas da expansão preservadas.
+- Finanças (`#/finance`): folha oficial/estimada/projetada, central de contratos, free agency com agente, Bird rights, cap holds, exceções, two-way, dead money e imposto de luxo.
+- Offseason (`#/offseason`): 11 fases persistentes, aposentadorias plausíveis e desenvolvimento uma vez por temporada; cap da liga cresce 6%/ano.
+- God Mode ampliado (`#/commissioner`): Forçar aceitação, Override Total com registro de intervenções, revisão de trades da IA.
+- Stores `draftPicks`/`prospects`/`finances` e documentos `meta.market/draft/offseason` entram em backup e validação; saves antigos migram sem perda (`ensureWorldSystems`).
+- `futurePickYearsAhead=1` mantido; ampliação opcional por carreira. Regras do CBA marcadas `needsValidation`.
+- Testes: 828 (758 originais + 70 novos); `fake-indexeddb` vendorizado em `tests/vendor/`. Cache PWA `nuv-management-20261014-r1`.
+- Documentação: `docs/GESTAO-TRADE-DRAFT-FINANCAS-OFFSEASON.md` e `docs/CODEX-RELATORIO-GESTAO-2026-10-14.md`.
+
 ## 2026-10-14 | Street NBA/WNBA, All-Star e acessibilidade (camada independente)
 
 - Street NBA/WNBA: box score de 1 e 2 pontos, aproveitamento, roubos e perdas por atleta e equipe; cálculo derivado de eventos reais.

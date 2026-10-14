@@ -1,4 +1,10 @@
-# Project State — 2026-10-09
+# Project State — 2026-10-14
+
+Estado atual: o pacote CODIGO-COMPLETO de 14/10/2026 (758 testes) recebeu o módulo de gestão — Trade Machine 3.0, Draft Night, Finanças e contratos, Offseason de 11 fases, IA de GMs e God Mode ampliado — sem criar outro jogo: mesmas stores do IndexedDB (`draftPicks`, `prospects`, `finances`, `meta`), mesmo `career.godMode`, mesmo `cap.js`. Suíte: 828/828. `pwa:verify` e `release:verify` verdes; cache PWA `nuv-management-20261014-r1`. Pendências conhecidas: conferir `trade.rules`/`draft` de `league.json` (`needsValidation`) contra o CBA oficial; testes E2E automatizados; verificação em Chromium localhost e Xiaomi reais. Detalhes: `docs/GESTAO-TRADE-DRAFT-FINANCAS-OFFSEASON.md` e `docs/CODEX-RELATORIO-GESTAO-2026-10-14.md`.
+
+---
+
+## Histórico — 2026-10-09
 
 O pacote da versão 0.2.0 segue como base canônica. A evolução gráfica começou sem substituir simulação, dados ou saves. O 2D atual permanece padrão. A Carreira agora também pode ser assistida no visual 2.5D Arcade em Canvas, com sprites estilizados e renderização de reserva em código; o 3D WebGL2 segue experimental dentro das partidas que usam `MatchSim`.
 

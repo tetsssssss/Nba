@@ -290,7 +290,7 @@ export function devToolsView() {
     mount(root, 
       h('div', { class: 'page-head' }, h('div', null, h('h1', null, 'Dev Tools'), h('p', { class: 'sub' }, 'Auditorias obrigatórias antes de cada entrega e ferramentas para testar sistemas.'))),
       h('div', { class: 'grid cols-2' }, h('div', { class: 'stack' }, integritySection(), photoSection(), selfTestSection()), h('div', { class: 'stack' }, toolsSection(render), seedSection(), resetSection())),
-      h('div', { style: { marginTop: '16px' } }, futureBox('Mais ferramentas', 'Geração de trades, testes de Draft e Free Agency, edição de classificação e reinício de sistemas individuais entram junto com cada módulo.', '2-4')),
+      h('div', { style: { marginTop: '16px' } }, futureBox('Mais ferramentas', 'Edição de classificação e reinício de sistemas individuais entram junto com cada módulo. Trades, Draft, finanças e offseason já têm painéis próprios (veja "Sistemas de gestão").', '4')),
     );
   };
   render();

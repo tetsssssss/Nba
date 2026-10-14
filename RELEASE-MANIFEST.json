@@ -1,7 +1,7 @@
 {
-  "label": "NBA Universe Manager • Street NBA/WNBA + All-Star • 2026-10-14",
-  "reference_base": "ARCADE-WNBA 2026-10-13 (301 arquivos); preservar saves e versões privadas",
-  "release": "Box score Street 1/2 pontos, foco de evento, invalidação de configuração, All-Star 3PT; testes 758/758; Chromium e Xiaomi pendentes",
+  "label": "NBA Universe Manager • Gestão (Trade Machine 3.0, Draft Night, Finanças, Offseason, God Mode) • 2026-10-14",
+  "reference_base": "STREET-WNBA-ALLSTAR 2026-10-14 CODIGO-COMPLETO (758 testes); preservar saves e versões privadas",
+  "release": "Trade Machine 3.0, IA de GMs, Draft Night, finanças e contratos, offseason de 11 fases, God Mode ampliado; testes 828/828; Chromium localhost e Xiaomi pendentes",
   "files": [
     {
       "path": "_headers",
@@ -61,7 +61,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "e6bbbd1bec8b89e81f833dc0cd73b33a6b2ddd0fcff26c85ba26dd55aef26c05"
+      "sha256": "090e6368dc79d6ff2eca25674b63b80b3978456678279e9eb1681744b976fd22"
     },
     {
       "path": "css/audio.css",
@@ -132,6 +132,10 @@
       "sha256": "f25ca90e87497c53ac3e6fddeb03dc88064c604279884ecca00704d6101c3b53"
     },
     {
+      "path": "css/management.css",
+      "sha256": "9a5a67c0d1a3b012f4652a97192e888f9c97e5d4114ac4f539ba22f964413bbd"
+    },
+    {
       "path": "css/mobile-pwa.css",
       "sha256": "ed7b07f3eae7f7e7004c61c028847bc602856d70808de5af7080f132e50083c9"
     },
@@ -193,7 +197,7 @@
     },
     {
       "path": "data/static/league.json",
-      "sha256": "115792da6a7c4bd06876df7b4a999cfb31b7acf25b1e2253b54491f94c384c78"
+      "sha256": "7f7987fb93fed48a6979fcc98debeded3f2e1b07be2e1794075b9441be8ce8c0"
     },
     {
       "path": "docs/AUDITORIA-FOTOS-NBB-EUROLEAGUE.csv",
@@ -222,6 +226,10 @@
     {
       "path": "docs/CODEX-INTEGRACAO-01-09-EVOLUCAO-80000.md",
       "sha256": "6b2e19b552ccf7e3e5e4d7179b391800c91163999815c1ef3f1e7d97e4775cee"
+    },
+    {
+      "path": "docs/CODEX-RELATORIO-GESTAO-2026-10-14.md",
+      "sha256": "a78b4e7c3b051b3469e98a4bebcccd1ed0eaebff40f5740bdc75be3d587852cb"
     },
     {
       "path": "docs/EVOLUCAO-ARCADE-WNBA-2026-10-13.md",
@@ -308,8 +316,12 @@
       "sha256": "a01b55ea3ce779d46c4655c1155662ad07a09658d7f62c3c6ff27399767afc1a"
     },
     {
+      "path": "docs/GESTAO-TRADE-DRAFT-FINANCAS-OFFSEASON.md",
+      "sha256": "c5fe7981843a0606ce77856ddf3f2359f645a1529362cd59d0c0d8b156c30b5c"
+    },
+    {
       "path": "docs/HANDOFF.md",
-      "sha256": "549e44e04a71b4ebda56dd697d95c3326f08672db20bdda7f7bacc5c4ad50286"
+      "sha256": "8151df53389c82cde7e8c6c28e708826425cbd8f3d67fdb9af916dc8e333d4c2"
     },
     {
       "path": "docs/INTEGRACAO-PROMPTS-02-08-10-14.md",
@@ -349,7 +361,7 @@
     },
     {
       "path": "index.html",
-      "sha256": "2859107dcbdaa0654a20331e55a5a30dd0fc8eace7a7a01209079442e1c16483"
+      "sha256": "71e9618f5cabf9583846cbe55b27ec74dea926081be3d746d8c651d409513721"
     },
     {
       "path": "Iniciar NBA Universe Manager.bat",
@@ -381,7 +393,7 @@
     },
     {
       "path": "offline-assets.json",
-      "sha256": "560520c7987c4a2990c232cf8e47499c7ce319b6f65f848a04ca72362794ab5c"
+      "sha256": "3dd5f688566480803105e9b772767f86f7e475a78602040136bc87c326e6e7b3"
     },
     {
       "path": "package.json",
@@ -389,11 +401,11 @@
     },
     {
       "path": "PROJECT-STATE.md",
-      "sha256": "515158555cc9ac66e5054833998515c20e3e8610e58b5173a922d70b548cff89"
+      "sha256": "e64b1293601b78deed2d1a1c57d571aa30b02a9d346566519f2ac717d8f95f89"
     },
     {
       "path": "README.md",
-      "sha256": "6cbb33b50eaa749d5fd0f657617c3f74621c02effe1a9e648cf48a3b913ad198"
+      "sha256": "d0df18eab648bd3fa8e73717475a452737dd2a30fc036fb3aae031aaa9d1217d"
     },
     {
       "path": "server.mjs",
@@ -432,12 +444,52 @@
       "sha256": "6fca6f4561c9dc1125fecd2da14b320c1a300dfb6349f51de49ec1e827bed362"
     },
     {
+      "path": "src/contracts/cap-growth.js",
+      "sha256": "c00828d578a4bfc7142f8c96a67c3f9241d64f0cd3740ec7e45fd1137ad1c592"
+    },
+    {
       "path": "src/contracts/cap.js",
-      "sha256": "10f6bf05b408fe6dc966e92b6861ce76f865821b6e138c6a83594c6dba92f62b"
+      "sha256": "3aa41c6a30745074d947630d45d17003bcb9bc83a2b582230868c61089213b12"
+    },
+    {
+      "path": "src/contracts/contracts-engine.js",
+      "sha256": "e264066b57db6b843dce0865019a075f3acd7434ddfbc415a7f4aaa2e25ac27e"
+    },
+    {
+      "path": "src/contracts/finance.js",
+      "sha256": "3a3c4abf27a3a3385ea9b76b3f1a91fb734a9a64619544d7075230a28eac0d3e"
+    },
+    {
+      "path": "src/contracts/market-state.js",
+      "sha256": "03e4c16a459a1b6bc6f12a9944d90d07a6386b222d6572bb0410f12cbfdc416a"
     },
     {
       "path": "src/contracts/market.js",
-      "sha256": "95c1fbc30764d5b0c5e9dbe8045026330b427a8b5ef85ee24592f3b5134442bd"
+      "sha256": "21567a98a54316ecfeb031bf5d07825fbf83ddf3349939b53c3643df47ae2f33"
+    },
+    {
+      "path": "src/contracts/picks.js",
+      "sha256": "d496a74b37439fd4faa4a0d2e56cd4ac4ac821860e60bd9aa8d651a25056b4a6"
+    },
+    {
+      "path": "src/contracts/rules-config.js",
+      "sha256": "3215be9c0569c8ac03afa5b9c2b3fc94243c5d508c0fc714b0f9460735f8938e"
+    },
+    {
+      "path": "src/contracts/trade-engine.js",
+      "sha256": "5ee24a5adc2c22010556487837749fa2d09a7c83b03092c05419f2945f267d13"
+    },
+    {
+      "path": "src/contracts/trade-rules.js",
+      "sha256": "a421da135d7d702180f6012167ecec90b5d8cf87f4e547060ed3ebb6776bf50e"
+    },
+    {
+      "path": "src/contracts/valuation.js",
+      "sha256": "cf7650fa64b3d1775a939bfe1e93731ef31b43e7a93c315f9f7cad1e74a83c18"
+    },
+    {
+      "path": "src/core/bootstrap.js",
+      "sha256": "61741c9a96ee19ccbb70cabab777b6b18b9743c8f57d82d58577d6eb248fbf86"
     },
     {
       "path": "src/core/career-options.js",
@@ -456,8 +508,16 @@
       "sha256": "fbf026d512b6527f268cf472388bd41e5adb40567da46afacb2c9ad1bcaaf156"
     },
     {
+      "path": "src/core/godmode-permissions.js",
+      "sha256": "0bfb1eec2fbe882b438d46fabe910185ee99469a0d64ccb65f794617b4d04cdc"
+    },
+    {
+      "path": "src/core/godmode.js",
+      "sha256": "520cad9c66e91578603755c53db641555b5d2f17f04228a97fb622ac37089ed8"
+    },
+    {
       "path": "src/core/modes.js",
-      "sha256": "96502b9ea68fef854229e072d2f9d97ac28426a49c7a23bce7a1885f5cb194e2"
+      "sha256": "b0221f31f4e63ab4a5ea4b3319c15e81f8417375ec3d4e78db34978857b3adc2"
     },
     {
       "path": "src/core/rng.js",
@@ -465,19 +525,19 @@
     },
     {
       "path": "src/core/roadmap.js",
-      "sha256": "2b02542b59ee552ede09aacc649ff651d264a39626c8cad738592250dd279f03"
+      "sha256": "741dd5b08f8c2ca5e6c4f4aa1495ab48a5f1f3d3f670dbd2e7b57b8604393426"
     },
     {
       "path": "src/core/save-snapshot.js",
-      "sha256": "9725b4f9af717d8aa9a65866595de9c9e5a99894224b87ca9ec7ccfb0f9b7fad"
+      "sha256": "9c85ab80b4849a5f0fee4779f2ede911673d7a65b296b379b4b50868597428f3"
     },
     {
       "path": "src/core/save-validation.js",
-      "sha256": "9f8aabe9dfa7b96c2c86cd1b6dedaf3eceaec962c030dc088d2dfa8c50c07235"
+      "sha256": "478693c4847dc30d4d4655b7a366101f65ea49524043ce8ff0f6b37bae8e1ec4"
     },
     {
       "path": "src/core/saves.js",
-      "sha256": "1d145cd2ad12a14b462a80c98f799250ed393e37fc2a5425afb6084159810fa1"
+      "sha256": "e7752c2e2b5f92b108a371235478f39beb13fcea56f6b911cf57b5b8821163e3"
     },
     {
       "path": "src/core/settings.js",
@@ -489,7 +549,7 @@
     },
     {
       "path": "src/core/tasks.js",
-      "sha256": "452978ae5b707250b1b4d196012f37bdd04285c8e4f84b9e605a01371a334b8a"
+      "sha256": "7085eea82f22e89d041276a15045559ef2117de40432c9b74afd0f977fc1a82d"
     },
     {
       "path": "src/core/universe.js",
@@ -501,15 +561,55 @@
     },
     {
       "path": "src/core/world.js",
-      "sha256": "5443f09b560cc6c93107cf1b924d26c51388e3b80b54bdd67a0cad1744de37b3"
+      "sha256": "1b105a3e9850447d3828e96e975711f85093dda6c0c2dd94fae5353179626364"
     },
     {
       "path": "src/dev/audit.js",
-      "sha256": "cd0360cf91ca73499e3a7eada1cc24748574d6f79f54b73aea3e1ee57045780f"
+      "sha256": "d725e23f2a4c8b850dada79f7afe31f1fa3917b48f9232e03ded43132fae9675"
     },
     {
       "path": "src/dev/selftest.js",
       "sha256": "cc06e06267a9cff56ec8c5cbf933098196d0f45e34582a4700a0108bc0b0ffd0"
+    },
+    {
+      "path": "src/draft/draft-analysis.js",
+      "sha256": "44d734209f5bf9e271175ba9bbbaac829d0758a81f4568cf44cd45370cc026a4"
+    },
+    {
+      "path": "src/draft/draft-engine.js",
+      "sha256": "154dadbbff04738af0931e80a090f6e198b4f51a6ac9b0eac9b82c54199dd108"
+    },
+    {
+      "path": "src/draft/lottery.js",
+      "sha256": "c217996f5f8b924e9f916eb3921ef14936b2b3864781940f3a6787fdb21f9770"
+    },
+    {
+      "path": "src/draft/player-factory.js",
+      "sha256": "ab1038fbd6023b5fe2022707970f1b10330b0617b6eb8e001fc58602930c1d00"
+    },
+    {
+      "path": "src/draft/prospects.js",
+      "sha256": "7b24fd33b032417f53245a92ca2e3ac082a6fc2be9690fbe647d832af2f22c01"
+    },
+    {
+      "path": "src/draft/scouting.js",
+      "sha256": "69b897eeb6a5866a058e131e94935bee7fbb4cb86145b1f86a83cf01ab336f21"
+    },
+    {
+      "path": "src/gm/ai-gm.js",
+      "sha256": "ab56451296d7aeb3bfe3844e81a4be83b8bc67c85c4c653548304761d00677a6"
+    },
+    {
+      "path": "src/gm/ai-offseason.js",
+      "sha256": "fbca245c9882b25e9e1ad14da90318e5e00e77c810cacb9c718ffbdeba9aec0c"
+    },
+    {
+      "path": "src/gm/personality.js",
+      "sha256": "51e1e263651e9a3ad634eec449ee514ebe9c7b6d04d8caa38756fcc5b4990b9b"
+    },
+    {
+      "path": "src/gm/team-context.js",
+      "sha256": "c959c751c3c5d6cf4ca457356a6b422355eb21ee153b649c1e725940c5728174"
     },
     {
       "path": "src/international/catalog.js",
@@ -541,7 +641,7 @@
     },
     {
       "path": "src/main.js",
-      "sha256": "3857a3d1fff5606df6c765ae9a4d928bc6e8e526d307c3d25e33ac5e5c824490"
+      "sha256": "3f569bb91ef618a271449d8f8d53884156fd014559740a0892e2f87d6f3cc8b3"
     },
     {
       "path": "src/match/babylon-adapter.js",
@@ -657,7 +757,7 @@
     },
     {
       "path": "src/players/offseason-integration.js",
-      "sha256": "1cf6637ab27db54846807fac0d8ab720c94586863efe2c101ea2d2a74f937ef1"
+      "sha256": "f480da7d0cd7ba543f7ecbbf7581da3727772e6823da7cfac4cd8ada0469be7d"
     },
     {
       "path": "src/players/overall.js",
@@ -666,6 +766,10 @@
     {
       "path": "src/players/potential.js",
       "sha256": "1c0898d1f380bbf50e73e4838df3def97df89d5109d9a0e891c917b73b8eb10c"
+    },
+    {
+      "path": "src/players/retirement.js",
+      "sha256": "7c8e0f27c09f318ab1a160a2fed7f75295c2773d28804485994d86451adc6c5f"
     },
     {
       "path": "src/players/rotation.js",
@@ -692,6 +796,10 @@
       "sha256": "f35083855b838ba421fbc303218885110fc19ec6c8590ce674b886092f84d9a5"
     },
     {
+      "path": "src/season/offseason.js",
+      "sha256": "bc98ec448425a7d2a1dc07c17ead4dab8cbbddaf40653986815e0a69849fa8f8"
+    },
+    {
       "path": "src/season/postseason.js",
       "sha256": "9084215885b1fc8640bb79d52b90fc833174b622d3d9b422544fc949f32fbe40"
     },
@@ -705,7 +813,7 @@
     },
     {
       "path": "src/season/season.js",
-      "sha256": "1aafc9098de3cdd268f816f9b39ca41c87d76c63943c2e5ccf761b5f2e3a4553"
+      "sha256": "8e649be97c76a16585c494e39e4bad77a43802406c56a25a655daaec7b5019c9"
     },
     {
       "path": "src/season/standings.js",
@@ -734,6 +842,10 @@
     {
       "path": "src/ui/components/game.js",
       "sha256": "081337e039a812783bdf383bb5b81dc88454f7d35885fc3522568dfff188b0a5"
+    },
+    {
+      "path": "src/ui/components/mgmt.js",
+      "sha256": "a0c4dd61f0509e8fc5c4c4ec8a5c4885f5fa20161dcf4a4722b4cf34cbda912d"
     },
     {
       "path": "src/ui/components/overlay.js",
@@ -793,11 +905,11 @@
     },
     {
       "path": "src/ui/shell.js",
-      "sha256": "8f6f56db5f1b3ba18473c35d07bbf2a961077bbfb496057779411976e8b38745"
+      "sha256": "a2245d9868701a84ea17faf27bb5d3306bb2157e3378793a3be72552badfce8e"
     },
     {
       "path": "src/ui/sim-control.js",
-      "sha256": "af7fdaa5accf4edbbe24e22046eb4bc766b598ec74d519cd8cf1aaee3fc00d94"
+      "sha256": "4b610ee4c139db52a5f6f236ed512e19c004578d92af44d181d062d58265972b"
     },
     {
       "path": "src/ui/views/arcade.js",
@@ -806,6 +918,10 @@
     {
       "path": "src/ui/views/calendar.js",
       "sha256": "3270f7cfb60d9865d0f97ac67ef52435d79bbc11a7c625b91680269425e740d8"
+    },
+    {
+      "path": "src/ui/views/commissioner.js",
+      "sha256": "066456e820dda22dc6580a11d94b0e39c0cc3ce2feacb169671ebdcfe92069bd"
     },
     {
       "path": "src/ui/views/compare.js",
@@ -817,7 +933,15 @@
     },
     {
       "path": "src/ui/views/devtools.js",
-      "sha256": "b31ca1b0569a64c8beb7ac497c8b6417e6a5c4f4007a54605ffb22859357cdf4"
+      "sha256": "4b9567b5b28dc7f4bf85ea71f604eb5b33f2f9c5da1bc51dc5d30fd2797b9cd6"
+    },
+    {
+      "path": "src/ui/views/draft.js",
+      "sha256": "798016f99ea119077837e92cb75627e1a9e36c7ab70b10ddb7247c20106bd3dc"
+    },
+    {
+      "path": "src/ui/views/finance.js",
+      "sha256": "b40c86b79241b0605a2475cb4c66a708e9d112b9852609ca9472f47a2ddcb541"
     },
     {
       "path": "src/ui/views/game.js",
@@ -853,11 +977,15 @@
     },
     {
       "path": "src/ui/views/new-career.js",
-      "sha256": "29959d4f2b52699b66664982635a6e26f2d1a6507d82d43aab592f39729ffdaf"
+      "sha256": "f17506712e2d1818b03d0495cf2bf76ca9f22bb7ab07f0ead885020bb48748c4"
     },
     {
       "path": "src/ui/views/observatory.js",
       "sha256": "0729d213aa2d8600a85d555f948dbf2af98c3b8e9758fbd11e0f67b9239507e4"
+    },
+    {
+      "path": "src/ui/views/offseason.js",
+      "sha256": "e2a6fd28ba8827099b1cfe671d779f4fd980ce18b9dbb259bc6ac825844214f1"
     },
     {
       "path": "src/ui/views/player.js",
@@ -881,7 +1009,7 @@
     },
     {
       "path": "src/ui/views/settings.js",
-      "sha256": "fb68423b11acaeb8a9c6600326ab607822c92ed46491c323d565a6ef0eb98e7e"
+      "sha256": "f7a41f33aa2207ca1fe7ff5c7f02f0135919083751d2f9e6a82a6cad77596c7c"
     },
     {
       "path": "src/ui/views/standings.js",
@@ -893,7 +1021,11 @@
     },
     {
       "path": "src/ui/views/team.js",
-      "sha256": "d57dcdbad70607fd83fcd85a9ac4b79bad228886d78037464a3bf08ac790229f"
+      "sha256": "915c278db6ffb46a8e97964d46abb143a9ef11f2a253647099132854d67c5c76"
+    },
+    {
+      "path": "src/ui/views/trade-machine.js",
+      "sha256": "c69504b82ac836a4548d26fd4371edfb678795d034f3b6e27501cd144450cba7"
     },
     {
       "path": "src/ui/views/watchlist.js",
@@ -961,7 +1093,11 @@
     },
     {
       "path": "sw.js",
-      "sha256": "62345318be6ffd98e2b37d1acc7131957322930d49823d8867044bd206d3f7be"
+      "sha256": "1bf9a4209793d5eb744e4469594c5a5df09c94cc974e70ba073432e6999b0ff6"
+    },
+    {
+      "path": "tests/ai.test.mjs",
+      "sha256": "7b09f608bb0553043518272fba0fc0ef78942d5a11a91f4b68699e88c1bc9b04"
     },
     {
       "path": "tests/arcade-evolution-20261013.test.mjs",
@@ -1010,6 +1146,14 @@
     {
       "path": "tests/cap.test.mjs",
       "sha256": "2b555ba8170f973e5b5b12074980dd233e8cd25624185217d903a8cf18d848af"
+    },
+    {
+      "path": "tests/contracts-finance.test.mjs",
+      "sha256": "08b0d35588e84847fc47378000d0e9b78b498c01dc744d53253840f2ded05d8a"
+    },
+    {
+      "path": "tests/draft.test.mjs",
+      "sha256": "308a31aed048dd312dc23eb6fcfafba399cf9552d895c59c83cd508eb0e9430c"
     },
     {
       "path": "tests/evolution-03-10.test.mjs",
@@ -1064,8 +1208,20 @@
       "sha256": "42b8b7766e912e5348a1d0e9c9ad1e9eb0d645adeb5ac4632e0aa754f21596a6"
     },
     {
+      "path": "tests/godmode.test.mjs",
+      "sha256": "1d4a6365d1b40dd9ecaa63cdec52fb8fc2b14d18738fd84e071eda9115b25523"
+    },
+    {
       "path": "tests/graphics3d.test.mjs",
       "sha256": "7b17c3bfe370c0488a34ecd1040a84f41a73920226c737fa6ff870a76c25cf11"
+    },
+    {
+      "path": "tests/helpers/career.js",
+      "sha256": "d6356e711fd08a91fd908e333f62af0c4f2dc7acbaeb38f6ce54da3dad27319c"
+    },
+    {
+      "path": "tests/helpers/env.js",
+      "sha256": "ce4e73dfb28a3dd7834df86cffa950aa310580f92c780e1897cfa442b1b391d0"
     },
     {
       "path": "tests/improvements.test.mjs",
@@ -1088,12 +1244,36 @@
       "sha256": "af26ed746eea4c469e3956cf82e978d7a8c4a1d23cbd15fa08be49d7140e45d1"
     },
     {
+      "path": "tests/lottery.test.mjs",
+      "sha256": "1c3638561c7d6aa9e9c0a04961ea0d7d735684039cb66c155b557e6b958dadc6"
+    },
+    {
+      "path": "tests/management-baseline.test.mjs",
+      "sha256": "7d64958d8dabc9103634dad29121850b160e27471551fde20a10f59885891c83"
+    },
+    {
+      "path": "tests/management-dom.test.mjs",
+      "sha256": "bf49064583676feb059bb600686325cb8602b6f847c2875f48d98f913125d7be"
+    },
+    {
+      "path": "tests/management-persistence.test.mjs",
+      "sha256": "8b70a748a306febb03e0cfe1369e7bbf48305b3d89e81f380c1b596a5d55e2f4"
+    },
+    {
       "path": "tests/match.test.mjs",
       "sha256": "4178040427a7aab33f0edcf3affd039b2fe17050c73e27d3bdb597bed44a6aa2"
     },
     {
       "path": "tests/mega.test.mjs",
       "sha256": "353f3ec2f32c89fb92637410f6dfc8588ba55f6befdf31a28a0a925cdec9fcc3"
+    },
+    {
+      "path": "tests/offseason.test.mjs",
+      "sha256": "4d76e66e4ff2a5c39196ca04c894e3555c52a69cb0f6f32d0dbc7b43432ed7a2"
+    },
+    {
+      "path": "tests/picks.test.mjs",
+      "sha256": "a37bcc6c491e091601349745a7a51ce7194d1d611db0c2ea1c60b6f7dae766f0"
     },
     {
       "path": "tests/players.test.mjs",
@@ -1128,6 +1308,198 @@
       "sha256": "583e1180c5d748a01c68c562e72d4a19fe9e02e87a4592835ea782fd2903e7f6"
     },
     {
+      "path": "tests/trades.test.mjs",
+      "sha256": "bb14bcadeb2862f6141e0922c2f08cbfa58fb439fbef70c05d18bbe120c6382f"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/auto/index.mjs",
+      "sha256": "484e2c85b3cafb240317590feab968990dfdbd1257af74f8080031361bf5477a"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/fakeIndexedDB.js",
+      "sha256": "d5e976278c38b011fd4264152b55b3a86cee0bcfaa10edc41e57c3a4f9b7e6ba"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/FDBCursor.js",
+      "sha256": "525914ffc7a506c1f6343325fe45ab2cec35a89dd0b2804eb710c4236d49275d"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/FDBCursorWithValue.js",
+      "sha256": "df0387f379445153120e3e7e87ef01f463984d91890b2f9e68827911c5f38dc8"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/FDBDatabase.js",
+      "sha256": "4ace3585a0df384db8ba5319c88230bbe357a630c4af0750a8cdef00330fecfd"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/FDBFactory.js",
+      "sha256": "0b931d22ca105d25270bb99e8198900de4b67f48f8bdc2dbb20baffcb777b8c7"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/FDBIndex.js",
+      "sha256": "9090153289181c0f34071e47a2e8a14a95694a6c1244dfc3ccbc8b72758314ce"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/FDBKeyRange.js",
+      "sha256": "d0560ebcefad8c0e220bb7146940d5d7f42932fe946e7e72a2cff8d7b07bc8f3"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/FDBObjectStore.js",
+      "sha256": "0c7a13359542f5e7abfcd6d1f548b93c189f979d7f45835dde69cce862f43b02"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/FDBOpenDBRequest.js",
+      "sha256": "08de83ff7455795bfa17b4ff6811d6adf926aa2235c743a0890e27d1d6928b3e"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/FDBRecord.js",
+      "sha256": "f311f89d9252f0fdbaf5c5d1ed4e6fb9e24db0b719e21256662eccad144f896c"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/FDBRequest.js",
+      "sha256": "4d87b9c1971258c20e07261ded65bfc82962181bda5f3dcb9f32e935062f9c96"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/FDBTransaction.js",
+      "sha256": "0f1eab0fd7246b67c8cf84cc8df2d733b9288d11457a814c5456ebd763529fd2"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/FDBVersionChangeEvent.js",
+      "sha256": "3ef84fd543dd0fb14d478a9ac9b6f3a932e08e907081584fbb39d19410ddaaa2"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/forceCloseDatabase.js",
+      "sha256": "be73dfaa8eda15064dbba36dfbc15f6948fa61ddbf85852f50894aec44ddbd13"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/index.js",
+      "sha256": "45791e33b9247a10f52e8aecb3358adef073505ea0abf3368e2dd1367b1df651"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/lib/binarySearchTree.js",
+      "sha256": "a1f5fdef0842c338e0636ed8f7db994e39581c18276c27871cf183a8eb72b142"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/lib/canInjectKey.js",
+      "sha256": "4f5edc82747f9fefe5adfda9409c7a9d23c91d1289132378eee14ebd2873d08e"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/lib/cloneValueForInsertion.js",
+      "sha256": "48db0f9802a0310599a795c8911517efb8dc634638b04ed20da53f5ad1d43f19"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/lib/closeConnection.js",
+      "sha256": "3980e6cc75d681e332e8884e205629b99ca79c88b0ae7ec2374056d127eba70e"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/lib/cmp.js",
+      "sha256": "bed134465533a67c32385d513bb0eb53cd3f0c345a810f03acec76f9a9d2cd38"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/lib/Database.js",
+      "sha256": "0211ed0b35daea3fcaaec6cfce37e3e467ed77d9c51fbf1e8c3a1274c97a2ac5"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/lib/enforceRange.js",
+      "sha256": "dd4b01502533d5355f6fd8e347ad57ac21862b82d7fa8cef4f262b3a28dcac2d"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/lib/errors.js",
+      "sha256": "1e388f274166cdda947d59e711dc530528da07fce2805258867dc1935ea37969"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/lib/extractGetAllOptions.js",
+      "sha256": "e79524b8a783907f4654e039fb98afcb2de43dafee1fdcc0ebe2355cba1c31f7"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/lib/extractKey.js",
+      "sha256": "0e49ff5cc3d9dd24aa23cbdf31a8538835e4ac919f15e9ff64e0620b4893deff"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/lib/FakeDOMStringList.js",
+      "sha256": "21227f286a754746088dfa7a099f2899183baacc1b4aa629054e66ace8d53aef"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/lib/FakeEvent.js",
+      "sha256": "532189b1e822d267cd90720dda2b545ad7bb6f7f9ba84aa2ea9bc5c3681f0f4b"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/lib/FakeEventTarget.js",
+      "sha256": "2e331238c3d95b49077745f98084bcb1d0c66dd5b6591dc1563e6a9ea5637e4c"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/lib/getKeyPath.js",
+      "sha256": "6a08ea6a49ca4f39ff8040b06bd07f9d67fe6dab8249491370d4a2ae99cf46ef"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/lib/Index.js",
+      "sha256": "639bf36888401763b619b1f82816211eddb005061ccb9498b946d67d93be87f9"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/lib/intersection.js",
+      "sha256": "f9751ee9da6f0e9510a90c868b53be4a4c828fa3f97c13486cee1ff64ffbc650"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/lib/isPotentiallyValidKeyRange.js",
+      "sha256": "71a3be7b6c73c6a8a77384dc560d47ff55454c9a48dd6b577e60f1382fc91e02"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/lib/isSharedArrayBuffer.js",
+      "sha256": "2905b2c5472cc389c3bcb2a2ecd9f2f1694d522277c377fe83e730a6a6d1eb8a"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/lib/KeyGenerator.js",
+      "sha256": "d3784ea3d14fab523d670235886d600383c047c5106a89a90e5e308c6aac1e3d"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/lib/ObjectStore.js",
+      "sha256": "703e0ef89c9650fd600051233d8f4e9f829efe77c39ead93fadba2726db18300"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/lib/RecordStore.js",
+      "sha256": "301d0f824ea68ab593cf9b8bce4e86c3569c0785622225a99710ec8a12d65202"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/lib/scheduling.js",
+      "sha256": "ccec4db00f46f5fdc1c3d20c01c0e2be57ddf4eb2546acfc5785f12b857f8bfa"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/lib/types.js",
+      "sha256": "2e29cd9a98755c46896f7a2d56524db2d6d96b248e36db46de14c30bf47c8d05"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/lib/validateKeyPath.js",
+      "sha256": "fc27ce74444a2693e8b259b1abca4411542c33544b92a350f6694abeba5bd5c1"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/lib/validateRequiredArguments.js",
+      "sha256": "8e7edeaf1b27b3afd79413e396f2163213605cbae87d0f8ebf6f0a1683795e7b"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/lib/valueToKey.js",
+      "sha256": "b1b14fe186f2129d5ce812ab8f91bbcf2b336f2a89cff9bf764047ac02997222"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/lib/valueToKeyRange.js",
+      "sha256": "e8ba602f7a0fdd98a21106ef82361d7618dbf9dbe453ff07303986af4e134285"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/build/esm/lib/valueToKeyWithoutThrowing.js",
+      "sha256": "672e630cade58dce5bf35e1a1bd08492698d0a1038131392f4a073027c9813a9"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/LICENSE",
+      "sha256": "0c2e77addd3045b932ae0de86b7cf66aa1eeed4248d4dab37e851f9e5499d85e"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/package.json",
+      "sha256": "c1e3a5a89b799c1805e202536b1c4185118d3a92103d40d649e07b1333b4f95d"
+    },
+    {
+      "path": "tests/vendor/fake-indexeddb/README.md",
+      "sha256": "179c9db911404afdbdc50d2589fef545e48085e18a6c34d69c6bcb45df7d6abc"
+    },
+    {
       "path": "tests/world-pulse.test.mjs",
       "sha256": "ca86350a30d38d278fe184489ba8468a0bbe09417d63c8deeef98af65573eaf2"
     },
@@ -1145,7 +1517,7 @@
     },
     {
       "path": "tools/build-netlify.mjs",
-      "sha256": "34785a87efa7ac0d9c63dae2087d6aeebbf945cb72bec23896fa7dae28d64dd3"
+      "sha256": "425f41353ca118fc50641e653b25f23ef8a10452cb5d75e122964606c2126d28"
     },
     {
       "path": "tools/build-seed.mjs",

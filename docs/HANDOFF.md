@@ -8,6 +8,8 @@
 >
 > **Sessão 5 (calendário e temporada):** ver `docs/TEMPORADA.md`. Calendário de 82 jogos, avanço de dia, simulação rápida da liga, jogo oficial no 2D, classificação, líderes, box scores e Expansion Draft automático. Migração de banco v2.
 >
+> **Gestão (14/10/2026):** Trade Machine 3.0, Draft Night, Finanças, Offseason e God Mode. Ver `docs/GESTAO-TRADE-DRAFT-FINANCAS-OFFSEASON.md` e `docs/CODEX-RELATORIO-GESTAO-2026-10-14.md`. Os itens "Trades, free agency, Draft e scouting, finanças" da lista de futuro abaixo agora estão implementados.
+>
 > **Sessão 4 (mega evolução):** ver `docs/MEGA-EVOLUCAO.md`. Modos de jogo, tela de abertura, sliders, saves com slots e validação, comandos do técnico na partida, quadra nova e recalibração do motor (inclui a correção da concentração de pontos no cestinha).
 
 Este documento é o ponto de partida obrigatório da próxima sessão. Ele descreve o

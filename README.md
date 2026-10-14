@@ -1,5 +1,9 @@
 # NBA Universe Manager | Versão pronta para jogar (referência)
 
+## Gestão de 14/10/2026: Trade Machine 3.0, Draft Night, Finanças, Offseason e God Mode
+
+A Carreira ganhou cinco telas de gestão, ligadas ao grupo **Gestão** do menu: **Trade Machine** (`#/market`, drag-and-drop e botões, três avaliações independentes: legalidade CBA, equilíbrio e aceitação da IA), **Draft** (`#/draft`, loteria, Draft Night persistente, prospectos fictícios, scouting, big board, análise e histórico), **Finanças** (`#/finance`, folha oficial/estimada/projetada, free agency com agente, Bird rights, cap holds, imposto de luxo), **Offseason** (`#/offseason`, 11 fases persistentes com aposentadorias e desenvolvimento) e **Painel do Comissário** (`#/commissioner`, God Mode ampliado com Forçar aceitação e Override Total). 7 personalidades de GM, contrapropostas, ofertas ao usuário e trades entre times da IA. As picks reservadas da expansão (LVJ #1/#10 e SEA #4/#5 no Draft 2027) foram preservadas e `futurePickYearsAhead=1` não foi alterado (há opção explícita de ampliação por carreira). As regras do CBA em `league.json` estão marcadas `needsValidation`. Consulte `docs/GESTAO-TRADE-DRAFT-FINANCAS-OFFSEASON.md` (design) e `docs/CODEX-RELATORIO-GESTAO-2026-10-14.md` (relatório de mudanças). Suíte: 828 testes.
+
 ## Atualização isolada de 14/10/2026
 
 Street NBA e WNBA agora mostram box scores de 1 e 2 pontos, FG%, roubos e perdas. A quadra Street NBA destaca o atleta associado ao evento real da última posse, sem inventar posições. Mudanças de configuração descartam partidas Street obsoletas. O All-Star informa bolas convertidas e aproveitamento no concurso de três pontos. Consulte `docs/EVOLUCAO-STREET-2026-10-14.md` para escopo, testes e limitações. Carreira, playoffs/offseason, contratos e saves não foram alterados nesta rodada.
