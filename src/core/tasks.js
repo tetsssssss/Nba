@@ -1,6 +1,7 @@
 // Pendências da franquia do usuário, geradas a partir do estado real do universo.
 import { getWorld, payrollOf, teamRoster, userTeam } from './world.js';
 import { contractSummary } from '../contracts/cap.js';
+import { capSeason } from '../contracts/rules-config.js';
 
 /** @returns [{ level: 'bad'|'warn'|'info'|'future', title, text, link? }] */
 export function userTasks() {
@@ -40,9 +41,9 @@ export function userTasks() {
     tasks.push({ level: out ? 'warn' : 'info', title: `${injured.length} jogador(es) no departamento médico`, text: `${out} fora de combate, ${injured.length - out} em dúvida.`, link: teamLink('elenco') });
   }
 
-  const expiring = roster.filter((p) => contractSummary(contracts.get(p.id), calendar.season)?.expiring && p.rosterStatus === 'standard');
+  const expiring = roster.filter((p) => contractSummary(contracts.get(p.id), capSeason(world))?.expiring && p.rosterStatus === 'standard');
   if (expiring.length) {
-    tasks.push({ level: 'info', title: `${expiring.length} contrato(s) no último ano`, text: 'Renovações e negociação com agentes chegam na Fase 2.', link: teamLink('folha') });
+    tasks.push({ level: 'info', title: `${expiring.length} contrato(s) no último ano`, text: 'Renovações e extensões estão na central de finanças.', link: '/finance?tab=contratos' });
   }
 
   if (!world.career.expansionDraft) tasks.push({ level: 'info', title: 'Expansion Draft na véspera da noite de abertura', text: `Os ${league.expansion.protectedPerTeam} jogadores mais valiosos do seu elenco serão protegidos automaticamente; você pode perder no máximo ${league.expansion.maxLostPerTeam}. Escolher os protegidos chega na Fase 3.`, link: '/calendar' });

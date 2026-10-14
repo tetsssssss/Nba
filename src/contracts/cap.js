@@ -93,3 +93,38 @@ export const CONTRACT_TYPE_LABEL = {
   'two-way': 'Two-way',
   camp: 'Training camp (não garantido)',
 };
+
+// ------------------------------------------------------------------ luxury tax (prompt mestre: Finanças)
+/** Faixas de US$ 5 mi acima da linha do imposto. Valores do CBA de 2023 reproduzidos de memória: marcados como ESTIMADOS (needsValidation). */
+export const TAX_BRACKET = 5000000;
+const TAX_RATES = [1.5, 1.75, 2.5, 3.25];
+const REPEATER_RATES = [2.5, 2.75, 3.5, 4.25];
+
+/**
+ * Imposto de luxo devido sobre uma folha. `repeater`: pagou imposto em 3 das 4 últimas temporadas.
+ * Nos modos de cap sem luxury tax (basic) devolve 0.
+ */
+export function luxuryTaxBill(total, cap, { repeater = false, capMode = 'full' } = {}) {
+  if (!capLines(capMode).luxuryTax) return 0;
+  let over = Math.max(0, total - cap.luxuryTax);
+  if (!over) return 0;
+  const rates = repeater ? REPEATER_RATES : TAX_RATES;
+  let bill = 0;
+  for (let i = 0; over > 0; i++) {
+    const slice = Math.min(over, TAX_BRACKET);
+    const rate = i < rates.length ? rates[i] : rates.at(-1) + 0.5 * (i - rates.length + 1);
+    bill += slice * rate;
+    over -= slice;
+  }
+  return Math.round(bill);
+}
+
+/** Linhas de cap por cima de um valor de folha (útil para mensagens). */
+export function capSituation(total, cap, capMode = 'full') {
+  const lines = capLines(capMode);
+  let status = total <= cap.salaryCap ? 'under-cap' : 'over-cap';
+  if (lines.luxuryTax && total > cap.luxuryTax) status = 'tax';
+  if (lines.aprons && total > cap.firstApron) status = 'first-apron';
+  if (lines.aprons && total > cap.secondApron) status = 'second-apron';
+  return status;
+}

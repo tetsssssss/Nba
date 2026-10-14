@@ -12,6 +12,9 @@ import { computeStandings } from './standings.js';
 import { planExpansionDraft } from './expansion.js';
 import { salaryIn } from '../contracts/cap.js';
 import { createPostseason, progressPostseason, postseasonGames as extractPostseasonGames } from './postseason.js';
+import { runAiMarketTick } from '../gm/ai-gm.js';
+import { ensureOffseason, offseasonFinished } from './offseason.js';
+import { ensureWorldSystems } from '../core/bootstrap.js';
 
 const STAT_KEYS = ['pts', 'fgm', 'fga', 'tpm', 'tpa', 'ftm', 'fta', 'orb', 'drb', 'ast', 'stl', 'blk', 'tov', 'pf'];
 const MIN_ROSTER = 8;
@@ -212,24 +215,38 @@ export function advanceDay() {
         const champ = world.teams.get(post.champion);
         addNews({ category: 'liga', teamIds: [post.champion, post.runnerUp], title: `${champ.fullName} é campeão da NBA!`, body: `Título de ${season() - 1}-${String(season()).slice(-2)} confirmado nas finais. O calendário entra na offseason.` });
         events.push({ type: 'champion', teamId: post.champion });
+        setCalendarDate(date);
+        ensureOffseason(world); // fecha as finais, arquiva estatísticas e contas, premiações
       }
     }
   }
   setCalendarDate(world.calendar.phase === 'offseason' ? date : next);
+  // Mercado da IA: uma única vez por data (checkpoint em market.ai.lastTick). Falhas nunca interrompem o calendário.
+  try {
+    const market = runAiMarketTick(world);
+    if (market.offers?.length || market.trades?.length || market.review?.length) events.push({ type: 'market', offers: market.offers.length, trades: market.trades.length, review: market.review.length });
+  } catch (err) {
+    console.error('Mercado da IA falhou neste dia', err);
+  }
   return { date: world.calendar.date, played, events };
 }
 
 /**
- * Virada simplificada: preserva contratos e elencos atuais, sem fingir que draft,
- * free agency ou ajuste automático do CBA já existem neste módulo.
+ * Abre a próxima temporada. O caminho normal exige que a offseason (#/offseason) esteja concluída: draft,
+ * aposentadorias, free agency, ajuste de elenco e desenvolvimento. `simplified: true` mantém a virada antiga
+ * (preserva contratos e elencos) e só deve ser usada por ferramentas de comissário e testes de regressão.
  */
-export function beginNextSeason() {
+export function beginNextSeason({ simplified = false } = {}) {
   const w = getWorld();
   if (w.calendar.phase !== 'offseason') throw new Error('A temporada precisa terminar para iniciar a próxima.');
   if ((w.career.completedSeasons?.length ?? 0) >= (w.career.careerLength ?? 10)) {
     w.calendar.phase = 'complete';
     markDirty('meta', 'calendar');
     return false;
+  }
+  if (!simplified) {
+    ensureOffseason(w);
+    if (!offseasonFinished(w)) throw new Error('Conclua a offseason antes de começar a próxima temporada: draft, free agency e ajuste de elenco pendentes (rota #/offseason).');
   }
   const previous = standings().rows;
   for (const t of w.teams.values()) {
@@ -248,10 +265,13 @@ export function beginNextSeason() {
   w.calendar.date = shift(w.calendar.date);
   // Pré-temporada: duas semanas antes da abertura.
   w.calendar.date = addDays(w.league.calendar.regularSeasonStart, -14);
+  w.offseason = null;
+  markDirty('meta', 'offseason');
   markDirty('meta', 'calendar');
   markDirty('meta', 'league');
-  addNews({ category: 'liga', title: `Temporada ${w.calendar.season - 1}-${String(w.calendar.season).slice(-2)} iniciada`, body: 'Novo calendário de 82 jogos por franquia. Os elencos existentes foram preservados; mercado e draft de offseason ainda são funcionalidades separadas.' });
+  addNews({ category: 'liga', title: `Temporada ${w.calendar.season - 1}-${String(w.calendar.season).slice(-2)} iniciada`, body: simplified ? 'Novo calendário de 82 jogos por franquia. Os elencos existentes foram preservados (virada simplificada).' : 'Novo calendário de 82 jogos por franquia, com elencos renovados pelo Draft, pela aposentadoria e pela free agency.' });
   ensureSchedule();
+  ensureWorldSystems(w); // horizonte de picks, classes de prospectos e perfis dos GMs para o novo ano
   emit('calendar:changed', w.calendar);
   return true;
 }

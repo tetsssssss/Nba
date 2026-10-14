@@ -4,6 +4,7 @@ import { createUniverse, loadSeed } from './universe.js';
 import { getWorld, loadWorld, saveWorld, setSaveIdentity, unloadWorld } from './world.js';
 import { getSetting, setSetting } from './settings.js';
 import { SAVE_FORMAT, validateSavePayload } from './save-validation.js';
+import { ensureWorldSystems } from './bootstrap.js';
 
 /** Identificador de save: instante + sufixo aleatório. Não participa da simulação (não precisa ser determinístico). */
 const newSaveId = () => `c${Date.now().toString(36)}${[...crypto.getRandomValues(new Uint8Array(3))].map((b) => b.toString(36).padStart(2, '0')).join('')}`;
@@ -37,6 +38,7 @@ export async function openCareer(saveId) {
   const world = await loadWorld(saveId);
   setSaveIdentity({ name: summary?.name ?? null, createdAt: summary?.createdAt ?? null, extra: summary ? { slot: summary.slot ?? null, parentId: summary.parentId ?? null, note: summary.note ?? null } : null });
   setSetting('lastSaveId', saveId);
+  ensureWorldSystems(world); // picks, prospectos e mercado: idempotente, também para saves antigos
   return world;
 }
 

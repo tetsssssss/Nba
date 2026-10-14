@@ -8,6 +8,7 @@ import { starOf, summarize } from './universe.js';
 import { positionOverall } from '../players/overall.js';
 import { teamPayroll } from '../contracts/cap.js';
 import { commitSaveSnapshot } from './save-snapshot.js';
+import { capSeason } from '../contracts/rules-config.js';
 
 /** @type {null | object} */
 let world = null;
@@ -20,8 +21,8 @@ export const hasWorld = () => world !== null;
 export async function loadWorld(saveId) {
   await unloadWorld();
   const db = await openSaveDb(saveId);
-  const [metaRows, teams, players, contracts, coaches, owners, arenas] = await Promise.all(
-    ['meta', 'teams', 'players', 'contracts', 'coaches', 'owners', 'arenas'].map((s) => getAll(db, s)),
+  const [metaRows, teams, players, contracts, coaches, owners, arenas, draftPicks, prospects, finances, careerStats] = await Promise.all(
+    ['meta', 'teams', 'players', 'contracts', 'coaches', 'owners', 'arenas', 'draftPicks', 'prospects', 'finances', 'careerStats'].map((s) => getAll(db, s)),
   );
   const meta = Object.fromEntries(metaRows.map((m) => [m.key, m.value]));
   const games = await getAll(db, 'games');
@@ -44,10 +45,20 @@ export async function loadWorld(saveId) {
     coaches: new Map(coaches.map((c) => [c.id, c])),
     owners: new Map(owners.map((o) => [o.id, o])),
     arenas: new Map(arenas.map((a) => [a.id, a])),
+    // Prompt mestre (Trade Machine / Draft / Finanças / Offseason): stores que já existiam no schema v1
+    // e passam a ser carregadas; `market`, `draft` e `offseason` são documentos da store `meta`.
+    draftPicks: new Map(draftPicks.map((p) => [p.id, p])),
+    prospects: new Map(prospects.map((p) => [p.id, p])),
+    finances: new Map(finances.map((f) => [f.id, f])),
+    careerStats: new Map(careerStats.map((c) => [c.playerId, c])), // somente leitura: base de produção para valuation
+    market: meta.market ?? null,
+    draft: meta.draft ?? null,
+    offseason: meta.offseason ?? null,
+    rosterVersion: 0,
     // calendário e resultados (sem box score: esse fica na store boxScores) e estatísticas da temporada em curso
     games: new Map(games.map((g) => [g.id, g])),
     seasonStats: new Map(playerSeasons.map((s) => [s.playerId, s])),
-    dirty: { teams: new Set(), players: new Set(), contracts: new Set(), coaches: new Set(), owners: new Set(), arenas: new Set(), meta: new Set(), games: new Set(), seasonStats: new Set() },
+    dirty: { teams: new Set(), players: new Set(), contracts: new Set(), coaches: new Set(), owners: new Set(), arenas: new Set(), meta: new Set(), games: new Set(), seasonStats: new Set(), draftPicks: new Set(), prospects: new Set(), finances: new Set(), careerStats: new Set() },
     pending: { news: [], transactions: [], games: [], boxScores: [] },
     createdAt: null,
     name: null,
@@ -66,8 +77,6 @@ export async function unloadWorld() {
 }
 
 // ------------------------------------------------------------------ escrita
-const META_KEYS = { career: 'career', calendar: 'calendar', league: 'league', history: 'history' };
-
 /** Marca um registro como alterado; o autosave grava em seguida. */
 export function markDirty(store, id) {
   if (!world) return;
@@ -116,7 +125,7 @@ export function teamRoster(teamId) {
   return out.sort((a, b) => b.ovr - a.ovr);
 }
 
-export const payrollOf = (teamId, season = world.calendar.season) =>
+export const payrollOf = (teamId, season = capSeason(world)) =>
   teamPayroll(teamRoster(teamId), world.contracts, world.teams.get(teamId), world.league.cap, season, world.career.capMode);
 
 export function playerAge(player, date = world?.calendar.date) {
@@ -173,6 +182,7 @@ export function movePlayer(player, toTeamId, { type = 'transfer', note = null } 
   const fromTeamId = player.teamId;
   if (fromTeamId === toTeamId) return;
   player.teamId = toTeamId;
+  bumpRosters();
   markDirty('players', player.id);
   const contract = world.contracts.get(player.id);
   if (contract) {
@@ -182,6 +192,11 @@ export function movePlayer(player, toTeamId, { type = 'transfer', note = null } 
   }
   addTransaction({ type, playerIds: [player.id], fromTeamId, toTeamId, note });
   emit('roster:changed', { teamIds: [fromTeamId, toTeamId] });
+}
+
+/** Invalida caches derivados dos elencos (tabela da liga, necessidades). Chamar em qualquer mudança de elenco. */
+export function bumpRosters() {
+  if (world) world.rosterVersion = (world.rosterVersion ?? 0) + 1;
 }
 
 export function setCalendarDate(date) {

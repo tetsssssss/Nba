@@ -2,7 +2,7 @@
  * Um lote de gravação é isolado da fila editável: falhas restauram exatamente os
  * IDs e registros originais. Injeção de adaptadores permite testes de falha real.
  */
-const META_KEYS = { career: 'career', calendar: 'calendar', league: 'league', history: 'history' };
+const META_KEYS = { career: 'career', calendar: 'calendar', league: 'league', history: 'history', market: 'market', draft: 'draft', offseason: 'offseason' };
 const PENDING_KEYS = ['news', 'transactions', 'games', 'boxScores'];
 
 export async function commitSaveSnapshot(w, { write, updateSummary, summarizeWorld, notify = () => {} }) {
@@ -11,8 +11,8 @@ export async function commitSaveSnapshot(w, { write, updateSummary, summarizeWor
   w.dirty = Object.fromEntries(Object.keys(dirty).map((store) => [store, new Set()]));
   w.pending = Object.fromEntries(PENDING_KEYS.map((store) => [store, []]));
   const writes = {};
-  for (const store of ['teams', 'players', 'contracts', 'coaches', 'owners', 'arenas']) {
-    if (dirty[store]?.size) writes[store] = [...dirty[store]].map((id) => w[store].get(id)).filter(Boolean);
+  for (const store of ['teams', 'players', 'contracts', 'coaches', 'owners', 'arenas', 'draftPicks', 'prospects', 'finances', 'careerStats']) {
+    if (dirty[store]?.size && w[store]) writes[store] = [...dirty[store]].map((id) => w[store].get(id)).filter(Boolean);
   }
   if (dirty.meta?.size) writes.meta = [...dirty.meta].map((key) => ({ key, value: w[META_KEYS[key]] }));
   if (dirty.games?.size) writes.games = [...dirty.games].map((id) => w.games.get(id)).filter(Boolean);

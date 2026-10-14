@@ -87,11 +87,13 @@ export function advanceControl() {
   if (world.calendar.phase === 'complete') return h('span', { class: 'chip' }, 'Carreira concluída');
   if (world.calendar.phase === 'offseason') return h('div', { class: 'advance-group' },
     h('a', { class: 'btn', href: '#/playoffs' }, 'Ver campeão'),
-    h('button', { class: 'btn primary', type:'button', onclick: async (e) => {
-      const button = e.currentTarget; button.disabled = true;
-      try { const started = beginNextSeason(); await saveWorld(); toast(started ? 'Nova temporada gerada. Os elencos atuais foram preservados.' : 'Limite de temporadas atingido. A carreira foi concluída.'); refreshView(); }
-      catch(err) { toast(`Falha ao iniciar temporada: ${err.message}`, 'error'); button.disabled = false; }
-    } }, (world.career.completedSeasons?.length ?? 0) >= (world.career.careerLength ?? 10) ? 'Concluir carreira' : 'Começar próxima temporada'));
+    (world.career.completedSeasons?.length ?? 0) >= (world.career.careerLength ?? 10)
+      ? h('button', { class: 'btn primary', type: 'button', onclick: async (e) => {
+          const button = e.currentTarget; button.disabled = true;
+          try { beginNextSeason(); await saveWorld(); toast('Limite de temporadas atingido. A carreira foi concluída.'); refreshView(); }
+          catch (err) { toast(`Falha ao concluir a carreira: ${err.message}`, 'error'); button.disabled = false; }
+        } }, 'Concluir carreira')
+      : h('a', { class: 'btn primary', href: '#/offseason' }, 'Abrir a offseason'));
   if (seasonOver()) return h('span', { class:'chip' }, 'Temporada concluída');
   const game = userGameToday();
   const busy = async (button, fn) => {

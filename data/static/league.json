@@ -59,7 +59,38 @@
   },
   "trade": {
     "futurePickYearsAhead": 1,
-    "note": "Decisão de design: trades de picks futuras limitadas a 1 ano à frente. Configurável."
+    "note": "Decisão de design: trades de picks futuras limitadas a 1 ano à frente. Configurável.",
+    "rules": {
+      "needsValidation": true,
+      "note": "Estrutura do CBA de 2023 (salary matching, aprons, exceções de troca, regra Stepien) reproduzida de memória e adaptada ao universo de 32 franquias. Percentuais e prazos marcados aqui precisam de conferência contra o texto oficial do CBA antes de serem tratados como regra definitiva.",
+      "matching": {
+        "basic": { "pct": 1.0, "plus": 0 },
+        "intermediate": { "pct": 1.25, "plus": 100000 },
+        "advanced": { "pct": 2.0, "plus": 250000 },
+        "full": { "pct": 2.0, "plus": 250000 }
+      },
+      "firstApronMatching": { "pct": 1.1, "plus": 100000 },
+      "secondApronMatching": { "pct": 1.0, "plus": 0 },
+      "secondApronNoAggregation": true,
+      "secondApronNoCash": true,
+      "tradeExceptionValidDays": 365,
+      "tradeExceptionAllowance": 100000,
+      "recentSigningLockDays": 90,
+      "recentSigningEarliest": "12-15",
+      "deadlineDaysBeforeAllStar": 7,
+      "stepien": true,
+      "frozenPickSeasonsOut": 6
+    }
+  },
+  "draft": {
+    "needsValidation": true,
+    "note": "Loteria com as probabilidades de 2019 da NBA para as 14 piores equipes fora dos playoffs (a liga de 32 franquias tem 16 não classificadas: as duas melhores entre elas ocupam as posições 15 e 16). Picks reservadas da expansão ficam fora da loteria.",
+    "lotteryTeams": 14,
+    "lotteryDraws": 4,
+    "lotteryOdds": [140, 140, 140, 125, 105, 90, 75, 60, 45, 30, 20, 15, 10, 5],
+    "secondsPerPick": 120,
+    "rookieScaleYears": 4,
+    "rookieGuaranteedYears": 2
   },
   "expansion": {
     "protectedPerTeam": 7,
