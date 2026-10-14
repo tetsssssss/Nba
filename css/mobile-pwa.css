@@ -1,0 +1,20 @@
+/* Ajustes de instalação móvel sem trocar os layouts originais da carreira. */
+html { -webkit-text-size-adjust: 100%; }
+body { overscroll-behavior-y: contain; }
+#nuv-install-app:not([hidden]) {
+  position: fixed; z-index: 500; right: max(14px, env(safe-area-inset-right));
+  bottom: max(14px, env(safe-area-inset-bottom)); border: 1px solid #4d86c0;
+  background: #101b2d; color: #f4f7fb; border-radius: 999px;
+  padding: 13px 18px; min-height: 46px; font: 700 .85rem system-ui, sans-serif;
+  box-shadow: 0 8px 26px rgba(0,0,0,.35); cursor:pointer;
+}
+#nuv-install-app[hidden] { display:none!important; }
+@media (max-width: 740px) and (pointer: coarse) {
+  button, .btn { touch-action: manipulation; }
+  .match-controls > .btn, .match-controls > button { min-height: 40px; }
+  .match-canvas-babylon, .match-canvas-3d, .match-canvas-arcade { max-width: 100%; }
+  .nuv-show-players { display: none; }
+}
+@media (display-mode: standalone) {
+  #nuv-install-app { display: none!important; }
+}

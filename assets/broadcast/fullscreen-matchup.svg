@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-label="Tela cheia de confronto">
+  <defs><linearGradient id="bg" x1="0" x2="1"><stop offset="0%" stop-color="#08111F"/><stop offset="100%" stop-color="#132239"/></linearGradient></defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <text x="960" y="110" fill="#F6B73C" font-size="22" font-family="Inter, Arial, sans-serif" font-weight="800" text-anchor="middle">NBA UNIVERSE TV · NOITE DE JOGO</text>
+  <text x="960" y="188" fill="#F4F7FB" font-size="64" font-family="Inter, Arial, sans-serif" font-weight="800" text-anchor="middle">LOS SANTOS STARS vs RIO TITANS</text>
+  <rect x="180" y="280" rx="28" width="620" height="520" fill="#101B2D" stroke="#223756" stroke-width="2"/>
+  <rect x="1120" y="280" rx="28" width="620" height="520" fill="#101B2D" stroke="#223756" stroke-width="2"/>
+  <circle cx="490" cy="470" r="96" fill="#2D7FF9" opacity=".95"/>
+  <circle cx="1430" cy="470" r="96" fill="#FF7A3D" opacity=".95"/>
+  <text x="490" y="630" fill="#F4F7FB" font-size="42" font-family="Inter, Arial, sans-serif" font-weight="800" text-anchor="middle">22-8</text>
+  <text x="490" y="675" fill="#A9B8CE" font-size="22" font-family="Inter, Arial, sans-serif" font-weight="600" text-anchor="middle">3º no Leste</text>
+  <text x="1430" y="630" fill="#F4F7FB" font-size="42" font-family="Inter, Arial, sans-serif" font-weight="800" text-anchor="middle">20-10</text>
+  <text x="1430" y="675" fill="#A9B8CE" font-size="22" font-family="Inter, Arial, sans-serif" font-weight="600" text-anchor="middle">5º no Oeste</text>
+  <text x="960" y="880" fill="#F4F7FB" font-size="38" font-family="Inter, Arial, sans-serif" font-weight="800" text-anchor="middle">Destaque: duelo entre armadores · expectativa de jogo equilibrado</text>
+  <text x="960" y="928" fill="#A9B8CE" font-size="24" font-family="Inter, Arial, sans-serif" font-weight="600" text-anchor="middle">Disponível para NBA, WNBA, All-Star e Street 2D</text>
+</svg>

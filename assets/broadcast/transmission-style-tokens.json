@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "name": "NBA Universe TV - Broadcast Package",
+    "version": "2026-10-12",
+    "compatibleWith": [
+      "2D",
+      "WebGL2",
+      "Babylon 3D"
+    ],
+    "notes": "Tokens iniciais para implementação em CSS/Canvas/SVG."
+  },
+  "colors": {
+    "bg": "#08111F",
+    "panel": "#101B2D",
+    "panelElevated": "#16243A",
+    "line": "#223756",
+    "text": "#F4F7FB",
+    "muted": "#A9B8CE",
+    "accent": "#3FA9F5",
+    "accent2": "#F6B73C",
+    "success": "#3DDC97",
+    "danger": "#FF5F6D",
+    "home": "#2D7FF9",
+    "away": "#FF7A3D"
+  },
+  "typography": {
+    "fontFamily": "Inter, system-ui, Segoe UI, Arial, sans-serif",
+    "kicker": {
+      "size": 12,
+      "weight": 700,
+      "tracking": 1.2
+    },
+    "label": {
+      "size": 14,
+      "weight": 600
+    },
+    "score": {
+      "size": 36,
+      "weight": 800
+    },
+    "clock": {
+      "size": 24,
+      "weight": 700
+    },
+    "body": {
+      "size": 16,
+      "weight": 500
+    },
+    "small": {
+      "size": 12,
+      "weight": 500
+    }
+  },
+  "spacing": {
+    "xs": 4,
+    "sm": 8,
+    "md": 12,
+    "lg": 16,
+    "xl": 24,
+    "xxl": 32
+  },
+  "radius": {
+    "sm": 8,
+    "md": 12,
+    "lg": 18,
+    "pill": 999
+  },
+  "shadow": {
+    "panel": "0 16px 36px rgba(0,0,0,.32)",
+    "soft": "0 10px 24px rgba(0,0,0,.18)"
+  },
+  "motion": {
+    "overlayInMs": 260,
+    "overlayOutMs": 200,
+    "curve": "cubic-bezier(.2,.85,.2,1)",
+    "reducedMotion": true
+  }
+}

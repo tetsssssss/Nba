@@ -1,0 +1,4 @@
+/* Controles compactos de sonoplastia */
+.audio-slider { display:flex; align-items:center; justify-content:space-between; gap:18px; flex-wrap:wrap; font-size:13px; color:var(--text-secondary); }
+.audio-slider input[type=range] { width:min(260px,100%); accent-color:var(--accent, #f47a3c); }
+@media (max-width:580px){ .audio-slider{ align-items:stretch; flex-direction:column; gap:5px; } }

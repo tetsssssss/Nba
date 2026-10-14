@@ -1,0 +1,105 @@
+/* NBA Universe TV: camada não interativa, independente de Canvas, WebGL2 e Babylon. */
+.court-wrap > .nuv-tv-overlay {
+  --nuv-bg: #08111f;
+  --nuv-surface: #101b2d;
+  --nuv-border: #223756;
+  --nuv-text: #f4f7fb;
+  --nuv-muted: #c2cfe1;
+  --nuv-accent: #3fa9f5;
+  position: absolute;
+  z-index: 4;
+  top: 10px;
+  left: 10px;
+  max-width: calc(100% - 20px);
+  width: min(780px, calc(100% - 20px));
+  pointer-events: none;
+  color: var(--nuv-text);
+  font-family: Inter, system-ui, Segoe UI, Arial, sans-serif;
+  font-variant-numeric: tabular-nums;
+  filter: drop-shadow(0 10px 14px rgba(0,0,0,.28));
+}
+.nuv-tv-overlay.nuv-tv-hidden { display: none; }
+.nuv-tv-header { display: flex; align-items: center; flex-wrap:wrap; gap: 8px; margin-bottom: 4px; }
+.nuv-tv-brand { background: #08111fe8; border:1px solid #223756; border-radius: 6px; font-size: .67rem; letter-spacing: .12em; font-weight: 850; padding: 4px 9px; }
+.nuv-tv-competition { color: var(--nuv-text); font-size: .66rem; letter-spacing: .09em; font-weight: 750; text-transform: uppercase; text-shadow: 0 1px 3px #000; }
+.nuv-tv-scorebug { display: grid; grid-template-columns: minmax(0,1fr) minmax(120px,1.15fr) minmax(0,1fr); gap: 2px; border:1px solid var(--nuv-border); border-radius: 13px; background: #08111ff2; overflow: hidden; backdrop-filter: blur(9px); }
+.nuv-tv-side { min-width: 0; display:flex; align-items: center; gap: 8px; padding: 9px 11px; background:var(--nuv-surface); }
+.nuv-tv-home { border-left: 4px solid #2d7ff9; }
+.nuv-tv-away { border-right: 4px solid #ff7a3d; justify-content: flex-end; }
+.nuv-tv-name { font-size: clamp(.7rem, 1.2vw, .9rem); font-weight: 760; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.nuv-tv-points { font-size: clamp(1.3rem, 2.5vw, 2rem); font-weight: 850; margin-left: auto; }
+.nuv-tv-away .nuv-tv-points { margin-left: 0; }
+.nuv-tv-possession { font-size: .66rem; color: #3ddc97; }
+.nuv-tv-center { display:flex; flex-direction:column; gap:1px; text-align:center; align-items:center; justify-content:center; padding:6px 8px; }
+.nuv-tv-period { font-size:.61rem; letter-spacing: .09em; font-weight: 750; color:var(--nuv-muted); }
+.nuv-tv-clock { font-size: clamp(1rem, 1.8vw, 1.35rem); line-height:1.12; }
+.nuv-tv-shot-wrap { font-size:.61rem; color:var(--nuv-muted); }
+.nuv-tv-shot { font-weight: 800; color: #f6b73c; }
+.nuv-tv-cue { margin-top: 10px; width: min(420px, 100%); display:flex; flex-direction:column; gap: 3px; padding: 12px 14px; background:#08111ff0; border-radius: 8px; border-left:4px solid var(--nuv-accent); overflow-wrap:anywhere; animation:nuv-tv-slide-in 260ms cubic-bezier(.2,.85,.2,1) both; }
+.nuv-tv-cue[data-kind="shot"] { border-color: #f6b73c; }
+.nuv-tv-cue[data-kind="timeout"] { border-color: #3ddc97; }
+.nuv-tv-cue[data-kind="period"] { border-color: #ff7a3d; }
+.nuv-tv-cue-top { display:flex; justify-content:space-between; gap:12px; align-items:center; }
+.nuv-tv-cue-label { font-size:.75rem; letter-spacing:.06em; text-transform:uppercase; }
+.nuv-tv-cue-time { font-size:.71rem; color:var(--nuv-muted); }
+.nuv-tv-cue-team { font-size:.72rem; font-weight:750; color:#aaccf6; }
+.nuv-tv-cue-team:empty { display:none; }
+.nuv-tv-cue-text { font-size:.85rem; line-height:1.35; }
+.nuv-tv-cue.hidden, .nuv-tv-possession.hidden { display:none; }
+@keyframes nuv-tv-slide-in { from {opacity:0;transform: translateX(-14px)} to {opacity:1;transform:translateX(0)} }
+@media (max-width:750px) {
+  .court-wrap > .nuv-tv-overlay { top: 5px; left: 5px; max-width:calc(100% - 10px); width:calc(100% - 10px); }
+  .nuv-tv-brand { font-size:.5rem; padding:3px 5px; }
+  .nuv-tv-competition { font-size:.54rem; }
+  .nuv-tv-side { padding: 6px; gap:4px; }
+  .nuv-tv-name { font-size: .62rem; }
+  .nuv-tv-points { font-size: 1.28rem; }
+  .nuv-tv-center { padding: 5px 4px; }
+  .nuv-tv-period, .nuv-tv-shot-wrap { font-size:.53rem; }
+  .nuv-tv-clock { font-size:.98rem; }
+  .nuv-tv-cue { padding:7px 9px; margin-top:6px; }
+}
+@media (max-width:390px) {
+  .nuv-tv-scorebug { grid-template-columns: minmax(0,1fr) minmax(90px,1fr) minmax(0,1fr); }
+  .nuv-tv-name { max-width: 38px; }
+  .nuv-tv-possession { font-size: .5rem; }
+}
+@media (prefers-reduced-motion:reduce) { .nuv-tv-overlay *, .nuv-tv-overlay *::before, .nuv-tv-overlay *::after { animation:none!important; transition:none!important; } }
+
+/* Vinhetas de pré-jogo, tempo técnico, períodos e encerramento.
+   Pointer events sempre desligados: controles do jogo continuam acessíveis. */
+.court-wrap > .nuv-show {
+  position: absolute; z-index: 5; inset: 0; display: grid;
+  place-items: center; pointer-events: none;
+  padding: clamp(6px, 2vw, 24px); color: #f4f7fb;
+  background: linear-gradient(115deg, rgba(4,11,23,.88), rgba(15,30,54,.84));
+  font-family: Inter, system-ui, Arial, sans-serif;
+  animation: nuv-show-enter .28s cubic-bezier(.2,.85,.2,1) both;
+}
+.court-wrap > .nuv-show.hidden { display: none; }
+.nuv-show-inner { width: min(680px, 100%); text-align: center; max-height: 100%; overflow: hidden;
+  padding: clamp(10px, 3vw, 28px); border-radius: 22px; background: rgba(8,17,31,.88);
+  border: 1px solid #355072; box-shadow: 0 20px 50px rgba(0,0,0,.4); }
+.nuv-show-brand { display: block; font-size: clamp(.56rem,.9vw,.76rem); font-weight: 800; letter-spacing: .15em; color: #f6b73c; text-transform: uppercase; }
+.nuv-show h2 { font-size: clamp(1.05rem,3vw,2rem); margin: 10px 0; letter-spacing: .04em; }
+.nuv-show-score { display: grid; grid-template-columns: 1fr auto 1fr; gap: 14px; align-items: center; border-block: 1px solid #355072; padding: 10px 4px; }
+.nuv-show-score strong { font-size: clamp(1.4rem,3.8vw,2.9rem); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.nuv-show-team { font-size: clamp(.7rem,1.4vw,1rem); font-weight: 750; overflow-wrap: anywhere; }
+.nuv-show-desc { font-size: clamp(.7rem,1.3vw,.94rem); color: #c2cfe1; margin: 10px 0; }
+.nuv-show-stats { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 5px; }
+.nuv-show-stat { display: grid; grid-template-columns: 35px minmax(0,1fr) 35px; gap:4px; align-items: center; padding: 5px 7px; font-size: clamp(.62rem,1vw,.8rem); border-radius: 8px; background: #172942; }
+.nuv-show-stat span { color: #c2cfe1; }
+.nuv-show-players { margin-top: 9px; display: flex; gap: 5px; justify-content:center; flex-wrap: wrap; }
+.nuv-show-player { font-size: clamp(.56rem,.9vw,.7rem); background: #1e3553; border-radius: 8px; padding: 4px 7px; }
+.nuv-show-foot { display: block; font-size: .58rem; margin-top: 10px; color: #a8bad6; }
+@keyframes nuv-show-enter { from { opacity: 0; transform: translateY(8px) scale(.98); } to { opacity: 1; transform: none; } }
+@media (max-width: 540px) {
+  .nuv-show-stats { grid-template-columns: 1fr 1fr; }
+  .nuv-show-players { max-height: 60px; overflow: hidden; }
+  .nuv-show-inner { padding: 8px; border-radius: 10px; }
+  .nuv-show-brand { letter-spacing: .05em; }
+  .nuv-show-desc { margin: 5px 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .court-wrap > .nuv-show { animation: none; }
+}

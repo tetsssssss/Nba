@@ -1,0 +1,94 @@
+{
+ "snapshotDate": "2026-10-05",
+ "generatedAt": "2026-10-05T23:13:29.442Z",
+ "season": "2026-27",
+ "sources": [
+  {
+   "id": "nba-index",
+   "name": "NBA.com / stats.nba.com — índice oficial de jogadores 2026-27",
+   "use": "elencos, posição, altura, peso, país, draft"
+  },
+  {
+   "id": "espn",
+   "name": "ESPN — elencos e estatísticas de carreira",
+   "use": "data de nascimento, lesões, carreira, técnicos, logos"
+  },
+  {
+   "id": "hoopshype",
+   "name": "HoopsHype — salários",
+   "use": "contratos ano a ano, opções, two-way, dead money"
+  },
+  {
+   "id": "nba-stats",
+   "name": "stats.nba.com — avançadas, tracking, play types, hustle, combine",
+   "use": "modelo de atributos e tendências"
+  }
+ ],
+ "fetch": {
+  "finishedAt": "2026-10-05T22:46:49.551Z",
+  "ok": 863,
+  "failed": 6
+ },
+ "counts": {
+  "players": 619,
+  "teams": 30,
+  "coaches": 30,
+  "contracts": 619,
+  "careerSeasons": 3063
+ },
+ "ratingModel": {
+  "version": "ratings-v1",
+  "seasons": {
+   "2025-26": 1,
+   "2024-25": 0.55
+  },
+  "referencePopulation": 406,
+  "calibration": {
+   "PG": {
+    "a": 12.187,
+    "b": 0.912,
+    "c": 0.1773,
+    "knot": 76.52,
+    "n": 89
+   },
+   "SG": {
+    "a": 25.503,
+    "b": 0.7548,
+    "c": 0.1391,
+    "knot": 68.17,
+    "n": 90
+   },
+   "SF": {
+    "a": 13.138,
+    "b": 0.9769,
+    "c": 0.3661,
+    "knot": 67.19,
+    "n": 92
+   },
+   "PF": {
+    "a": 18.47,
+    "b": 0.881,
+    "c": 0.4226,
+    "knot": 67.48,
+    "n": 60
+   },
+   "C": {
+    "a": -10.424,
+    "b": 1.2385,
+    "c": 0.1358,
+    "knot": 73.95,
+    "n": 75
+   }
+  },
+  "confidence": {
+   "high": 264,
+   "medium": 142,
+   "low": 94,
+   "none": 119
+  }
+ },
+ "contractSources": {
+  "hoopshype": 539,
+  "estimated": 80
+ }
+}

@@ -1,0 +1,12 @@
+/* Street 2D experimental: estilos isolados para não afetar Carreira nem 5x5. */
+.w-spatial-shell {border:1px solid var(--border, #496373);border-radius:14px;padding:12px;background:linear-gradient(155deg,#111d2a,#1b3541);color:#f4f6fb;max-width:900px;margin:12px auto;}
+.w-spatial-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:2px 0 10px;}
+.w-spatial-court{width:100%;height:auto;max-height:520px;border-radius:12px;display:block;box-shadow:0 6px 25px #03070d35;}
+.w-spatial-controls{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:12px;}
+.w-spatial-controls .w-btn{flex:0 1 auto;}
+.w-spatial-controls .w-btn:disabled{opacity:.48;cursor:not-allowed;}
+.w-spatial-announcer{font-size:1rem;font-weight:650;margin:10px 0 2px;line-height:1.5;}
+.w-spatial-shell .w-disclaimer{color:#c7dce1;}
+.w-spatial-shell .w-btn:focus-visible{outline:3px solid #f0dca4;outline-offset:3px;}
+@media(max-width:640px){.w-spatial-shell{padding:8px}.w-spatial-controls .w-btn{flex:1 1 42%;min-width:0}.w-spatial-top{align-items:flex-start}}
+@media(prefers-reduced-motion:reduce){.w-spatial-shell *, .w-spatial-shell *::before,.w-spatial-shell *::after{animation:none!important;transition:none!important}}

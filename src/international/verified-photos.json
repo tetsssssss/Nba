@@ -1,0 +1,484 @@
+{
+  "EUROLEAGUE-BAR:Dario Brizuela": {
+    "url": "https://www.fcbarcelona.com/photo-resources/2024/10/15/f6f54232-998a-454e-9aef-0fc9c61225a8/2310_Fitxes_BASQUET-8-DARIO-BRIZUELA-AC306947.jpg?height=470&width=470",
+    "source": "https://www.fcbarcelona.fr/fr/basketball/first-team/squad",
+    "credit": "FC Barcelona; retrato de elenco 2024",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-08",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference; photo may show another season or uniform"
+  },
+  "EUROLEAGUE-BAR:Tomas Satoransky": {
+    "url": "https://www.fcbarcelona.com/photo-resources/2022/11/30/73585a4a-7ec0-4b05-ae22-388381431376/202211_Imatges_Fitxa_Jugadors_B-squet_01_SATORANSKY.jpg?height=750&width=1200",
+    "source": "https://www.fcbarcelona.com/en/basketball/first-team/players/2666687/satoransky",
+    "credit": "FC Barcelona, foto oficial de temporada anterior",
+    "review": "identity-matched-search",
+    "checked": "2026-10-08"
+  },
+  "EUROLEAGUE-BAS:Markus Howard": {
+    "url": "https://www.naiz.eus/media/asset_publics/resources/001/113/376/original/Howard.jpg",
+    "source": "https://www.naiz.eus/eu/info/noticia/20240513/saski-baskonia-amplia-el-contrato-de-markus-howard-hasta-2028",
+    "credit": "Naiz, foto identificada",
+    "review": "identity-matched-search",
+    "checked": "2026-10-08"
+  },
+  "EUROLEAGUE-BAS:Rodions Kurucs": {
+    "url": "https://www.ceroacero.es/img/jogadores/new/17/07/571707_rodions_kurucs_20250930181805.png",
+    "source": "https://www.ceroacero.es/jugador/rodions-kurucs/571707",
+    "credit": "Ceroacero; retrato Baskonia 2025/26",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-08",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference; photo may show another season or uniform"
+  },
+  "EUROLEAGUE-BAS:Tadas Sedekerskis": {
+    "url": "https://cms.deportivoalaves.com/uploads/large_Diseno_sin_titulo_2025_12_18_T113143_918_ac51e72b39.png?format=webp",
+    "source": "https://www.baskonia.com/es/plantilla/tadas-sedekerskis",
+    "credit": "Baskonia; perfil 2025/26",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-08",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference; photo may show another season or uniform"
+  },
+  "EUROLEAGUE-BAY:Rokas Jokubaitis": {
+    "url": "https://img.fcbayern.com/image/upload/f_auto/q_auto/ar_1%3A1%2Cc_fill%2Cg_custom%2Cw_768/v1758877590/cms/public/images/fcb-basketball/spieler/2025-26/Portrait/Jokubaitis.png",
+    "source": "https://fcbayern.com/basketball/en/teams/mens-first-team/rokas-jokubaitis",
+    "credit": "FC Bayern Basketball; retrato oficial 2025/26",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-08",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference; portrait may be from another season"
+  },
+  "EUROLEAGUE-CZV:Isaiah Canaan": {
+    "url": "https://www.aba-liga.com/stats/img/foto/2000x2000/4771.png?id=20260319034946kK6MsbT2eLgu5Erw1USO8cm3x",
+    "source": "https://druga.aba-liga.com/player/4771/24/1/isaiah-canaan/",
+    "credit": "ABA League; retrato Crvena zvezda",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-08",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference; photo may show another season or uniform"
+  },
+  "EUROLEAGUE-CZV:Jordan Nwora": {
+    "url": "https://www.aba-liga.com/stats/img/foto/2000x2000/5074.png?id=20260326160942U8AD0jo9KyZeMGtnvCmfzVFc3",
+    "source": "https://www.aba-liga.com/player/5074/25/1/jordan-nwora/",
+    "credit": "ABA League; retrato Crvena zvezda 2025/26",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-08",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference; photo may show another season or uniform"
+  },
+  "EUROLEAGUE-DUB:Davis Bertans": {
+    "url": "https://www.aba-liga.com/stats/img/foto/2000x2000/2034.png?id=20260417073010qBt4WhSfcbHZInAge0EojlD8M",
+    "source": "https://www.aba-liga.com/player/2034/25/1/davis-bertans/",
+    "credit": "ABA League; retrato Dubai Basketball",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-08",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference; photo may show another season or uniform"
+  },
+  "EUROLEAGUE-DUB:Dwane Bacon": {
+    "url": "https://dubaibasketball.com/wp-content/uploads/2024/07/dwayne-bacon-profile.png",
+    "source": "https://dubaibasketball.com/team_member/dwayne-bacon/",
+    "credit": "Dubai Basketball; perfil oficial (nome do atleta escrito Dwayne na fonte)",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-08",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference; portrait may be from another season"
+  },
+  "EUROLEAGUE-FEN:Scottie Wilbekin": {
+    "url": "https://cdn.sanity.io/images/x16599u6/production/be1f9d2faf0eadd39069c428266c02076f0839b2-466x466.png?q=70",
+    "source": "https://fenerbahcemeydani.com/posts/tesekkuerler-scottie-wilbekin/",
+    "credit": "Fenerbahçe; retrato de homenagem (2026)",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-08",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference; photo may show another season or uniform"
+  },
+  "EUROLEAGUE-FEN:Talen Horton-Tucker": {
+    "url": "https://pbs.twimg.com/media/G14JkP1XkAABBvB.jpg",
+    "source": "https://x.com/canpekerpekcan/status/1972024209137168732",
+    "credit": "Foto de apresentação Fenerbahçe, publicação externa",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-08",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference; photo may show another season or uniform"
+  },
+  "EUROLEAGUE-HAP:Bruno Caboclo": {
+    "url": "https://basket.co.il/pics/2025-2026/bruno.jpg",
+    "source": "https://basket.co.il/player.asp?PlayerId=21799&lang=en",
+    "credit": "Liga israelense; retrato Hapoel Tel Aviv 2025/26",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-08",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference; portrait may be from another season"
+  },
+  "EUROLEAGUE-HAP:Yam Madar": {
+    "url": "https://www.playmakerstats.com/img/jogadores/new/84/58/808458_yam_madar_20250930210113.png",
+    "source": "https://www.playmakerstats.com/player/yam-madar/808458",
+    "credit": "Playmakerstats; retrato Hapoel 2025/26",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-08",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference; portrait may be from another season"
+  },
+  "EUROLEAGUE-MIL:Leandro Bolmaro": {
+    "url": "https://store.olimpiamilano.com/images/olimpia/players/41.webp?v=1770734642",
+    "source": "https://store.olimpiamilano.com/it/prima-squadra/10-leandro-bolmaro",
+    "credit": "Olimpia Milano; perfil oficial de atleta",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-08",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference; photo may show another season or uniform"
+  },
+  "EUROLEAGUE-MON:Jaron Blossomgame": {
+    "url": "https://asmonaco.basketball/upload/iblock/02d/02d5a1976b7cf6435d302012a83768a6.png",
+    "source": "https://asmonaco.basketball/team/profile.php?ID=39223",
+    "credit": "AS Monaco; retrato oficial",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-08",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference; portrait may be from another season"
+  },
+  "EUROLEAGUE-MON:Matthew Strazel": {
+    "url": "https://asmonaco.basketball/upload/iblock/cce/cce1b991b0d24cc91405819c4a123eba.png",
+    "source": "https://asmonaco.basketball/team/profile.php?ID=39227",
+    "credit": "AS Monaco; retrato oficial",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-08",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference; portrait may be from another season"
+  },
+  "EUROLEAGUE-MON:Nemanja Nedovic": {
+    "url": "https://asmonaco.basketball/upload/iblock/0bc/0bc57e2c6ea3694b424e8e670699a184.png",
+    "source": "https://asmonaco.basketball/team/profile.php?ID=67912",
+    "credit": "AS Monaco, perfil individual",
+    "review": "identity-matched-search",
+    "checked": "2026-10-08"
+  },
+  "EUROLEAGUE-MON:Juhann Begarin": {
+    "url": "https://asmonaco.basketball/upload/iblock/edf/edf582ceea075349912e5e80d7e30dd7.png",
+    "source": "https://asmonaco.basketball/team/profile.php?ID=57827",
+    "credit": "AS Monaco Basket; retrato oficial, identificado via Google Imagens",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-09",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference"
+  },
+  "EUROLEAGUE-MON:Nick Calathes": {
+    "url": "https://cdn.bebasket.fr/resources/images/blog/nick-calathes-1f00980f-1437-696c-bb79-4bbe84e6ffdc.png",
+    "source": "https://www.bebasket.fr/nick-calathes-absent-du-top-25-des-meilleurs-joueurs-de-lhistoire-de-leuroleague-impossible-que-je-ne-sois-pas-dans-cette-liste",
+    "credit": "BeBasket; Nick Calathes no Monaco, identificado via Google Imagens",
+    "review": "identity-matched-search",
+    "checked": "2026-10-09",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference"
+  },
+  "EUROLEAGUE-OLY:Alec Peters": {
+    "url": "https://cdn-img.zerozero.pt/img/jogadores/new/48/20/604820_alec_peters_20251001013438.png",
+    "source": "https://www.playmakerstats.com/player/alec-peters/604820",
+    "credit": "Playmakerstats; retrato Olympiacos 2025/26",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-08",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference; photo may show another season or uniform"
+  },
+  "EUROLEAGUE-OLY:Nikola Milutinov": {
+    "url": "https://api.olympiacosbc.gr/media/cache/person_large/media/persons/2023/08/6981e9c4a9c45612540003.png",
+    "source": "https://www.olympiacosbc.gr/en/team/roster.html",
+    "credit": "Olympiacos BC; retrato oficial",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-08",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference; photo may show another season or uniform"
+  },
+  "EUROLEAGUE-OLY:Tyler Dorsey": {
+    "url": "https://www.playmakerstats.com/img/jogadores/new/81/19/588119_tyler_dorsey_20251001012532.png",
+    "source": "https://www.playmakerstats.com/player/tyler-dorsey/588119",
+    "credit": "Playmakerstats; retrato Olympiacos 2025/26",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-08",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference; photo may show another season or uniform"
+  },
+  "EUROLEAGUE-PAO:Cedi Osman": {
+    "url": "https://cdn-img.zerozero.pt/img/jogadores/new/17/40/571740_cedi_osman_20251001005714.png",
+    "source": "https://www.playmakerstats.com/player/cedi-osman/571740",
+    "credit": "Playmakerstats; retrato Panathinaikos 2025/26",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-08",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference; photo may show another season or uniform"
+  },
+  "EUROLEAGUE-PAO:Jerian Grant": {
+    "url": "https://cdn-img.zerozero.pt/img/jogadores/new/82/14/568214_jerian_grant_20251001005506.png",
+    "source": "https://www.playmakerstats.com/player/jerian-grant/568214",
+    "credit": "Playmakerstats; retrato Panathinaikos 2025/26",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-08",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference; photo may show another season or uniform"
+  },
+  "EUROLEAGUE-PAO:Juancho Hernangomez": {
+    "url": "https://www.zerozero.pt/img/jogadores/new/85/71/568571_juancho_hernangomez_20251001010016.png",
+    "source": "https://www.zerozero.pt/jogador/juancho-hernangomez/568571",
+    "credit": "Zerozero; retrato Panathinaikos 2025/26",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-08",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference; photo may show another season or uniform"
+  },
+  "EUROLEAGUE-PAO:Kostas Sloukas": {
+    "url": "https://dve-images.imggaming.com/original/p/2023/10/03/r1SSUDU5YWLKKJHyjvCzAnCO2meVQuu0-1696315588963.jpg",
+    "source": "https://www.euroleaguebasketball.net/en/euroleague/news/kostas-sloukas-panathinaikos-people-say-i-look-good-in-green/",
+    "credit": "EuroLeague, imagem editorial identificada",
+    "review": "identity-matched-search",
+    "checked": "2026-10-08"
+  },
+  "EUROLEAGUE-PAO:Omer Yurtseven": {
+    "url": "https://cdn-img.zerozero.pt/img/jogadores/new/85/60/868560_omer_yurtseven_20251001010316.png",
+    "source": "https://www.playmakerstats.com/player/omer-yurtseven/868560",
+    "credit": "Playmakerstats; retrato Panathinaikos 2025/26",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-08",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference; portrait may be from another season"
+  },
+  "EUROLEAGUE-RMA:Andres Feliz": {
+    "url": "https://assets.realmadrid.com/is/image/realmadrid/FELIZ_550X650?%24Desktop%24=&fit=wrap&wid=420",
+    "source": "https://www.realmadrid.com/en-US/basketball/first-team/players/andres-feliz",
+    "credit": "Real Madrid, retrato oficial",
+    "review": "identity-matched-search",
+    "checked": "2026-10-08"
+  },
+  "EUROLEAGUE-RMA:Facundo Campazzo": {
+    "url": "https://media-cdn.incrowdsports.com/3e8764fc-3edf-49b9-8d87-8f16757e87c8.png?format=webp&resizeType=fill&width=720",
+    "source": "https://www.euroleaguebasketball.net/euroleague/players/facundo-campazzo/005928/",
+    "credit": "EuroLeague, retrato oficial",
+    "review": "identity-matched-search",
+    "checked": "2026-10-08"
+  },
+  "EUROLEAGUE-RMA:Gabriel Deck": {
+    "url": "https://assets.realmadrid.com/is/image/realmadrid/DECK_550X650_new?%24Desktop%24=&fit=wrap&wid=420",
+    "source": "https://www.realmadrid.com/en-US/basketball/first-team/players/gabriel-deck",
+    "credit": "Real Madrid; retrato oficial",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-08",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference; photo may show another season or uniform"
+  },
+  "EUROLEAGUE-RMA:Izan Almansa": {
+    "url": "https://cdn-img.zerozero.pt/img/jogadores/new/20/58/1232058_izan_almansa_20251001015307.png",
+    "source": "https://www.ceroacero.es/jugador/izan-almansa/1232058",
+    "credit": "Zerozero, retrato identificado",
+    "review": "identity-matched-search",
+    "checked": "2026-10-08"
+  },
+  "EUROLEAGUE-RMA:Sergio Llull": {
+    "url": "https://assets.realmadrid.com/is/image/realmadrid/LLULL_550X650?%24Desktop%24=&fit=wrap&wid=420",
+    "source": "https://www.realmadrid.com/en-US/basketball/first-team/players/sergio-llull",
+    "credit": "Real Madrid, retrato oficial",
+    "review": "identity-matched-search",
+    "checked": "2026-10-08"
+  },
+  "EUROLEAGUE-RMA:Trey Lyles": {
+    "url": "https://assets.realmadrid.com/is/image/realmadrid/LYLES_550X650?%24Mobile%24=&fit=wrap&wid=420",
+    "source": "https://www.realmadrid.com/pt-PT/basquetebol/primeira-equipa/plantel/trey-lyles",
+    "credit": "Real Madrid; retrato oficial",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-08",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference; photo may show another season or uniform"
+  },
+  "EUROLEAGUE-RMA:Usman Garuba": {
+    "url": "https://assets.realmadrid.com/is/image/realmadrid/GARUBA_50X650?%24Desktop%24=&fit=wrap&wid=420",
+    "source": "https://www.realmadrid.com/en-US/basketball/first-team/players/usman-garuba",
+    "credit": "Real Madrid; retrato oficial",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-08",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference; photo may show another season or uniform"
+  },
+  "EUROLEAGUE-VAL:Sergio De Larrea": {
+    "url": "https://img.asmedia.epimg.net/resizer/v2/X74U43YTMFLZJPZVA2YAP6VIJU.jpg?auth=05626cf0528f93a9d05c02bf85085110e8ee0623ca4e09eb476ce15461d7dca5&focal=2621%2C2193&height=828&width=1472",
+    "source": "https://as.com/baloncesto/mis-referentes-siempre-han-sido-ricky-y-el-chacho-n/",
+    "credit": "AS; Sergio de Larrea com uniforme Valencia",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-08",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference; portrait may be from another season"
+  },
+  "EUROLEAGUE-VIR:Daniel Hackett": {
+    "url": "https://store.virtus.it/images/virtusbologna/players/5.webp?v=1761749491",
+    "source": "https://store.virtus.it/sn/first-team/23-daniel-hackett",
+    "credit": "Virtus Bologna; retrato oficial",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-08",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference; portrait may be from another season"
+  },
+  "EUROLEAGUE-ZAL:Ignas Brazdeikis": {
+    "url": "https://lkl.lt/media/players/890x520/6069ed76ac22e42603360bb55327d8e4.png",
+    "source": "https://lkl.lt/zaidejai/ignas-brazdeikis",
+    "credit": "LKL; retrato Žalgiris",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-08",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference; portrait may be from another season"
+  },
+  "EUROLEAGUE-ZAL:Maodo Lo": {
+    "url": "https://s.hs-data.com/gfx/person/cropped/400x400/414495.png?fallback=male",
+    "source": "https://www.sport.de/basketball/pe414495/maodo-lo/",
+    "credit": "Sport.de; retrato do atleta",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-08",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference; portrait may be from another season"
+  },
+  "EUROLEAGUE-ASV:David Lighty": {
+    "url": "https://cdn-img.zerozero.pt/img/jogadores/new/43/68/574368_david_lighty_20250930172257.png",
+    "source": "https://www.leballonrond.fr/joueur/david-lighty/574368?epoca_id=151",
+    "credit": "Le Ballon Rond; retrato de David Lighty no ASVEL, identificado via Google Imagens",
+    "review": "identity-matched-search",
+    "checked": "2026-10-09",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference"
+  },
+  "EUROLEAGUE-ASV:Shaquille Harrison": {
+    "url": "https://cdn.bebasket.fr/resources/images/blog/shaquille-harrison-est-arrete-pour-un-mois-lasvel-perd-son-defenseur-delite-e1759761251928-1f0a2c18-98c2-6cee-99c0-43402adbd786.jpg",
+    "source": "https://www.bebasket.fr/lasvel-privee-dun-joueur-cle-pour-un-mois",
+    "credit": "BeBasket; Shaquille Harrison no ASVEL, identificado via Google Imagens",
+    "review": "identity-matched-search",
+    "checked": "2026-10-09",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference"
+  },
+  "NBB-BAU:Alex Garcia": {
+    "url": "https://s2-ge.glbimg.com/Z6BTBSjkTjBcLfhxTpYbqzF30lo%3D/1600x0/filters%3Aformat%28jpeg%29/https%3A/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2024/b/m/45G5IpTcSZCt2KXFFeBQ/whatsapp-image-2024-07-23-at-12.02.13.jpeg",
+    "source": "https://ge.globo.com/sp/tem-esporte/basquete/noticia/2024/07/23/brabo-e-interminavel-aos-44-anos-alex-garcia-renova-por-mais-uma-temporada-com-o-bauru-basket.ghtml",
+    "credit": "ge; Alex Garcia no Bauru, foto 2024",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-08",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference; portrait may be from another season"
+  },
+  "NBB-BRA:Facundo Corvalan": {
+    "url": "https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2025/10/31/123016223-screenshot20251031164156gallery.jpg",
+    "source": "https://www.terra.com.br/esportes/basquete/nba/atual-campeao-do-nbb-facundo-corvalan-reforco-do-brasilia-basquete-alcanca-recorde-em-assistencias%2C56c76495c4bacbbbacef430a849a7e9b5u31nubv.html",
+    "credit": "Terra; Facundo Corvalán em Brasília",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-08",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference; photo may show another season or uniform"
+  },
+  "NBB-CAX:Shamell Stallworth": {
+    "url": "https://www.rbsdirect.com.br/filestore/9/9/5/2/9/4/5_e630e2597c1df61/5492599_56209d55504f98e.jpg?a=c&format=webp&h=1200&w=1600",
+    "source": "https://gauchazh.clicrbs.com.br/pioneiro/esportes/noticia/2025/10/quero-terminar-a-minha-carreira-bem-garante-shamell-antes-da-estreia-do-caxias-basquete-no-nbb-cmgzeoqk10071015gmzd24goi.html",
+    "credit": "Pioneiro; Shamell com a camisa do Caxias",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-08",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference; photo may show another season or uniform"
+  },
+  "NBB-COR:Elinho Corazza": {
+    "url": "https://conteudo.imguol.com.br/c/esporte/6c/2024/01/19/elinho-corazza-armador-do-corinthians-1705683138926_v2_450x450.jpg",
+    "source": "https://www.uol.com.br/esporte/ultimas-noticias/2024/01/22/previa-corinthians-x-brasilia-nbb.htm",
+    "credit": "UOL; Elinho Corazza em ação 2024",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-08",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference; photo may show another season or uniform"
+  },
+  "NBB-FLA:Franco Baralle": {
+    "url": "https://medias.itatiaia.com.br/dims4/default/a4fb003/2147483647/strip/false/crop/563x563%2B266%2B0/resize/1000x1000%21/quality/90/?url=https%3A%2F%2Fk2-prod-radio-itatiaia.s3.us-east-1.amazonaws.com%2Fbrightspot%2F4b%2F2c%2F6be049b346b09a1d4408b16fd441%2Ffotojet-2025-07-09t100104-370.jpg",
+    "source": "https://www.itatiaia.com.br/esportes/basquete/flamengo-anuncia-contratacao-de-franco-baralle-ex-kto-minas",
+    "credit": "Itatiaia, anúncio Flamengo",
+    "review": "identity-matched-search",
+    "checked": "2026-10-08"
+  },
+  "NBB-FLA:Guilherme Deodato": {
+    "url": "https://media.mundobola.com/media/2025/11/flabasquete-gui-deodato.jpg",
+    "source": "https://fla.mundobola.com/flabasquete-da-surra-historica-no-1o-quarto-vence-franca-e-mantem-100percent-no-nbb/",
+    "credit": "MundoBola, foto identificada em Flamengo 2025",
+    "review": "identity-matched-search",
+    "checked": "2026-10-08"
+  },
+  "NBB-FLA:Markeith Cummings": {
+    "url": "https://fla-media.mundobola.com/media/2025/07/markeith-cummings.jpeg",
+    "source": "https://fla.mundobola.com/flabasquete-encaminha-contratacao-de-markeith-cummings/",
+    "credit": "Mundobola, retrato individual",
+    "review": "identity-matched-search",
+    "checked": "2026-10-08"
+  },
+  "NBB-FRA:Cristiano Felicio": {
+    "url": "https://www.francabasquete.com.br/storage/equipes/qavttGwXuxHUkes5rECRuV4yHI7CNDoG8RSOcw9j.png",
+    "source": "https://www.francabasquete.com.br/",
+    "credit": "Sesi Franca; retrato identificado do elenco",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-08",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference; photo may show another season or uniform"
+  },
+  "NBB-FRA:David Jackson": {
+    "url": "https://sampi.net.br/dir-arquivo-imagem/2026/01/44bde6471c9cb676c960632c5e48ab27.jpg",
+    "source": "https://sampi.net.br/franca/noticias/2957299/esporte/2026/01/estamos-preparados-diz-dj-para-jogo-contra-o-pinheiros-em-sp",
+    "credit": "Sampi; foto de David Jackson em ação 2026",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-08",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference; photo may show another season or uniform"
+  },
+  "NBB-FRA:Georginho de Paula": {
+    "url": "https://sampi.net.br/dir-arquivo-imagem/2025/06/cce01d13c60ca37845a9a81dbb0268d1.jpg",
+    "source": "https://sampi.net.br/franca/noticias/2911024/esporte/2025/06/georginho-continua-no-sesi-franca-basquete-para-a-temporada-25-26",
+    "credit": "Sampi; Georginho de Paula em premiação",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-08",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference; photo may show another season or uniform"
+  },
+  "NBB-FRA:Lucas Dias": {
+    "url": "https://cronos-media.sesisenaisp.org.br//api/media/1-0/files?img=img_64_210602_7989b3a7-7abd-48d1-8d6e-e8abb18dd812_o.jpg&tipo=m",
+    "source": "https://franca.sesisp.org.br/noticia/sesi-franca-basquete-renova-com-lucas-dias-2",
+    "credit": "Sesi SP; Lucas Dias identificado",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-08",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference; photo may show another season or uniform"
+  },
+  "NBB-FRA:Corderro Bennett": {
+    "url": "https://s2-ge.glbimg.com/7xPzjBt8PRS336KkMLLcyuZ2biA%3D/1600x0/filters%3Aformat%28jpeg%29/https%3A/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2023/a/4/TLgtFqR6mnwoOCaBkAxQ/whatsapp-image-2023-03-04-at-18.14.24-1-.jpeg",
+    "source": "https://ge.globo.com/sp/ribeirao-preto-e-regiao/basquete/noticia/2025/06/25/franca-anuncia-contratacao-do-americano-corderro-bennett-ex-sao-paulo.ghtml",
+    "credit": "ge; Corderro Bennett em ação pelo São Paulo, imagem identificada via Google Imagens",
+    "review": "identity-matched-search",
+    "checked": "2026-10-09",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference; photo shows previous team uniform"
+  },
+  "NBB-FRA:Hugo Nicolini": {
+    "url": "https://www.francabasquete.com.br/storage/equipes/4YF5dC49w2WAM0Q6lK4AUgL4q7rf2MwfzakVtYNs.png",
+    "source": "https://www.francabasquete.com.br/equipes",
+    "credit": "Sesi Franca Basquete; retrato oficial do elenco, identificado via Google Imagens",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-09",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference"
+  },
+  "NBB-FRA:Rafael Mineiro": {
+    "url": "https://s2-ge.glbimg.com/hDRl4gJA1zRkB3a5c_DR1pli3Eg%3D/0x0%3A3000x2250/984x0/smart/filters%3Astrip_icc%28%29/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2026/I/E/4qzytJSRmvRnner2nJwg/maa-5600.jpg",
+    "source": "https://ge.globo.com/sp/ribeirao-preto-e-regiao/basquete/nbb/noticia/2026/02/23/rafa-mineiro-chega-a-600-jogos-pelo-nbb-veja-top-10-com-mais-partidas.ghtml",
+    "credit": "ge; Rafael Mineiro no NBB, imagem identificada via Google Imagens",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-09",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference"
+  },
+  "NBB-UCO:Rafael Hettsheimeir": {
+    "url": "https://s2-ge.glbimg.com/xV-83Qtd7ONqh9L-oceOuMaHCGU%3D/0x0%3A825x515/1008x0/smart/filters%3Astrip_icc%28%29/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2021/R/F/7Ej29rQta7BTZaPfrkEg/394457-976770-rafa-01.jpeg",
+    "source": "https://ge.globo.com/sp/tem-esporte/basquete/noticia/bauru-basket-acerta-o-retorno-do-pivo-rafael-hettsheimeir.ghtml",
+    "credit": "ge; fotografia antiga do atleta (Bauru), equipe diferente",
+    "review": "person-matched-web-image",
+    "checked": "2026-10-08",
+    "imageValidation": "not-tested-in-browser",
+    "seasonNote": "2025/26 roster reference; photo may show another season or uniform"
+  }
+}

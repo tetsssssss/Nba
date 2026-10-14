@@ -1,0 +1,1219 @@
+{
+  "label": "NBA Universe Manager • Street NBA/WNBA + All-Star • 2026-10-14",
+  "reference_base": "ARCADE-WNBA 2026-10-13 (301 arquivos); preservar saves e versões privadas",
+  "release": "Box score Street 1/2 pontos, foco de evento, invalidação de configuração, All-Star 3PT; testes 758/758; Chromium e Xiaomi pendentes",
+  "files": [
+    {
+      "path": "_headers",
+      "sha256": "bf55d2ea30fc256868c05d6110bc66e2ff8ffbfc1872cdee51b816b79ae09bf4"
+    },
+    {
+      "path": ".claude/launch.json",
+      "sha256": "6cdb3f37db19b3c474745d19539cdd1b8fabc5963f2c8d4636465aad3a016bf3"
+    },
+    {
+      "path": ".gitattributes",
+      "sha256": "e30b1201fa9f4716f126b0bf3b91f63fc7c00c53fab5cadf7a8f33d0d1796689"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "c62f1260c7bb82e1e6adab1af741c4629cbd3c4e2629d7b1a94044c6f28ec900"
+    },
+    {
+      "path": "assets/art/arcade-basketball-poses-v1.png",
+      "sha256": "7333b6cd897160e55b0e4ac4bf4849b24b8c4c59a232ce425e21816907ca4ccc"
+    },
+    {
+      "path": "assets/broadcast/fullscreen-matchup.svg",
+      "sha256": "a649d0b1393aa6600bb05ff97c6b4061dc60fbfdeda3d088b1f3baa81f7977c3"
+    },
+    {
+      "path": "assets/broadcast/lower-third-player.svg",
+      "sha256": "390cc569b1e5f6b7df85935b8b1ffe6f53fd42b1ba5d80a96e9a141493546e28"
+    },
+    {
+      "path": "assets/broadcast/scorebug-main.svg",
+      "sha256": "f63793e677f60874c2d8c17b24569cc2bc26425c679e9ad932a9bad3c5ba4a9d"
+    },
+    {
+      "path": "assets/broadcast/transmission-style-tokens.json",
+      "sha256": "84fb18726dfed5423e81089ffc31ce57a10dcbea6d13ffc511ebf3ded4cb63e8"
+    },
+    {
+      "path": "assets/icons/nba-universe-192.png",
+      "sha256": "5c6ef274f007eec4e1ad317cea347d734546019fb1612b068bf988ca4d907a07"
+    },
+    {
+      "path": "assets/icons/nba-universe-512.png",
+      "sha256": "4023a8c65d2ce6b8329841d30a40b09b0948ebd64cdf3f5bc9b6a59d34b899a2"
+    },
+    {
+      "path": "assets/icons/nba-universe-maskable-512.png",
+      "sha256": "93b66d352dde754ea9c86c90bf27492497f6e00fd08c2da040ef49bed93ab318"
+    },
+    {
+      "path": "assets/models/nba-jersey-lowpoly.obj",
+      "sha256": "6550713fcb60c219baf475a8d3dfece51aaa3a301799b34f36923598ff0441fe"
+    },
+    {
+      "path": "assets/vendor/README.txt",
+      "sha256": "279d058fdf252c5008d3b5b6589cd43819ee4ff0f9670716293c2b7d96ddd2f8"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "e6bbbd1bec8b89e81f833dc0cd73b33a6b2ddd0fcff26c85ba26dd55aef26c05"
+    },
+    {
+      "path": "css/audio.css",
+      "sha256": "7bd7c8a9e01911b3fea59960e493c25d5900854ee678b7865248ff77f72dd88d"
+    },
+    {
+      "path": "css/base.css",
+      "sha256": "ac2fe0f844aafe171a5d4ecc07739c2e79ce469b1eb48d5cd236c12ac9bcfde9"
+    },
+    {
+      "path": "css/broadcast-tv.css",
+      "sha256": "7d2ad9bfd81a52bc16c7b798371c74c6fcedf1a986e01f43bb59d7c1da021672"
+    },
+    {
+      "path": "css/components.css",
+      "sha256": "b44d605be63aea5381b547eaac0004d1e33f3ac1ccb4f9585a4107ef230eca31"
+    },
+    {
+      "path": "css/evolution-02.css",
+      "sha256": "480ac06507226dc0abff31a1d3cc608b26b7360b27696b7b536a236a19c5a3b8"
+    },
+    {
+      "path": "css/evolution-03-10.css",
+      "sha256": "25af5562b865bde1aa37e6589dd8fa1ffe20582d1dadf0ac10409caf437eabc6"
+    },
+    {
+      "path": "css/evolution-1001-2000.css",
+      "sha256": "0a565b5457a514185789f2ead8ac18d2b30c420f91df65e59290b34a701e40e9"
+    },
+    {
+      "path": "css/evolution-101-500.css",
+      "sha256": "b316fc71d641416c85cd95b0dab789e444e11b5024df41205c3c94fdcc09a895"
+    },
+    {
+      "path": "css/evolution-11-100.css",
+      "sha256": "1ff753e6f623f714b9475bbe7aa427f5be61b7a296ccc48e719eea300f60b3f6"
+    },
+    {
+      "path": "css/evolution-2001-plus.css",
+      "sha256": "c1809481c930ba876479613cada6d13a0f7c4e33d382c75afd28c685dfb7a3b6"
+    },
+    {
+      "path": "css/evolution-501-700.css",
+      "sha256": "2aad8f9d1ce4f262710e6732cdae57f278f4e3672f448032d7d76ae79eb54258"
+    },
+    {
+      "path": "css/evolution-701-1000.css",
+      "sha256": "d952e9985c4af7bd30295f321e23f7fce7c7b770a3aee7bee558d6ba774f58f1"
+    },
+    {
+      "path": "css/evolution-spatial-street.css",
+      "sha256": "beb334c238a4bb9dc3c7e26377dec9821be1c6c0a302d5e85a37711fcb5c38de"
+    },
+    {
+      "path": "css/evolution.css",
+      "sha256": "26474273dd2f78994addaae78e38808e0ad7418ff0c354fab4597114436943d7"
+    },
+    {
+      "path": "css/game.css",
+      "sha256": "ad4f77f2921c51a3fe7bdf6e9c98d32aa455eaf90edf8f4b122738639623fc52"
+    },
+    {
+      "path": "css/international.css",
+      "sha256": "2bd5d5a3fa23e1b5e0e66dbea1637a1dd2f4ba70bbcf6c69eec2d2c60a94489a"
+    },
+    {
+      "path": "css/layout.css",
+      "sha256": "f25ca90e87497c53ac3e6fddeb03dc88064c604279884ecca00704d6101c3b53"
+    },
+    {
+      "path": "css/mobile-pwa.css",
+      "sha256": "ed7b07f3eae7f7e7004c61c028847bc602856d70808de5af7080f132e50083c9"
+    },
+    {
+      "path": "css/tokens.css",
+      "sha256": "2311e7abc687b380887c96e3a49509c6fbbb7f3e031cb741279dbd9f7be37100"
+    },
+    {
+      "path": "css/views.css",
+      "sha256": "6415a64fe20711c8b749624feb04140eef1a78948e57f22e64a897db0f677eed"
+    },
+    {
+      "path": "data/seed/advanced-stats.json",
+      "sha256": "ea7989f6e3fa9b9cb5a22dd1e0978554140b857d012c5c75d6d49a1b6850ba8e"
+    },
+    {
+      "path": "data/seed/career-stats.json",
+      "sha256": "d4343664af9c8ba4e644c9623fbef01931797ad2f460cad2ee580748189dd5b0"
+    },
+    {
+      "path": "data/seed/coaches.json",
+      "sha256": "01f1196ee217ba1da5b8605749da4fd460a14d7335d3e6122d9ee04f7bbcff93"
+    },
+    {
+      "path": "data/seed/contracts.json",
+      "sha256": "c09396f2b469b246507a6fb2fa0df088aedb24745a220c700251967024778312"
+    },
+    {
+      "path": "data/seed/history.json",
+      "sha256": "f2b2e51948fe0b89feec5bb9ae862c0ecb53c54756967a910293a25cb2ab7ba0"
+    },
+    {
+      "path": "data/seed/meta.json",
+      "sha256": "3ab9e923bdc004a168722df4e8ab5b0d48d597854cf4de798e46def4607e646c"
+    },
+    {
+      "path": "data/seed/photo-manifest.json",
+      "sha256": "1d23496b3aa0c9d1dc4046f7b5072e3e5928be385ca0e39041b9e202ef47ade3"
+    },
+    {
+      "path": "data/seed/players.json",
+      "sha256": "2549da4bf139f5d300945cc13b6d017377ffbfba4f6d1fb739ea39be81d610f9"
+    },
+    {
+      "path": "data/seed/ratings.json",
+      "sha256": "59bfd4e8443e3d1917fe0b9b4c4a703feab7320742a9fdd18703d9cf2e7d5ffe"
+    },
+    {
+      "path": "data/seed/teams.json",
+      "sha256": "b10c8290d5bb154d7dfca89cac1f26be6155f1a640f8385f780760fa4dba515d"
+    },
+    {
+      "path": "data/seed/validation.json",
+      "sha256": "5ade52a678dab3101b62d19eb9d3cef98bd23a2ed49ab087c83d515af499ba24"
+    },
+    {
+      "path": "data/static/franchises.json",
+      "sha256": "582ace605a9bedaadaa4ff81e7430877483d79d8a928ee0e6a312c5b83a72e70"
+    },
+    {
+      "path": "data/static/league.json",
+      "sha256": "115792da6a7c4bd06876df7b4a999cfb31b7acf25b1e2253b54491f94c384c78"
+    },
+    {
+      "path": "docs/AUDITORIA-FOTOS-NBB-EUROLEAGUE.csv",
+      "sha256": "fb5ded0e31883c795a03c7c756288e53ae93b23f664a54ae2e0ba1e9b6fee7cc"
+    },
+    {
+      "path": "docs/BABYLON-BLENDER-BROADCAST-2026-10-12.md",
+      "sha256": "945918f5319269351b50411b7c0fa25a82ae3ae4371297452230489c5b8262c8"
+    },
+    {
+      "path": "docs/BLENDER-3D-INTEGRATION.md",
+      "sha256": "10082268d0cccb14965c5adf503c00b1deb41cf49fef8541dc665ffbdeb987a7"
+    },
+    {
+      "path": "docs/BROADCAST-3D-ENGINE-2026-10-12.md",
+      "sha256": "96ca2606ed8c731e17233b53c0da0d194203be82bfbd35660faef86409f56a07"
+    },
+    {
+      "path": "docs/BROADCAST-TV-RUNTIME-INTEGRATION-2026-10-12.md",
+      "sha256": "af2b9d6b4bb82f9cc5f68bfd202b518b71c32d454463f5c3b1104fcdde56f465"
+    },
+    {
+      "path": "docs/CATALOGO-FOTOS-NBB-EUROLEAGUE-v2.csv",
+      "sha256": "a073f7978b7494b804fc18ed647291635c212c65415292f6a6a36ab357577b42"
+    },
+    {
+      "path": "docs/CODEX-INTEGRACAO-01-09-EVOLUCAO-80000.md",
+      "sha256": "6b2e19b552ccf7e3e5e4d7179b391800c91163999815c1ef3f1e7d97e4775cee"
+    },
+    {
+      "path": "docs/EVOLUCAO-ARCADE-WNBA-2026-10-13.md",
+      "sha256": "16585cbd2ad78911dd531772a496ba649717ec1eccaf8851774083dbc2fe5132"
+    },
+    {
+      "path": "docs/EVOLUCAO-STREET-2026-10-14.md",
+      "sha256": "afee6704dd8084685b2655503bb5c93d5a82eb75fb198a8154439cba607d72ee"
+    },
+    {
+      "path": "docs/EVOLUCAO-VISUAL-CARREIRA-MUNDO.md",
+      "sha256": "bbfe60625e00448c8c8740153f34a835d68f5da90a43129acebf4a7b02f72ef8"
+    },
+    {
+      "path": "docs/EVOLUTION-02-OUTRAS-AREAS.md",
+      "sha256": "b7f65c7994500aa801dd41252c7424b1bd49286b23aceb93b57a97db573ca89a"
+    },
+    {
+      "path": "docs/EVOLUTION-03-10-FORA-CARREIRA.md",
+      "sha256": "0ee9e43fdd99a5afbe0c94a4895f1fda48baf9ce80ac50541ce3a90aa95f0747"
+    },
+    {
+      "path": "docs/EVOLUTION-1001-2000-RELATORIO.md",
+      "sha256": "5d8fe7d0dbcc682e2f5a33170478b31bf71d2164081dc0490a24e3d0ebaac98c"
+    },
+    {
+      "path": "docs/EVOLUTION-101-500-RELATORIO.md",
+      "sha256": "09336d257bc2673ccbc4ca4dfd3cec8f72e5be8e6ca3554dd998cbfb335b9674"
+    },
+    {
+      "path": "docs/EVOLUTION-11-100-FORA-CARREIRA.md",
+      "sha256": "8c73366ec41d9e6a731ca954dbc3fcf2cf4eb196297dfd716fcd307da7ade0bb"
+    },
+    {
+      "path": "docs/EVOLUTION-173-500-ROADMAP.md",
+      "sha256": "be0084e48c670e83fbb83e2121c1980c16931533b39361f2aab7284d978c7bba"
+    },
+    {
+      "path": "docs/EVOLUTION-2000-ROADMAP.md",
+      "sha256": "8c78d8cc67c82f499caf1c7b7d0fac325407ea3131806561c764fd3bc296409a"
+    },
+    {
+      "path": "docs/EVOLUTION-2001-15000-PROGRESSO.md",
+      "sha256": "cb30067a5ec7b49f066ba12a8c9a063e98089e995f342dcdea21d337fd0beb75"
+    },
+    {
+      "path": "docs/EVOLUTION-2001-15000-PROMPT-MESTRE.md",
+      "sha256": "9e4acf5ef1e3aed3fa6fa0499a0e4d3eda2bd6d6bdda642e27a75d7a5e56d9f7"
+    },
+    {
+      "path": "docs/EVOLUTION-2001-15000-ROADMAP.md",
+      "sha256": "b5abac610c2f3a2064ba1f592d07d895be032de715281a21573af062b96b8f3f"
+    },
+    {
+      "path": "docs/EVOLUTION-501-700-CHECKLIST.md",
+      "sha256": "e035616cd2455c1eb9881aed5aa579e08657cd0db55f6288e01e790420475705"
+    },
+    {
+      "path": "docs/EVOLUTION-501-700-WNBA.md",
+      "sha256": "9ce19fda9d475be3640d5ada0983526fdb724b957363ecf826d8d677345c5c97"
+    },
+    {
+      "path": "docs/EVOLUTION-701-1000-RELATORIO.md",
+      "sha256": "9f64a844e409a6033a5455294d3c3c0e9252eaad264037c159ff9b0c3f8c1014"
+    },
+    {
+      "path": "docs/EVOLUTION-SONOPLASTIA-01.md",
+      "sha256": "11d43f9449c3ac244cadc8da8611f4249828059d7ab0ad917b6042394305759c"
+    },
+    {
+      "path": "docs/EVOLUTION-STREET-SPATIAL-RELATORIO.md",
+      "sha256": "6a75e889b55ac4f453589474c1218b21c3ffea4fd3faf987d9efc76d52065843"
+    },
+    {
+      "path": "docs/EXPANSAO-NBB-EUROLEAGUE-EUROBASKET.md",
+      "sha256": "aa34bca05dfbff3e44f391cb7722894cb5b657485600ff2b53b2a2ba168e2cf0"
+    },
+    {
+      "path": "docs/FOTOS-NBB-EUROLEAGUE-2026.md",
+      "sha256": "dc4fb63ee3e31541bcfc0350f46bfff2dac9ee5be5188579f3778f669c265296"
+    },
+    {
+      "path": "docs/FOTOS-NBB-EUROLEAGUE-v2.md",
+      "sha256": "a01b55ea3ce779d46c4655c1155662ad07a09658d7f62c3c6ff27399767afc1a"
+    },
+    {
+      "path": "docs/HANDOFF.md",
+      "sha256": "549e44e04a71b4ebda56dd697d95c3326f08672db20bdda7f7bacc5c4ad50286"
+    },
+    {
+      "path": "docs/INTEGRACAO-PROMPTS-02-08-10-14.md",
+      "sha256": "5a59b2d57d3e3fdeb045d868a3ac277e83fc7e57612251546a34539b6288ebe5"
+    },
+    {
+      "path": "docs/LAYOUT.md",
+      "sha256": "f3dcecfbefec61c366221914085f923e22db3d5b67f918ab0b47b3fa5db95e68"
+    },
+    {
+      "path": "docs/MEGA-EVOLUCAO.md",
+      "sha256": "2eca8b4bab709d76961507d5185c0d47e6671376c4265c7e970fe16dd368860c"
+    },
+    {
+      "path": "docs/MOTOR-2D.md",
+      "sha256": "db669fa48656493f7d2bb9369139f5424c61837c2c942b6b3d5bd9f62bccda44"
+    },
+    {
+      "path": "docs/NETLIFY-ANDROID-XIAOMI-BROADCAST-2026-10-12.md",
+      "sha256": "cbeffff55244175f7b3989ab7504fe420666dcdff57695b24841ea4ecc7adda7"
+    },
+    {
+      "path": "docs/NEXT-GEN-GRAPHICS.md",
+      "sha256": "17d1744f06c9faf38ecd4c2fc21deea895ec54277d7f6f93f79f20cf86486cd7"
+    },
+    {
+      "path": "docs/PROMPT-CODEX-SONOPLASTIA.md",
+      "sha256": "00ca4e1068e142bb3f0f0e5118d927c7ea67f7eb9cd8b4143b34cbb52f2f1fec"
+    },
+    {
+      "path": "docs/RELEASE-INTEGRACAO-01-09-80000.md",
+      "sha256": "6290b6a864cccd9180f9461abbeb74de88ecfd5f08aaeca2c760aee1fdd4552c"
+    },
+    {
+      "path": "docs/TEMPORADA.md",
+      "sha256": "ffede071d367e84379723c8abe5c89648870e36a6ab2a9f8ece531f23d763178"
+    },
+    {
+      "path": "index.html",
+      "sha256": "2859107dcbdaa0654a20331e55a5a30dd0fc8eace7a7a01209079442e1c16483"
+    },
+    {
+      "path": "Iniciar NBA Universe Manager.bat",
+      "sha256": "452eaed68c7b56635eba767433b9dfff4708a71477f60764d0ff8d69d52a7b71"
+    },
+    {
+      "path": "JOGAR - Linux.sh",
+      "sha256": "f342ec064554f9e6a8bbe3fdaf4c8773b70a68ac2fe2ed5268f8b042d6cc0987"
+    },
+    {
+      "path": "JOGAR - macOS.command",
+      "sha256": "f342ec064554f9e6a8bbe3fdaf4c8773b70a68ac2fe2ed5268f8b042d6cc0987"
+    },
+    {
+      "path": "JOGAR - Windows.bat",
+      "sha256": "4def9110bd7322c8b79b3a0a2ba0e6edcb95ccf3d58c2d03defbd1f888410907"
+    },
+    {
+      "path": "launch.mjs",
+      "sha256": "f4b537ce65fa731c44bf31f2c037327d788b48470160af3d252d40c0452f1305"
+    },
+    {
+      "path": "manifest.webmanifest",
+      "sha256": "719a8f1141efad8f55fc8beee4c0a7803cd0b39d432eb3d056a491d5a3b28d67"
+    },
+    {
+      "path": "netlify.toml",
+      "sha256": "e5cff092f479a49fc8f97258baf86bb7de6f0d1008883ec30ff0e00fe977bf95"
+    },
+    {
+      "path": "offline-assets.json",
+      "sha256": "560520c7987c4a2990c232cf8e47499c7ce319b6f65f848a04ca72362794ab5c"
+    },
+    {
+      "path": "package.json",
+      "sha256": "d039afb1c70c5373e058e6a050c726463354e37231b11fbcdb2ab8e6885c4c43"
+    },
+    {
+      "path": "PROJECT-STATE.md",
+      "sha256": "515158555cc9ac66e5054833998515c20e3e8610e58b5173a922d70b548cff89"
+    },
+    {
+      "path": "README.md",
+      "sha256": "6cbb33b50eaa749d5fd0f657617c3f74621c02effe1a9e648cf48a3b913ad198"
+    },
+    {
+      "path": "server.mjs",
+      "sha256": "d229b7b149564b16f9ac94e966f343017ab5a1a5f3a31ccfe8b27b43bfe73882"
+    },
+    {
+      "path": "src/arcade/all-star.js",
+      "sha256": "35e9f01255fbbee818b7ab460f033cfe345cf16b88cb0b9ddea688e548e3487a"
+    },
+    {
+      "path": "src/arcade/rosters.js",
+      "sha256": "1ebadd4228aebf72a5b68cccda831fe193204d1f4829c0fe72ad97c0291b132f"
+    },
+    {
+      "path": "src/arcade/street-spatial.js",
+      "sha256": "7f3bae9b2bb81f38940ad627371af50126bf047c65f9e3dec60083e961bfe73b"
+    },
+    {
+      "path": "src/arcade/street-statistics.js",
+      "sha256": "8c7d3239e1eca6073561639b5b2c42d1a3f3341189acecc8f73f6b1bb8d0b85e"
+    },
+    {
+      "path": "src/arcade/street.js",
+      "sha256": "3700a422bee874b7e019242247a95dea1c5b04e09e860a1a2be6fc59e66f6f30"
+    },
+    {
+      "path": "src/arcade/tournament.js",
+      "sha256": "de43de5a59e6866389691b2940f002ec5b84ac319b7638c3e3e1677f9a7b8aa6"
+    },
+    {
+      "path": "src/audio/broadcast-narration.js",
+      "sha256": "0e9a3ef14074a1f82e3db34e0b6c8e4788b5b063d9e97c162972a4bf35a3b5c2"
+    },
+    {
+      "path": "src/audio/soundscape.js",
+      "sha256": "6fca6f4561c9dc1125fecd2da14b320c1a300dfb6349f51de49ec1e827bed362"
+    },
+    {
+      "path": "src/contracts/cap.js",
+      "sha256": "10f6bf05b408fe6dc966e92b6861ce76f865821b6e138c6a83594c6dba92f62b"
+    },
+    {
+      "path": "src/contracts/market.js",
+      "sha256": "95c1fbc30764d5b0c5e9dbe8045026330b427a8b5ef85ee24592f3b5134442bd"
+    },
+    {
+      "path": "src/core/career-options.js",
+      "sha256": "23eedbcb199441ed1aa04cc2256fdc20aac8f853419a41a080a57412d9e3098a"
+    },
+    {
+      "path": "src/core/checkpoint-events.js",
+      "sha256": "42b11fa636074b9e61f96cbddf5e92bc17b46dc582e7c40346a46704f98280c6"
+    },
+    {
+      "path": "src/core/db.js",
+      "sha256": "b7e79c40c5f7c6ed62ab3004bcc2766cb2b776169e481e3f05ceb47f37203960"
+    },
+    {
+      "path": "src/core/events.js",
+      "sha256": "fbf026d512b6527f268cf472388bd41e5adb40567da46afacb2c9ad1bcaaf156"
+    },
+    {
+      "path": "src/core/modes.js",
+      "sha256": "96502b9ea68fef854229e072d2f9d97ac28426a49c7a23bce7a1885f5cb194e2"
+    },
+    {
+      "path": "src/core/rng.js",
+      "sha256": "19d483bbaa48fbaa0c0e46021b3be9166fca4424737d5af88dd69f01ee6b6473"
+    },
+    {
+      "path": "src/core/roadmap.js",
+      "sha256": "2b02542b59ee552ede09aacc649ff651d264a39626c8cad738592250dd279f03"
+    },
+    {
+      "path": "src/core/save-snapshot.js",
+      "sha256": "9725b4f9af717d8aa9a65866595de9c9e5a99894224b87ca9ec7ccfb0f9b7fad"
+    },
+    {
+      "path": "src/core/save-validation.js",
+      "sha256": "9f8aabe9dfa7b96c2c86cd1b6dedaf3eceaec962c030dc088d2dfa8c50c07235"
+    },
+    {
+      "path": "src/core/saves.js",
+      "sha256": "1d145cd2ad12a14b462a80c98f799250ed393e37fc2a5425afb6084159810fa1"
+    },
+    {
+      "path": "src/core/settings.js",
+      "sha256": "6b34b106629abfc8b38d24bc4ee9f5034b7f147fb6d78492fa29033033ad5213"
+    },
+    {
+      "path": "src/core/sliders.js",
+      "sha256": "b8a6fdb96812a0d56f3e6fc2fe55e22146b66884ba61ce48bbfb01c1cbdcdc78"
+    },
+    {
+      "path": "src/core/tasks.js",
+      "sha256": "452978ae5b707250b1b4d196012f37bdd04285c8e4f84b9e605a01371a334b8a"
+    },
+    {
+      "path": "src/core/universe.js",
+      "sha256": "f70bb2bcb92a0ffeea2146c25a145b2d81f2c3ed8324d9361b2fc7abe0da289e"
+    },
+    {
+      "path": "src/core/watchlist.js",
+      "sha256": "113285e1414c7de05364c6396717e32dd3c08cd31baa1e222307d3d3e746f812"
+    },
+    {
+      "path": "src/core/world.js",
+      "sha256": "5443f09b560cc6c93107cf1b924d26c51388e3b80b54bdd67a0cad1744de37b3"
+    },
+    {
+      "path": "src/dev/audit.js",
+      "sha256": "cd0360cf91ca73499e3a7eada1cc24748574d6f79f54b73aea3e1ee57045780f"
+    },
+    {
+      "path": "src/dev/selftest.js",
+      "sha256": "cc06e06267a9cff56ec8c5cbf933098196d0f45e34582a4700a0108bc0b0ffd0"
+    },
+    {
+      "path": "src/international/catalog.js",
+      "sha256": "22147a6b82eaca8433eda016f27c5fc394e246351433e0c59ff609f27c6821bb"
+    },
+    {
+      "path": "src/international/engine.js",
+      "sha256": "325b6219ccd794478f526c548d05062871cc252d600576fde6b828a555a7a075"
+    },
+    {
+      "path": "src/international/photo-ids.json",
+      "sha256": "b8968c75e17e28e5632eadb2b424675a33f3e060e5634818dbcef226c4986a88"
+    },
+    {
+      "path": "src/international/photos.js",
+      "sha256": "a44cae640ead3f7fed427725d3727dd984319bbe3c16131ec77c362fedd7068b"
+    },
+    {
+      "path": "src/international/stars.json",
+      "sha256": "29877449c12e6ac67f763a342351ba68d2fb63a2f51ee9af523a8a6d7232553b"
+    },
+    {
+      "path": "src/international/teams.json",
+      "sha256": "31f02f381001aab7cfe455692293598ddf7c80328c0a4d2de0d3d6d07c963f7b"
+    },
+    {
+      "path": "src/international/verified-photos.json",
+      "sha256": "0139e71fc8d62aa6700eb641b329b516a770065310a60bc040db29a43664ea00"
+    },
+    {
+      "path": "src/main.js",
+      "sha256": "3857a3d1fff5606df6c765ae9a4d928bc6e8e526d307c3d25e33ac5e5c824490"
+    },
+    {
+      "path": "src/match/babylon-adapter.js",
+      "sha256": "75f43e17568677b92625e014db5dca98db9749c78c1d09579d65e49d0c9620f8"
+    },
+    {
+      "path": "src/match/ball.js",
+      "sha256": "55d8c354b1296c35536228c4975533fca063d288dc2ab12b3045515491dd9718"
+    },
+    {
+      "path": "src/match/bridge.js",
+      "sha256": "3b9345942146beb7aa8abcad214f5259ccac8d9a20066ad23237595594639304"
+    },
+    {
+      "path": "src/match/broadcast-bridge.js",
+      "sha256": "4e4895f39f82d79077b52c2e95387d549add5fa527833051a5e26dd2527831fd"
+    },
+    {
+      "path": "src/match/broadcast-overlay-state.js",
+      "sha256": "946f90db0386cb41d0318200cd1c51dd6981333c1cd79f9c8f88d100b779cdec"
+    },
+    {
+      "path": "src/match/broadcast-show-state.js",
+      "sha256": "82934fa141575bf198acbd94a1aea48845f40da4e6612bf09726342e8db2fc88"
+    },
+    {
+      "path": "src/match/config.js",
+      "sha256": "93f6a3ca671eae54fdae82e9e6e4787e59f7ec1c19ed13e592b25d9bbaab0d39"
+    },
+    {
+      "path": "src/match/court-art.js",
+      "sha256": "eef91151aef2e5a19f5039162664e120b13688fc8b67252d76f52685bbf87882"
+    },
+    {
+      "path": "src/match/courts.js",
+      "sha256": "30f702147099c223ef957bb573df0617e36c33506b583bc939bae574fb64d8ff"
+    },
+    {
+      "path": "src/match/defense.js",
+      "sha256": "60156c552178aa18ae52c8fa71810d1f7b7a041c8a4cd23a7decd4f9fbcda15f"
+    },
+    {
+      "path": "src/match/exhibition.js",
+      "sha256": "cc0febf2d5f4a419807fd064974baf281f46097fac2a09a7b64de6b3a521660e"
+    },
+    {
+      "path": "src/match/highlights.js",
+      "sha256": "84989c9222f8a217f7915c0f113a73363e088f9978b067fd55096f4b4644a7d3"
+    },
+    {
+      "path": "src/match/movement.js",
+      "sha256": "8fc217712d909a92e52f29f30028eb40ac4f89c13a031f8cd4b22e2053dd85f4"
+    },
+    {
+      "path": "src/match/offense.js",
+      "sha256": "1a9f3d6f6d5181efc38eff06bf1df41e320d1cb9d6ad525ae9062865cca71218"
+    },
+    {
+      "path": "src/match/profiles.js",
+      "sha256": "f04603efbaa2ef065422c38e65acb691840be894e4d3a17f325395629779a197"
+    },
+    {
+      "path": "src/match/renderer-arcade25d.js",
+      "sha256": "ecd68b7a217f71eed3b6be79a190609596ed7e0d3aef4d5e911fcdd412831926"
+    },
+    {
+      "path": "src/match/renderer-babylon.js",
+      "sha256": "b42c1cad99e52f245080ccf62ed9d1c6a5c671b111da39a006e4c1bf1fe0ae59"
+    },
+    {
+      "path": "src/match/renderer.js",
+      "sha256": "a3bd6a4696843ae985f8fdbdca243add2c73c89b9bf93053ed65b2be6beabea6"
+    },
+    {
+      "path": "src/match/renderer3d.js",
+      "sha256": "323160e55aa83efc0666be95ecc09781c6be0e9240735791c8391c9ad65ea07a"
+    },
+    {
+      "path": "src/match/scenarios.js",
+      "sha256": "2cadf802d52f08121e701de02840465008198f06ee41b121162796794fa4e050"
+    },
+    {
+      "path": "src/match/shot.js",
+      "sha256": "ff39f35cbebfc99985b0f0b2c12ce611fe8a0a823f7193de7d1a5a15542e91ca"
+    },
+    {
+      "path": "src/match/sim.js",
+      "sha256": "fe67551a3b0c941f3964ed2ec711193009741f20f4b8b4484182cf213a3c0c71"
+    },
+    {
+      "path": "src/match/tactics.js",
+      "sha256": "87a44cb6549c2a49f19f0cb808fa1c32eb4a15d3315544338472fc85b02ab992"
+    },
+    {
+      "path": "src/media/photos.js",
+      "sha256": "e2f4522432589ca84f3159b9f923e252d174aec70075fb0460d8f0bb3ac43517"
+    },
+    {
+      "path": "src/players/attributes.js",
+      "sha256": "8d8705083a8c0444f86465bf49c9c451ad5c1090844580b9de6458d52e8bd6ff"
+    },
+    {
+      "path": "src/players/depth.js",
+      "sha256": "c478e6d301746d9693ca11afa2667253ab8910a33b44a6c806d646b6c3ea60d8"
+    },
+    {
+      "path": "src/players/development.js",
+      "sha256": "93ec2f474051a5574b715e9349b6f047c34d14e2337701576a879db4d33bdcfa"
+    },
+    {
+      "path": "src/players/eligibility.js",
+      "sha256": "1796a6860d2d205a8b57e547fc93b7cb10e10be15b0f461a81a48f146fb2fbb1"
+    },
+    {
+      "path": "src/players/offseason-integration.js",
+      "sha256": "1cf6637ab27db54846807fac0d8ab720c94586863efe2c101ea2d2a74f937ef1"
+    },
+    {
+      "path": "src/players/overall.js",
+      "sha256": "02cc5d0dcd8489dfa3db0327ca5380114c035acca99780afdf0ea17a58dce79a"
+    },
+    {
+      "path": "src/players/potential.js",
+      "sha256": "1c0898d1f380bbf50e73e4838df3def97df89d5109d9a0e891c917b73b8eb10c"
+    },
+    {
+      "path": "src/players/rotation.js",
+      "sha256": "d8e87b18375e5fa32dcdabf939a6e56d26aed6be7262de8a261f9ccd86fbe27f"
+    },
+    {
+      "path": "src/players/statline.js",
+      "sha256": "ff52ec28767ff89bd22d47ad26746f1de1018f603ca46ea77ca66085c36492e5"
+    },
+    {
+      "path": "src/players/tendencies.js",
+      "sha256": "7d713de34dd1e4a74fcabb4b0c9e7df7575b507c4416545c6b9d61f0cf0e156c"
+    },
+    {
+      "path": "src/pwa/install.js",
+      "sha256": "56fc725cbfe546ea9e70464984a598f7eafc58adaf2e3d4903aa441758929a9b"
+    },
+    {
+      "path": "src/season/expansion.js",
+      "sha256": "2c472342024f68cd86afcd733d96be5debdbccd55952a15e3d5048de40f82489"
+    },
+    {
+      "path": "src/season/narrative.js",
+      "sha256": "f35083855b838ba421fbc303218885110fc19ec6c8590ce674b886092f84d9a5"
+    },
+    {
+      "path": "src/season/postseason.js",
+      "sha256": "9084215885b1fc8640bb79d52b90fc833174b622d3d9b422544fc949f32fbe40"
+    },
+    {
+      "path": "src/season/quick-game.js",
+      "sha256": "d7914796c6a5d322363cdb2920df4a776ac6d3e608afee7e3d896bf170f572fc"
+    },
+    {
+      "path": "src/season/schedule.js",
+      "sha256": "c5eae917610c2bf445cbd686f42eb6e1bc08b35dd2c630c8b7d8c95386068ef2"
+    },
+    {
+      "path": "src/season/season.js",
+      "sha256": "1aafc9098de3cdd268f816f9b39ca41c87d76c63943c2e5ccf761b5f2e3a4553"
+    },
+    {
+      "path": "src/season/standings.js",
+      "sha256": "aee5a02d868550e5dbda467931d8f9bd46f65e77b77495dd4fcb0081077f3efd"
+    },
+    {
+      "path": "src/season/world-pulse.js",
+      "sha256": "3640d13c11f093468113733f5814115db07274e4f0dc06fe8214b11fbbd313ce"
+    },
+    {
+      "path": "src/ui/components/broadcast-live-overlay.js",
+      "sha256": "d14b81fd6d68c86d6d61bee14931b0607b8de615e4f8a298d035ccfa02f422fc"
+    },
+    {
+      "path": "src/ui/components/broadcast-show-overlay.js",
+      "sha256": "c28c74de8397f482481f01798c31faaecdffa1e769db20abb681054f172c37f9"
+    },
+    {
+      "path": "src/ui/components/broadcast-studio.js",
+      "sha256": "9dcb9b7bd1038a364385fdb78e9f8078d660d5e27fef8142d8c93e5d5d29c9c2"
+    },
+    {
+      "path": "src/ui/components/feedback.js",
+      "sha256": "9882a6b9b6698864f8d6058fd8f2494bc4ef47c13dd032fa33c08d6de70ec10e"
+    },
+    {
+      "path": "src/ui/components/game.js",
+      "sha256": "081337e039a812783bdf383bb5b81dc88454f7d35885fc3522568dfff188b0a5"
+    },
+    {
+      "path": "src/ui/components/overlay.js",
+      "sha256": "56a2b245d64c457054c58c4533474e3ba5f3e88fc10fa66ef87eb57126a51823"
+    },
+    {
+      "path": "src/ui/components/player-quick.js",
+      "sha256": "aaf389caead69924aae621737f5a1d3682f1d45ba87bf189a6971d230ab417a4"
+    },
+    {
+      "path": "src/ui/components/street-spatial.js",
+      "sha256": "b39cffc32f56afddef12090ab2b276002134d6d0f006c0ae7b23a03133ee6aab"
+    },
+    {
+      "path": "src/ui/components/table.js",
+      "sha256": "3a371e8f1794f52bf6f0099fa1e5472286478775d8abcd8f339292cb07ad30a0"
+    },
+    {
+      "path": "src/ui/components/tooltip.js",
+      "sha256": "572f94779f641bdb306689dcac0f3b68d6e9d923caa20a4796aa96d04643471b"
+    },
+    {
+      "path": "src/ui/components/visuals.js",
+      "sha256": "c8086be8046c273ab3f3b6074745f7d002fa056713a2c2db5cdfb11779cf8060"
+    },
+    {
+      "path": "src/ui/components/widgets.js",
+      "sha256": "866b8ed5eb5f5edab9e9ca027ba469c5299aa4aa08d17dccb85ab19ca6a2709e"
+    },
+    {
+      "path": "src/ui/dom.js",
+      "sha256": "d3de8cad6d90badf3e673918494ac39f383b6f2c75ded46e095d9c9d0a912bb4"
+    },
+    {
+      "path": "src/ui/experience-insights.js",
+      "sha256": "a5563b3cc4051cbd68569f958e200249e980e1a83a6ea1605d021f1c1073e443"
+    },
+    {
+      "path": "src/ui/format.js",
+      "sha256": "8c8b9aae72626f2257e844f2d9e7746ccb06f643edc73b8d1b8788af034d07b1"
+    },
+    {
+      "path": "src/ui/lab-insights.js",
+      "sha256": "c19cef785abc8f493738b64cee188062fbb97117ba226e234ca30f05961e8561"
+    },
+    {
+      "path": "src/ui/presentation-insights.js",
+      "sha256": "8f935a8510cc82c4be0c40deada7f2ddeb3876b24f4d39491feadce57db32378"
+    },
+    {
+      "path": "src/ui/router.js",
+      "sha256": "d0ef58740abb2478596f03c67b8516afa141d07f976879f8dcc780b68495a8e3"
+    },
+    {
+      "path": "src/ui/search.js",
+      "sha256": "176f610be5ac33514a63c2387ae45615082cfdf9119fa4ee9bf77a111c350f21"
+    },
+    {
+      "path": "src/ui/shell.js",
+      "sha256": "8f6f56db5f1b3ba18473c35d07bbf2a961077bbfb496057779411976e8b38745"
+    },
+    {
+      "path": "src/ui/sim-control.js",
+      "sha256": "af7fdaa5accf4edbbe24e22046eb4bc766b598ec74d519cd8cf1aaee3fc00d94"
+    },
+    {
+      "path": "src/ui/views/arcade.js",
+      "sha256": "e3dd163a052fe02b089da19582c3c0766b2f3f8512c7deee2642f20ae7cc66e6"
+    },
+    {
+      "path": "src/ui/views/calendar.js",
+      "sha256": "3270f7cfb60d9865d0f97ac67ef52435d79bbc11a7c625b91680269425e740d8"
+    },
+    {
+      "path": "src/ui/views/compare.js",
+      "sha256": "033cd88153bd32d20a948d4f174ebf8b2b74b09781f87dfe121dd525ef843501"
+    },
+    {
+      "path": "src/ui/views/data-lab.js",
+      "sha256": "a71daa7872da73c3a3a80daa8a70160b317b5a745a531010842a19bf42629490"
+    },
+    {
+      "path": "src/ui/views/devtools.js",
+      "sha256": "b31ca1b0569a64c8beb7ac497c8b6417e6a5c4f4007a54605ffb22859357cdf4"
+    },
+    {
+      "path": "src/ui/views/game.js",
+      "sha256": "8f789f65228d06212b2d86581b506c2502863209a980d8fb621434f16d138f12"
+    },
+    {
+      "path": "src/ui/views/history.js",
+      "sha256": "6dc996adaeb7007ccfdcdb2e5e88e3407eedfb385c4150ea65568a96f9fb1db2"
+    },
+    {
+      "path": "src/ui/views/home.js",
+      "sha256": "9430984bf8ca631df5246f1cc6cf1d502e8b1a5cc0d330d67799aa989b42aa46"
+    },
+    {
+      "path": "src/ui/views/international.js",
+      "sha256": "c7be3bc294959c58dc88cbb11ad3b7ead6116cc0946cee33a43b72dd3cd299c1"
+    },
+    {
+      "path": "src/ui/views/league.js",
+      "sha256": "dfd871a79b810f43bd903b9806f7ac98d874b21f3b493e752d19b2442d864154"
+    },
+    {
+      "path": "src/ui/views/match-coach.js",
+      "sha256": "b5c8939f1c4b7008aecbbdecd6a7804c799387a9983be2b524774dae5617438a"
+    },
+    {
+      "path": "src/ui/views/match-live.js",
+      "sha256": "e10046a816f0e1cb1ea9d4f1b88668c973eb2275578ebc1d86c02d3230f0b06f"
+    },
+    {
+      "path": "src/ui/views/match.js",
+      "sha256": "327fa20544fd3306677787e54effb4286f0fbaf0a5e619e216e8f5d87f913a76"
+    },
+    {
+      "path": "src/ui/views/new-career.js",
+      "sha256": "29959d4f2b52699b66664982635a6e26f2d1a6507d82d43aab592f39729ffdaf"
+    },
+    {
+      "path": "src/ui/views/observatory.js",
+      "sha256": "0729d213aa2d8600a85d555f948dbf2af98c3b8e9758fbd11e0f67b9239507e4"
+    },
+    {
+      "path": "src/ui/views/player.js",
+      "sha256": "1f9e0a4e5bd737b5131964b90bdbd39cb377fa3adf41825b3f609b7afbbc699a"
+    },
+    {
+      "path": "src/ui/views/players.js",
+      "sha256": "5a34cda3ac65978a4cf4e03d9cd82877edab544604ebdf3376e925d9c3cf326a"
+    },
+    {
+      "path": "src/ui/views/playoffs.js",
+      "sha256": "cb4fd9a36b2ba3234d9e12167bf53e43a1684ce2eca39d559e01d118cbd64031"
+    },
+    {
+      "path": "src/ui/views/roadmap.js",
+      "sha256": "56983359725348155f1bc1cf867a688f81ba4235679939283c03b32386367842"
+    },
+    {
+      "path": "src/ui/views/saves.js",
+      "sha256": "57c2c7f17c8ac246b315e0d5b26a1e2efeeb6adb089814ff62e087d2bdb91051"
+    },
+    {
+      "path": "src/ui/views/settings.js",
+      "sha256": "fb68423b11acaeb8a9c6600326ab607822c92ed46491c323d565a6ef0eb98e7e"
+    },
+    {
+      "path": "src/ui/views/standings.js",
+      "sha256": "b8bed8a12ba28d94fc0cb08bf61e92a521399507f3294cd314e7b3ff357b6d8f"
+    },
+    {
+      "path": "src/ui/views/start.js",
+      "sha256": "72818908e66c41d00e396ccb2ebafb603d397974aa8a6f4cb17a41f460d93264"
+    },
+    {
+      "path": "src/ui/views/team.js",
+      "sha256": "d57dcdbad70607fd83fcd85a9ac4b79bad228886d78037464a3bf08ac790229f"
+    },
+    {
+      "path": "src/ui/views/watchlist.js",
+      "sha256": "453bc2b5345db683f97a960730c08754f5870ad0be065be58f4d6a30ed3882b6"
+    },
+    {
+      "path": "src/ui/views/wnba.js",
+      "sha256": "0b0aa2f34d0a2adf3173c5cb33aba5d1e0f51a82056f5638445e3ea49067144f"
+    },
+    {
+      "path": "src/ui/views/world.js",
+      "sha256": "8a77f2be9aebdf83a7a1d6d6fbb75e6e3eede01909b67b754faa5f1ffa204974"
+    },
+    {
+      "path": "src/wnba/analytics.js",
+      "sha256": "82029f69ce9789065913381dcdab380fd5b582642c5d520f0382dd09f4d1fe97"
+    },
+    {
+      "path": "src/wnba/arcade-league.js",
+      "sha256": "62803a7a161f619a3b89c8f56c0b60385778c46e80f7b8485316ff3edada9190"
+    },
+    {
+      "path": "src/wnba/catalog.js",
+      "sha256": "67b49812ea40ed69bd88ffecdaf5ef8ebee5b7b6e4a6fd8add5694c3f91ca69c"
+    },
+    {
+      "path": "src/wnba/court.js",
+      "sha256": "37c92a433af599b818b9ea3224029d69d4d3e498afc96ae7c95057873bee5eda"
+    },
+    {
+      "path": "src/wnba/duel-tournament.js",
+      "sha256": "5e3377fe6dbbdc5521f81b2a5dfa11f5691fd792492197f8ccf66a62df1dde79"
+    },
+    {
+      "path": "src/wnba/engine.js",
+      "sha256": "ba27fd4f488808176f852b12cf662ca82912b92a10ccfed2e9e2ec117db18c7a"
+    },
+    {
+      "path": "src/wnba/player-creator.js",
+      "sha256": "d2b67caca63688af4331e14d4a7ae5ce8dc3afafd3ce1a18fbfd04af3d402245"
+    },
+    {
+      "path": "src/wnba/replay.js",
+      "sha256": "a8f0c7533cd1120b2891f57d39a01c90defea8d94c5311f7c4dac8eb8e409129"
+    },
+    {
+      "path": "src/wnba/roster-library.js",
+      "sha256": "96fc8e64f959c2a9631fa1c3d57811e19a2718964f8fffac1bc01d6a0ec3c4e0"
+    },
+    {
+      "path": "src/wnba/roster-studio.js",
+      "sha256": "325c5e73dd899329cb03125c175d444b3f41e65231092865f5dfaf7a62a36e32"
+    },
+    {
+      "path": "src/wnba/showcase.js",
+      "sha256": "ea49c6fdff8167f3ac520a262636bde52994fee88085fb325289357dcafaedd5"
+    },
+    {
+      "path": "src/wnba/skills-academy.js",
+      "sha256": "3bc0c9aaa2ba63e0386e177493bc963069e94dab0aa2102d0266dd6ba69e5497"
+    },
+    {
+      "path": "src/wnba/street-lab.js",
+      "sha256": "978bc1004b58e685e0c5f38d87e4bdf899a37d3d03a4f887263d72e933eb5f7b"
+    },
+    {
+      "path": "sw.js",
+      "sha256": "62345318be6ffd98e2b37d1acc7131957322930d49823d8867044bd206d3f7be"
+    },
+    {
+      "path": "tests/arcade-evolution-20261013.test.mjs",
+      "sha256": "fc687065c311662fc38f1402cd6bf0457667882f19f95feb139cc5afdd23aebb"
+    },
+    {
+      "path": "tests/arcade25d-career.test.mjs",
+      "sha256": "af6fe4b1a600ef713fe459dc159355597c60d42b346492f5707526f3bb24f527"
+    },
+    {
+      "path": "tests/audio.test.mjs",
+      "sha256": "1435ced92fa148688c6c93fe9428eacbb8bb1d1f2552e7b51370dd8e91984f8a"
+    },
+    {
+      "path": "tests/babylon-adapter.test.mjs",
+      "sha256": "f48f8e67ebfbb79d4cf42f8f4407a4c0ebf0d639b191996b4c3a4500e8f833dd"
+    },
+    {
+      "path": "tests/broadcast-dom.test.mjs",
+      "sha256": "ec4bdb91cec639b0a5cc37445d54f3571656744dd4f1b5b42fe757ab43e84260"
+    },
+    {
+      "path": "tests/broadcast-engine.test.mjs",
+      "sha256": "ba0545b46ca91e7739dd97629b19d13b5f6ab6ecb18ac87e917192f52eba3742"
+    },
+    {
+      "path": "tests/broadcast-narration.test.mjs",
+      "sha256": "652bb8ac95eafde256ebaa75bcf798952ef45b79395b3be2d4ffc240d6085d00"
+    },
+    {
+      "path": "tests/broadcast-show-dom.test.mjs",
+      "sha256": "6cf05b029230ffad06823b7b0320baff77d5a796587ba1ef6ab06281439b7598"
+    },
+    {
+      "path": "tests/broadcast-show-state.test.mjs",
+      "sha256": "78f61996273ace1b50edaec35837c5dfe76d28ab1b6dab23e5970a9b693af344"
+    },
+    {
+      "path": "tests/broadcast-tv-dom.test.mjs",
+      "sha256": "9ea6d94d609a6719d59847173d7bdb0e723c4e85ff512afffe355f0db28c205b"
+    },
+    {
+      "path": "tests/broadcast-tv-state.test.mjs",
+      "sha256": "a7c71228a75f5479247b8785eec48ce317ae44c037dc8340332ff64c4fb470a1"
+    },
+    {
+      "path": "tests/cap.test.mjs",
+      "sha256": "2b555ba8170f973e5b5b12074980dd233e8cd25624185217d903a8cf18d848af"
+    },
+    {
+      "path": "tests/evolution-03-10.test.mjs",
+      "sha256": "d226708ef192bd8dfd9677d204e97b4fcf15324a8210f8e6f6f183f6627a60f8"
+    },
+    {
+      "path": "tests/evolution-101-500.test.mjs",
+      "sha256": "de840a9a0c8f4d3d448fe30bd923150b299b58abd40abf9bc5142651c1b4bc9a"
+    },
+    {
+      "path": "tests/evolution-11-100.test.mjs",
+      "sha256": "91a8eb7ca68e7c2eb57618577aaea04397a740f269bf39287ae75539bbca6a48"
+    },
+    {
+      "path": "tests/evolution-2001plus.test.mjs",
+      "sha256": "fcc17739cc07d176a22484aa25c5567ec3430cd09524432b987b845d469a7927"
+    },
+    {
+      "path": "tests/evolution-creator-dom.test.mjs",
+      "sha256": "701053b87e2afef2a93f9405cb33e0edb72d0b35e46df96ece5be6c0c1166497"
+    },
+    {
+      "path": "tests/evolution-duels.test.mjs",
+      "sha256": "a134cc2816474a2f4bc8f041b57901805520f660f164487d678c5dd87f7c9a1e"
+    },
+    {
+      "path": "tests/evolution-spatial-street-dom.test.mjs",
+      "sha256": "2525aab3b85d48a2f5cd7961f4f229de7719360064005f62c384a06577d6e4aa"
+    },
+    {
+      "path": "tests/evolution-spatial-street.test.mjs",
+      "sha256": "9b2da95165f1ab5c0eb51bd214d00b3f5a39b94207f705ddcde4fb8db0b6f734"
+    },
+    {
+      "path": "tests/evolution-visuals.test.mjs",
+      "sha256": "4ce994f91c6a9c90a103e6a69bea87e98084784d7e1d7ecde1f59f6dc46dd159"
+    },
+    {
+      "path": "tests/evolution-wnba-1001-2000-dom.test.mjs",
+      "sha256": "31ae9c7a72c64574018c3c0ffc5906682a74d8b9978c0252d0302a1e02b5bfcf"
+    },
+    {
+      "path": "tests/evolution-wnba-1001-2000.test.mjs",
+      "sha256": "1ef61507cc4d5908dce4f1a027d9c271e27a8bd48c1423cbd986b06dcea97412"
+    },
+    {
+      "path": "tests/evolution-wnba-501-700.test.mjs",
+      "sha256": "670ad2e1ed8eab346b4b56b3009cefe916e25e96eea73dc6cfa4905a1fd46389"
+    },
+    {
+      "path": "tests/evolution-wnba-701-1000.test.mjs",
+      "sha256": "42b8b7766e912e5348a1d0e9c9ad1e9eb0d645adeb5ac4632e0aa754f21596a6"
+    },
+    {
+      "path": "tests/graphics3d.test.mjs",
+      "sha256": "7b17c3bfe370c0488a34ecd1040a84f41a73920226c737fa6ff870a76c25cf11"
+    },
+    {
+      "path": "tests/improvements.test.mjs",
+      "sha256": "1d2a5cc047d096a82e5cec9ab5a10f0ae8001ff6cdd57452b8551807f7d412ab"
+    },
+    {
+      "path": "tests/international-competitions.test.mjs",
+      "sha256": "e7a5bda9d472d1207d510cbcdc5880c653d340eae961c60d98c2be4ae8342685"
+    },
+    {
+      "path": "tests/international-dom.test.mjs",
+      "sha256": "5735008bf3fafe28fc6c3dff14dafb3d29f483bc54bbc0fdf27cdd69dd5daae1"
+    },
+    {
+      "path": "tests/international-photos-v2.test.mjs",
+      "sha256": "6a1394bd4b56aafc1fe0071a2b84ef1b86f37d1fad270229babcf2663dd882d9"
+    },
+    {
+      "path": "tests/international-photos.test.mjs",
+      "sha256": "af26ed746eea4c469e3956cf82e978d7a8c4a1d23cbd15fa08be49d7140e45d1"
+    },
+    {
+      "path": "tests/match.test.mjs",
+      "sha256": "4178040427a7aab33f0edcf3affd039b2fe17050c73e27d3bdb597bed44a6aa2"
+    },
+    {
+      "path": "tests/mega.test.mjs",
+      "sha256": "353f3ec2f32c89fb92637410f6dfc8588ba55f6befdf31a28a0a925cdec9fcc3"
+    },
+    {
+      "path": "tests/players.test.mjs",
+      "sha256": "e730bd27b71025b052eccb851d93b322a8630e24003d65a5c0a0dc7a6eb898d8"
+    },
+    {
+      "path": "tests/postseason-and-safe-save.test.mjs",
+      "sha256": "d5e542301402b8ba3a74fd99b80d683f7096a67b5cef25fcf44c227b8436a079"
+    },
+    {
+      "path": "tests/presentation-insights.test.mjs",
+      "sha256": "86eec6b310ed7e97eb92f368d901504e9fc9a47208ac9cd30e3cc34825df657b"
+    },
+    {
+      "path": "tests/pwa-static.test.mjs",
+      "sha256": "16c1a544f7729a3ce0ddfec789f7e81b91e35441e634975ffbcec8b6c77dbeae"
+    },
+    {
+      "path": "tests/season.test.mjs",
+      "sha256": "f681cc8e07095b5fe8e7df5d29e5046e8dd0f18deb425dc0fbb771bb01bcd8d5"
+    },
+    {
+      "path": "tests/seed.test.mjs",
+      "sha256": "ce4e349ee96bf5e6befa5b7f995ba455013ae3c4e5ec642de9a4636066266c21"
+    },
+    {
+      "path": "tests/statline.test.mjs",
+      "sha256": "c8f23236e718866f82860241c9b61c19b6a7f1341046fdf2f3acc095653b7ddf"
+    },
+    {
+      "path": "tests/street-statistics-20261014.test.mjs",
+      "sha256": "583e1180c5d748a01c68c562e72d4a19fe9e02e87a4592835ea782fd2903e7f6"
+    },
+    {
+      "path": "tests/world-pulse.test.mjs",
+      "sha256": "ca86350a30d38d278fe184489ba8468a0bbe09417d63c8deeef98af65573eaf2"
+    },
+    {
+      "path": "tools/audit-photos.mjs",
+      "sha256": "62c65a5fb22c63d59177e15b7be166ce7be23b7128e7587493994330a67cc071"
+    },
+    {
+      "path": "tools/blender/create-broadcast-player.py",
+      "sha256": "6b3066d334a830415a74d5596f5cbb202a3817eedf061c182fae7329ecd5351d"
+    },
+    {
+      "path": "tools/browser-smoke.py",
+      "sha256": "8e338c7691eb19bff9bed16e2f57474f2a9b5b8e385b8a1f94da76ea7b32b8f7"
+    },
+    {
+      "path": "tools/build-netlify.mjs",
+      "sha256": "34785a87efa7ac0d9c63dae2087d6aeebbf945cb72bec23896fa7dae28d64dd3"
+    },
+    {
+      "path": "tools/build-seed.mjs",
+      "sha256": "f3eb4cd8b4a03d7e3176b95cfb41fc732847ac850383ba7e92cd64fc14e01e63"
+    },
+    {
+      "path": "tools/compare-engines.mjs",
+      "sha256": "9d99551768249c10cad364bca4b42936dcb01d3967ae4b3e5f867c9bc0941962"
+    },
+    {
+      "path": "tools/fetch-universe.mjs",
+      "sha256": "7bf5f47d369e66e6619b744c8143c2899bfdf0d11e6557c3373f3571d08e154c"
+    },
+    {
+      "path": "tools/international-photo-report.mjs",
+      "sha256": "1f04005f4361b835e15e368205f6813dd71cc46f257311becb5109b4b8c3e41c"
+    },
+    {
+      "path": "tools/lib/career.mjs",
+      "sha256": "e97517296ccc52794d03f211039e90e8b4518db078cad90f2708b735fc300866"
+    },
+    {
+      "path": "tools/lib/contracts.mjs",
+      "sha256": "06cbd7b4670383a4a6aa11c22ad2a2aea027791f553073aebeb7de997799e36c"
+    },
+    {
+      "path": "tools/lib/features.mjs",
+      "sha256": "19fca5b6cbfae3864a1ccafd1d6ffdd4d14ffd81f1d3c58a0a1880d4e4374bd9"
+    },
+    {
+      "path": "tools/lib/http.mjs",
+      "sha256": "2e7dd5e0f2b09650895c956043c270e767edadced59ed79cb79eb354e75fe9db"
+    },
+    {
+      "path": "tools/lib/names.mjs",
+      "sha256": "3e8d395adaa29823d0f063401198c877955de9ee813da3fe6b6c065bcfda1e50"
+    },
+    {
+      "path": "tools/ratings/model.mjs",
+      "sha256": "e53ddd619bead4b132f5079e7dae5af00ce064fe0fa47576c82cd647a8c4406f"
+    },
+    {
+      "path": "tools/ratings/tendencies.mjs",
+      "sha256": "0ca1f9252f8c974fbbeb502c226b6dafd8a9eef73c7bf7b8ad79511d4c879dd1"
+    },
+    {
+      "path": "tools/sim-match.mjs",
+      "sha256": "37acdfafed42fa2d915bfa1e6cd5a2e9c1eb9b4012fd01aa4532f471f1215f9f"
+    },
+    {
+      "path": "tools/sim-season.mjs",
+      "sha256": "67b2546027f5ef558461ca53c22f57e2a093bc6aa6ace37e79927107a05c7afa"
+    },
+    {
+      "path": "tools/static/name-aliases.json",
+      "sha256": "a66eb23e8b0e796da65b5e5f276e0407398fb2fbe23d13b9cef534aeed7753f0"
+    },
+    {
+      "path": "tools/static/position-overrides.json",
+      "sha256": "d9ed7633bb9fdde7e96db460bb3d5804cb034bd009c9c66507bee4cdf275c47d"
+    },
+    {
+      "path": "tools/verify-pwa.mjs",
+      "sha256": "1b633dc0cb166c4146fd366055f24421ca063be223e2c10534cb9f7a99226d59"
+    },
+    {
+      "path": "tools/verify-release.mjs",
+      "sha256": "b8661194512dd4c705be793cad2e4a65683175634ac8debf3448483fe82034e0"
+    }
+  ]
+}

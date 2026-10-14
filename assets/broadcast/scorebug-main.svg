@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="180" viewBox="0 0 1280 180" role="img" aria-label="Scorebug principal NBA Universe TV">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1">
+      <stop offset="0%" stop-color="#08111F"/>
+      <stop offset="100%" stop-color="#132239"/>
+    </linearGradient>
+  </defs>
+  <rect x="32" y="24" rx="24" ry="24" width="1216" height="132" fill="url(#bg)" stroke="#223756" stroke-width="2"/>
+  <rect x="56" y="48" rx="16" width="280" height="84" fill="#16243A"/>
+  <rect x="944" y="48" rx="16" width="280" height="84" fill="#16243A"/>
+  <rect x="356" y="48" rx="16" width="568" height="84" fill="#101B2D"/>
+  <rect x="372" y="60" rx="10" width="112" height="24" fill="#223756"/>
+  <text x="428" y="77" fill="#F4F7FB" font-size="12" font-family="Inter, Arial, sans-serif" font-weight="700" text-anchor="middle">NBA UNIVERSE TV</text>
+  <text x="96" y="82" fill="#A9B8CE" font-size="14" font-family="Inter, Arial, sans-serif" font-weight="600">CASA</text>
+  <text x="182" y="107" fill="#F4F7FB" font-size="42" font-family="Inter, Arial, sans-serif" font-weight="800" text-anchor="middle">89</text>
+  <circle cx="301" cy="90" r="8" fill="#3DDC97"/>
+  <text x="986" y="82" fill="#A9B8CE" font-size="14" font-family="Inter, Arial, sans-serif" font-weight="600">FORA</text>
+  <text x="1082" y="107" fill="#F4F7FB" font-size="42" font-family="Inter, Arial, sans-serif" font-weight="800" text-anchor="middle">86</text>
+  <text x="640" y="98" fill="#F4F7FB" font-size="28" font-family="Inter, Arial, sans-serif" font-weight="800" text-anchor="middle">4º QUARTO · 04:28</text>
+  <text x="640" y="124" fill="#A9B8CE" font-size="14" font-family="Inter, Arial, sans-serif" font-weight="600" text-anchor="middle">POSSE: CASA · RELÓGIO DE POSSE 11s · SÉRIE 3-2</text>
+</svg>

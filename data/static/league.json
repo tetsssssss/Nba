@@ -1,0 +1,78 @@
+{
+  "_about": "Regras e números da liga no início do universo. Valores financeiros de 2026-27 são oficiais (fonte abaixo); itens com needsValidation foram derivados e precisam de conferência.",
+  "startSeason": 2027,
+  "calendar": {
+    "_note": "Datas de jogo do universo (decisão de design): o calendário real de 2026-27 não se aplica a uma liga de 32 franquias. Precisa de validação se a NBA divulgar datas oficiais.",
+    "regularSeasonStart": "2026-10-20",
+    "regularSeasonDays": 174,
+    "allStarBreak": ["2027-02-12", "2027-02-17"],
+    "gamesPerTeam": 82,
+    "playoffSeeds": 6,
+    "playInSeeds": 4
+  },
+  "startSeasonLabel": "2026-27",
+  "snapshotDate": "2026-10-05",
+  "careerLengthSeasons": 10,
+  "cap": {
+    "season": "2026-27",
+    "source": "Hoops Rumors — Salary Cap, Tax Line Set For 2026/27 NBA Season (junho/2026)",
+    "sourceUrl": "https://www.hoopsrumors.com/2026/06/salary-cap-tax-line-set-for-2026-27-nba-season.html",
+    "salaryCap": 164961000,
+    "luxuryTax": 200428000,
+    "firstApron": 209015000,
+    "secondApron": 221686000,
+    "minimumTeamSalary": 148465000,
+    "exceptions": {
+      "nonTaxpayerMLE": 15044000,
+      "taxpayerMLE": 6064000,
+      "roomException": 9366000,
+      "biAnnual": 5477000,
+      "earlyBird": 15235500
+    },
+    "maxSalary": {
+      "years0to6": 41240250,
+      "years7to9": 49488300,
+      "years10plus": 57736350
+    },
+    "tradeCashLimit": 8495000,
+    "estimatedAverageSalary": 15163000,
+    "twoWaySalary": 678882,
+    "previousSalaryCap": 154647000,
+    "minimumSalaryScale": {
+      "needsValidation": true,
+      "note": "Tabela de 2025-26 corrigida pelo crescimento do cap (164.961/154.647). Não é a tabela oficial de 2026-27.",
+      "byYearsOfService": [1357762, 2185114, 2449420, 2537524, 2625626, 2845881, 3066141, 3276397, 3506657, 3524113, 3876529]
+    },
+    "rookieScale": {
+      "needsValidation": true,
+      "note": "Primeiro ano em 120% da escala. Pick 1 = escala de 2025-26 corrigida pelo cap; demais picks seguem as proporções aproximadas da escala do CBA.",
+      "firstYearPick1": 14719000,
+      "ratioByPick": [1, 0.8947, 0.8035, 0.7244, 0.656, 0.5958, 0.5439, 0.4983, 0.458, 0.4351, 0.4134, 0.3927, 0.3731, 0.3544, 0.3367, 0.3199, 0.3039, 0.2887, 0.2757, 0.2646, 0.2541, 0.2439, 0.2342, 0.2248, 0.2158, 0.2087, 0.2026, 0.2014, 0.1999, 0.1985],
+      "annualRaise": 0.05
+    }
+  },
+  "roster": {
+    "standardMax": 15,
+    "twoWayMax": 3,
+    "offseasonMax": 21,
+    "regularSeasonMin": 14
+  },
+  "trade": {
+    "futurePickYearsAhead": 1,
+    "note": "Decisão de design: trades de picks futuras limitadas a 1 ano à frente. Configurável."
+  },
+  "expansion": {
+    "protectedPerTeam": 7,
+    "maxLostPerTeam": 2,
+    "teams": ["SEA", "LVJ"],
+    "initialDraftPicks": { "LVJ": [1, 10], "SEA": [4, 5] },
+    "initialDraftSeason": 2027,
+    "initialDraftNote": "Decisão do usuário (6 out 2026): as picks reservadas valem para o Draft 2027. O Draft 2026 real não é refeito."
+  },
+  "capModes": [
+    { "id": "basic", "label": "Básico", "description": "Salary cap simples: um teto, sem imposto nem exceções." },
+    { "id": "intermediate", "label": "Intermediário", "description": "Salary cap + luxury tax." },
+    { "id": "advanced", "label": "Avançado", "description": "Bird Rights, exceções, cap holds e aprons." },
+    { "id": "full", "label": "NBA completo", "description": "Regras próximas ao CBA real." }
+  ]
+}

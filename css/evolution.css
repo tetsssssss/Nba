@@ -1,0 +1,192 @@
+/* Evolution 01 — camada de apresentação, sem sobrescrever motor, saves ou regras.
+   Cores vêm dos tokens existentes e da identidade da franquia. */
+:root {
+  --radius: 10px;
+  --radius-lg: 18px;
+  --shadow-card: 0 10px 35px rgba(0, 0, 0, .17);
+  --t-reveal: 460ms;
+}
+:root[data-motion='off'] { --t-reveal: 0ms; }
+@media (prefers-reduced-motion: reduce) { :root { --t-reveal: 0ms; } }
+
+/* Layout: preserva o trilho lateral adaptativo e acrescenta hierarquia nas superfícies. */
+.shell { background: var(--bg-primary); }
+.sidebar {
+  background: linear-gradient(175deg, color-mix(in srgb, var(--team-raw) 7%, var(--bg-secondary)), var(--bg-secondary) 34%);
+}
+.main {
+  background: radial-gradient(950px 470px at 38% -230px, color-mix(in srgb, var(--team-raw) 10%, transparent), transparent 78%), var(--bg-primary);
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+.topbar { background: color-mix(in srgb, var(--bg-secondary) 92%, var(--surface-3)); }
+.nav-item { border-radius: 9px; }
+.nav-item.active {
+  background: linear-gradient(105deg, color-mix(in srgb, var(--team) 14%, var(--surface-1)), var(--surface-1) 85%);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--team) 12%, transparent);
+}
+.nav-item:hover { transform: translateX(2px); }
+.nav-item, .btn, .world-tab { transition: transform var(--t-fast) var(--ease), background var(--t-fast), border-color var(--t-fast), color var(--t-fast); }
+.page { max-width: 1550px; }
+.page > * { min-width: 0; }
+.page .card, .page .kpi {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+.page .card { background: linear-gradient(150deg, color-mix(in srgb, var(--surface-2) 18%, var(--surface-1)), var(--surface-1)); }
+.page .card:hover { border-color: var(--border-default); }
+.page h1 { letter-spacing: -.025em; }
+.page .kpi { position: relative; overflow: hidden; border-color: var(--border-muted); }
+.page .kpi::before {
+  content: ''; position: absolute; left: 0; top: 0; width: 100%; height: 2px;
+  background: linear-gradient(90deg, var(--team), transparent 70%); opacity: .54;
+}
+.hero-card.home-banner {
+  padding: clamp(22px, 2.6vw, 38px);
+  background:
+    radial-gradient(470px 340px at 92% -15%, color-mix(in srgb, var(--c2, var(--team-2)) 14%, transparent), transparent 70%),
+    linear-gradient(105deg, color-mix(in srgb, var(--c1, var(--team)) 36%, var(--surface-1)), var(--surface-1) 75%);
+  min-height: 180px;
+}
+.hero-card.home-banner .title { font-size: clamp(28px, 3.1vw, 46px); letter-spacing: -.025em; }
+.home .card, .home .kpi { animation: evolution-rise var(--t-reveal) var(--ease) both; }
+.home .kpi:nth-child(2) { animation-delay: 65ms; }
+.home .kpi:nth-child(3) { animation-delay: 105ms; }
+.home .kpi:nth-child(4) { animation-delay: 145ms; }
+@keyframes evolution-rise { from { opacity: .25; transform: translateY(11px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Carreira: trajetória esportiva calculada, e não metas fabricadas. */
+.career-arc {
+  padding: clamp(18px, 2vw, 26px);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(125deg, color-mix(in srgb, var(--team) 8%, var(--surface-1)), var(--surface-1) 72%);
+  position: relative; overflow: hidden;
+}
+.career-arc::before {
+  content: ''; position: absolute; inset: 0 0 auto; height: 3px;
+  background: linear-gradient(90deg, var(--team), var(--team-2), transparent 70%);
+}
+.eyebrow, .career-arc-label, .world-eyebrow {
+  font-size: var(--fs-micro); font-weight: 800; letter-spacing: .12em; color: var(--text-secondary);
+}
+.career-arc-heading, .world-panel-head { display: flex; justify-content: space-between; gap: 16px; align-items: center; }
+.career-arc-heading { margin-bottom: 20px; }
+.career-arc-heading h2 { font: 750 clamp(23px, 2vw, 31px)/1.1 var(--font-display); margin-top: 5px; }
+.career-arc-heading p { color: var(--text-secondary); margin-top: 8px; }
+.career-arc-grid { display: grid; grid-template-columns: minmax(220px, 1.5fr) repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--border-default); border: 1px solid var(--border-muted); border-radius: 12px; overflow: hidden; }
+.career-arc-progress, .career-arc-metric { padding: 20px; background: color-mix(in srgb, var(--surface-1) 88%, var(--surface-2)); min-width: 0; }
+.career-arc-numbers { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; margin-top: 12px; }
+.career-arc-numbers strong, .career-arc-metric strong { font: 750 clamp(25px, 2.5vw, 38px)/1 var(--font-display); font-variant-numeric: tabular-nums; }
+.career-arc-numbers span, .career-arc-metric small { color: var(--text-secondary); font-size: var(--fs-small); }
+.career-meter { height: 9px; border-radius: 99px; background: var(--surface-3); margin-top: 18px; overflow: hidden; }
+.career-meter i { display: block; height: 100%; max-width: 100%; background: linear-gradient(90deg, var(--team), var(--team-2)); border-radius: inherit; transform-origin: left; animation: meter-draw var(--t-reveal) var(--ease) both; }
+@keyframes meter-draw { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.career-arc-metric { display: flex; flex-direction: column; align-items: flex-start; justify-content: space-between; gap: 9px; }
+.career-arc-metric strong { margin-top: 4px; }
+
+/* Universo: ranking, duelos e arquivo sem estatísticas inventadas. */
+.universe-page { display: grid; gap: 18px; }
+.universe-page .page-head { margin-bottom: 0; }
+.world-hero {
+  display: flex; justify-content: space-between; align-items: flex-end; gap: 28px;
+  min-height: 220px; padding: clamp(25px, 3.3vw, 44px);
+  border-radius: 20px; border: 1px solid var(--border-default); overflow: hidden;
+  background:
+    radial-gradient(480px 260px at 92% -30%, color-mix(in srgb, var(--team) 27%, transparent), transparent 85%),
+    repeating-linear-gradient(-23deg, rgba(255,255,255,.015) 0 1px, transparent 1px 24px),
+    linear-gradient(125deg, color-mix(in srgb, var(--team-raw) 24%, var(--surface-1)), var(--surface-1) 75%);
+}
+.world-eyebrow { display: flex; align-items: center; gap: 10px; }
+.live-dot { background: var(--success); display: inline-block; width: 8px; height: 8px; border-radius: 50%; box-shadow: 0 0 0 4px var(--success-soft); }
+:root[data-motion='on'] .live-dot { animation: live-pulse 2.7s ease-in-out infinite; }
+@keyframes live-pulse { 50% { box-shadow: 0 0 0 9px transparent; } }
+.world-hero h2 { font: 800 clamp(32px, 4.2vw, 58px)/.96 var(--font-display); letter-spacing: -.03em; margin: 18px 0; }
+.world-hero h2 span { display: block; color: var(--text-secondary); font-size: .55em; letter-spacing: 0; line-height: 1.55; }
+.world-hero p { color: var(--text-secondary); }
+.world-hero-counts { display: flex; gap: 30px; flex-shrink: 0; }
+.world-hero-counts > div { display: flex; flex-direction: column; max-width: 145px; }
+.world-hero-counts strong { font: 800 clamp(30px, 3vw, 47px)/1 var(--font-display); font-variant-numeric: tabular-nums; }
+.world-hero-counts span { font-size: var(--fs-small); color: var(--text-secondary); margin-top: 7px; }
+.world-layout { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(300px, .85fr); align-items: start; gap: 18px; }
+.world-panel { padding: 22px; background: var(--surface-1); border: 1px solid var(--border-default); border-radius: var(--radius-lg); min-width: 0; }
+.world-panel-head { margin-bottom: 18px; align-items: flex-start; }
+.world-panel-head h3 { font: 750 24px/1.15 var(--font-display); margin-top: 5px; }
+.world-tabs { display: flex; align-items: center; gap: 7px; margin-bottom: 15px; }
+.world-tab { border: 1px solid var(--border-muted); background: var(--surface-2); color: var(--text-secondary); border-radius: 7px; padding: 7px 13px; cursor: pointer; }
+.world-tab.active { border-color: color-mix(in srgb, var(--team) 65%, var(--border-default)); background: color-mix(in srgb, var(--team) 17%, var(--surface-1)); color: var(--text-primary); }
+.world-tab:hover, .btn:hover { transform: translateY(-1px); }
+.world-rank { display: flex; gap: 13px; align-items: center; padding: 12px 7px; border-bottom: 1px solid var(--border-muted); min-width: 0; }
+.world-rank:last-child { border-bottom: 0; }
+.world-rank.is-mine { background: color-mix(in srgb, var(--team) 9%, transparent); border-radius: 8px; }
+.world-rank-number { font: 800 18px/1 var(--font-display); color: var(--text-tertiary); width: 30px; text-align: center; flex-shrink: 0; }
+.world-rank .person { min-width: 0; flex: 1; }
+.world-rank-stats { display: flex; flex-direction: column; align-items: flex-end; min-width: 120px; gap: 4px; font-variant-numeric: tabular-nums; }
+.world-rank-stats small { font-size: 10px; color: var(--text-secondary); }
+.world-rank-streak { min-width: 45px; text-align: center; font: 800 15px/1 var(--font-display); }
+.positive { color: var(--success); }
+.negative { color: var(--danger); }
+.world-explainer { font-size: var(--fs-small); color: var(--text-tertiary); margin-top: 15px; line-height: 1.5; }
+.world-streaks, .world-duels, .world-news-list { display: flex; flex-direction: column; gap: 10px; }
+.world-streak { display: flex; align-items: center; gap: 11px; padding: 12px; border: 1px solid var(--border-muted); background: var(--surface-2); border-radius: 10px; }
+.world-streak > div:nth-child(2) { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.world-streak strong, .world-duel strong { font-weight: 750; }
+.world-streak small, .world-duel small { color: var(--text-secondary); }
+.world-streak-score { font: 800 20px/1 var(--font-display); }
+.world-duel { border: 1px solid var(--border-muted); border-radius: 10px; padding: 14px; display: flex; gap: 9px; flex-direction: column; }
+.world-duel-teams { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.world-duel strong { font: 750 20px/1 var(--font-display); font-variant-numeric: tabular-nums; }
+.world-story-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.world-story { display: flex; flex-direction: column; gap: 10px; border: 1px solid var(--border-default); background: var(--surface-2); border-radius: 12px; padding: 18px; transition: transform var(--t-fast), border-color var(--t-fast); }
+.world-story:hover { transform: translateY(-3px); border-color: var(--team); }
+.world-story-date, .world-story-more { color: var(--text-tertiary); font-size: var(--fs-small); }
+.world-story h4 { font: 740 18px/1.2 var(--font-display); }
+.world-story p { color: var(--text-secondary); font-size: var(--fs-small); }
+.world-story-more { margin-top: auto; color: var(--team); }
+.world-news-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.world-news { border: 1px solid var(--border-muted); border-radius: 10px; padding: 17px; background: var(--surface-2); }
+.world-news h4 { margin: 10px 0 7px; font-size: 15px; }
+.world-news p { font-size: var(--fs-small); color: var(--text-secondary); line-height: 1.55; }
+
+@media (max-width: 1279px) {
+  .career-arc-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .world-layout { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 820px) {
+  .world-story-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .world-news-list { grid-template-columns: minmax(0, 1fr); }
+  .world-hero { align-items: flex-start; flex-direction: column; }
+  .world-hero-counts { gap: 28px; }
+}
+@media (max-width: 600px) {
+  .main { padding: 14px 12px 55px; scrollbar-gutter: auto; }
+  .topbar { gap: 6px; padding-right: 6px; }
+  .top-date { display: none; }
+  .hero-card.home-banner { padding: 21px; }
+  .home-banner .quick-actions, .home-banner .quick-actions > .row { width: 100%; flex-wrap: wrap; }
+  .home-banner .quick-actions > .row > .btn { flex: 1; justify-content: center; }
+  .career-arc-heading { align-items: flex-start; flex-direction: column; }
+  .career-arc-grid { grid-template-columns: minmax(0,1fr); }
+  .career-arc-progress, .career-arc-metric { padding: 16px; }
+  .career-arc-metric { gap: 5px; }
+  .world-panel { padding: 16px; }
+  .world-hero { min-height: auto; padding: 20px; }
+  .world-story-grid { grid-template-columns: minmax(0,1fr); }
+  .world-rank { flex-wrap: wrap; gap: 8px; }
+  .world-rank-stats { min-width: auto; }
+  .world-rank .person { flex-basis: 55%; }
+  .world-rank-streak { min-width: 33px; }
+  .world-panel-head { flex-wrap: wrap; }
+  .world-tabs { flex-wrap: wrap; }
+}
+/* Redução de movimento: respeita tanto preferência do sistema quanto configuração no jogo. */
+:root[data-motion='off'] .home .card,
+:root[data-motion='off'] .home .kpi,
+:root[data-motion='off'] .career-meter i,
+:root[data-motion='off'] .live-dot,
+:root[data-motion='off'] .page { animation: none !important; transition: none !important; }
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within, .main { scroll-behavior: auto; }
+  .home .card, .home .kpi, .career-meter i, .live-dot, .page { animation: none !important; transition: none !important; }
+  .btn:hover, .nav-item:hover, .world-story:hover, .world-tab:hover { transform: none; }
+}

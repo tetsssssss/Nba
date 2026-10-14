@@ -1,0 +1,10 @@
+/* WNBA Evolution 2001+: isolated creation and drills presentation */
+.wnba-page .w-created-person{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:12px;border:1px solid var(--border,rgba(255,255,255,.14));border-radius:10px;margin:6px 0;background:rgba(126,135,174,.055)}
+.wnba-page .w-created-person small{display:block;opacity:.68;font-size:11px;margin-top:3px}
+.wnba-page .w-creator-skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;padding:12px 0}
+.wnba-page .w-creator-skills .w-field{min-width:0}
+.wnba-page .w-creator-skills input{width:100%;min-width:0}
+.wnba-page .w-bracket-row{overflow-wrap:anywhere}
+.wnba-page .w-created-person button:focus-visible,.wnba-page .w-creator-skills input:focus-visible{outline:3px solid #71d6fb;outline-offset:3px}
+@media(max-width:660px){.wnba-page .w-created-person{align-items:flex-start}.wnba-page .w-created-person .w-panel-actions{width:100%;display:flex;flex-wrap:wrap}.wnba-page .w-creator-skills{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(prefers-reduced-motion:reduce){.wnba-page .w-created-person,.wnba-page .w-created-person *{animation:none!important;transition:none!important}}

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="220" viewBox="0 0 1280 220" role="img" aria-label="Lower third do jogador">
+  <rect x="48" y="70" rx="22" width="720" height="112" fill="#08111F" opacity=".95"/>
+  <rect x="48" y="70" rx="22" width="18" height="112" fill="#3FA9F5"/>
+  <text x="92" y="112" fill="#F4F7FB" font-size="34" font-family="Inter, Arial, sans-serif" font-weight="800">A. SANTOS</text>
+  <text x="92" y="142" fill="#A9B8CE" font-size="18" font-family="Inter, Arial, sans-serif" font-weight="600">PG · #4 · NBA UNIVERSE ALL-STARS</text>
+  <text x="92" y="170" fill="#F6B73C" font-size="16" font-family="Inter, Arial, sans-serif" font-weight="700">18 PTS · 6 AST · 4/7 3PT</text>
+  <rect x="796" y="82" rx="18" width="196" height="88" fill="#101B2D"/>
+  <text x="894" y="118" fill="#A9B8CE" font-size="14" font-family="Inter, Arial, sans-serif" font-weight="700" text-anchor="middle">DESTAQUE</text>
+  <text x="894" y="148" fill="#F4F7FB" font-size="28" font-family="Inter, Arial, sans-serif" font-weight="800" text-anchor="middle">HOT STREAK</text>
+</svg>

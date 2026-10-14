@@ -1,0 +1,14 @@
+{
+  "_about": "Nomes grafados de forma diferente entre fontes. Chave = nome normalizado no índice da NBA; valor = lista de grafias normalizadas na ESPN/HoopsHype. Normalização: minúsculas, sem acentos, pontuação e sufixos (jr, ii, iii).",
+  "dennis schroder": ["dennis schroeder"],
+  "nic claxton": ["nicolas claxton"],
+  "cam whitmore": ["cameron whitmore"],
+  "santi aldama": ["santiago aldama"],
+  "ronald holland": ["ron holland"],
+  "yanic konan niederhauser": ["yanic niederhauser"],
+  "herbert jones": ["herb jones"],
+  "yang hansen": ["hansen yang"],
+  "svi mykhailiuk": ["sviatoslav mykhailiuk"],
+  "bub carrington": ["carlton carrington"],
+  "david jones garcia": ["david jones"]
+}

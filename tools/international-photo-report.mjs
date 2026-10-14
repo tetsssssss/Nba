@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import {INT_PLAYERS, INT_TEAM_MAP} from '../src/international/catalog.js';
+import {photoRecord,photoSearchUrl,photoKey,photoStats} from '../src/international/photos.js';
+const rows=INT_PLAYERS.filter(p=>p.league==='NBB'||p.league==='EUROLEAGUE');
+const csv=s=>`"${String(s??'').replaceAll('"','""')}"`;
+const header=['Liga','Equipe','Atleta','Identidade','Situação','URL da foto','Fonte da foto','Pesquisa no Google Imagens'];
+const data=[header,...rows.map(p=>{const rec=photoRecord(p,{});return [p.league,INT_TEAM_MAP.get(p.teamId)?.name,p.name,photoKey(p),rec.source,rec.url,rec.sourceUrl,photoSearchUrl({...p,teamName:INT_TEAM_MAP.get(p.teamId)?.name})]})];
+const path=new URL('../docs/AUDITORIA-FOTOS-NBB-EUROLEAGUE.csv',import.meta.url);
+fs.writeFileSync(path,data.map(row=>row.map(csv).join(',')).join('\n')+'\n');
+console.log('Exportado:',rows.length,'atletas',JSON.stringify(photoStats(rows,{})));

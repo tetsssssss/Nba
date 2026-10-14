@@ -1,0 +1,148 @@
+/* Evolution 02 — CAMADA VISUAL ISOLADA.
+   Não altera telas da carreira, estados, regras ou armazenamento. */
+
+/* Legibilidade e animação de elementos comuns fora do fluxo de Carreira. */
+:where(.league-page, .game-detail-page) {
+  --detail-radius: 16px;
+  --detail-transition: min(240ms, var(--t-slow));
+}
+:where(.league-page, .game-detail-page) .page-head h1 { letter-spacing: -.025em; }
+:where(.league-page, .game-detail-page) .page-head .sub { max-width: 72ch; line-height: 1.55; }
+:where(.league-page, .game-detail-page) .card { border-radius: var(--detail-radius); }
+:where(.league-page, .game-detail-page) .table-wrap { scrollbar-width: thin; overscroll-behavior-inline: contain; }
+:where(.league-page, .game-detail-page) .table-wrap:focus-within { outline: 2px solid var(--team); outline-offset: 2px; }
+:where(.league-page, .game-detail-page) .data tbody tr { transition: background var(--t-fast); }
+:where(.league-page, .game-detail-page) .data tbody tr:hover:not(.group) { background: var(--surface-hover); }
+
+/* Galeria interativa das franquias. */
+.league-page { display: grid; gap: 20px; }
+.league-page .page-head { margin-bottom: 0; }
+.league-explorer { min-width: 0; }
+.league-intro { display: flex; justify-content: space-between; align-items: end; gap: 24px; padding: 30px;
+  border: 1px solid var(--border-default); border-radius: 18px;
+  background: radial-gradient(circle at 88% -30%, color-mix(in srgb, var(--team) 21%, transparent), transparent 55%),
+  linear-gradient(125deg, var(--surface-2), var(--surface-1)); }
+.league-eyebrow { font-size: var(--fs-micro); color: var(--team); font-weight: 800; letter-spacing: .16em; }
+.league-intro h2 { font: 800 clamp(27px, 3.3vw, 45px)/1 var(--font-display); letter-spacing: -.018em; margin: 8px 0 14px; }
+.league-intro p { max-width: 60ch; color: var(--text-secondary); line-height: 1.55; }
+.league-quick-stats { display: flex; align-items: center; gap: 28px; flex-shrink: 0; }
+.league-quick-stats > span { display: flex; flex-direction: column; gap: 7px; }
+.league-quick-stats strong { font: 800 clamp(28px, 2.5vw, 39px)/1 var(--font-display); font-variant-numeric: tabular-nums; }
+.league-quick-stats small { color: var(--text-secondary); font-size: var(--fs-micro); letter-spacing: .08em; }
+.league-filterbar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;
+  margin: 18px 0 9px; }
+.league-filter-tabs, .league-filter-tools { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+.league-filter-btn { border: 1px solid var(--border-default); background: var(--surface-1); color: var(--text-secondary);
+  border-radius: 9px; font: 650 var(--fs-small)/1.1 var(--font); padding: 10px 13px; cursor: pointer;
+  transition: background var(--t-fast), border-color var(--t-fast), color var(--t-fast); }
+.league-filter-btn[aria-pressed='true'] { color: var(--text-primary); background: color-mix(in srgb, var(--team) 16%, var(--surface-2)); border-color: color-mix(in srgb, var(--team) 50%, var(--border-default)); }
+.league-filter-btn:hover { background: var(--surface-3); color: var(--text-primary); }
+.league-search, .league-sort { height: 39px; background: var(--surface-1); border: 1px solid var(--border-default);
+  border-radius: 9px; color: var(--text-primary); padding: 0 11px; max-width: 100%; }
+.league-search { width: min(270px, 100%); }
+.league-sort { width: 175px; }
+.league-filter-count { display: block; color: var(--text-secondary); font-size: var(--fs-small); padding: 2px 1px 11px; }
+.league-gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 13px; }
+.league-card { --club-color: var(--team); min-width: 0; padding: 17px; display: flex; flex-direction: column; gap: 15px;
+  position: relative; overflow: hidden; isolation: isolate; background: var(--surface-1); border: 1px solid var(--border-default);
+  border-radius: 14px; color: var(--text-primary); text-decoration: none;
+  transition: transform var(--t-base) var(--ease), border-color var(--t-base), box-shadow var(--t-base); }
+.league-card::before { content: ''; position: absolute; inset: 0 0 auto; height: 3px; background: var(--club-color); }
+.league-card::after { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: radial-gradient(circle at 93% 0, color-mix(in srgb, var(--club-color) 15%, transparent), transparent 54%); }
+.league-card:hover { transform: translateY(-4px); border-color: color-mix(in srgb, var(--club-color) 45%, var(--border-strong)); box-shadow: var(--shadow-2); }
+.league-card:focus-visible { outline: 2px solid var(--team); outline-offset: 3px; }
+.league-card.is-selected { border-color: color-mix(in srgb, var(--team) 65%, var(--border-strong)); }
+.league-card-top { display: flex; justify-content: space-between; gap: 9px; align-items: flex-start; min-height: 53px; }
+.league-logo { flex: none; }
+.league-card-conference { color: var(--text-secondary); font-size: 10px; line-height: 1.4; text-align: right; }
+.league-card-name { font: 750 clamp(18px, 1.65vw, 25px)/1.13 var(--font-display); min-height: 48px; }
+.league-card-foot { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 7px; margin-top: auto; }
+.league-card-foot span { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.league-card-foot small { font-size: 9px; letter-spacing: .07em; color: var(--text-tertiary); }
+.league-card-foot strong { font: 750 19px/1 var(--font-display); font-variant-numeric: tabular-nums; }
+.league-strength-track { height: 4px; background: var(--surface-3); border-radius: 99px; overflow: hidden; }
+.league-strength-track span { height: 100%; display: block; border-radius: inherit; background: var(--club-color); transform-origin: 0 50%; animation: e02-fill 600ms var(--ease) both; }
+.league-card-you { position: absolute; right: 8px; top: 10px; padding: 4px 7px; border-radius: 5px; font-size: 9px;
+  color: var(--text-primary); background: color-mix(in srgb, var(--team) 35%, var(--surface-2)); }
+.league-card.is-selected .league-card-conference { margin-top: 18px; }
+.league-empty { grid-column: 1/-1; text-align: center; padding: 44px 16px; border: 1px dashed var(--border-strong);
+  border-radius: 14px; color: var(--text-secondary); }
+.league-caption { color: var(--text-tertiary); margin-top: 11px; font-size: var(--fs-small); line-height: 1.5; }
+.league-divisions { border: 1px solid var(--border-default); border-radius: 14px; background: var(--surface-1); }
+.league-divisions summary { padding: 17px 20px; cursor: pointer; font-weight: 750; }
+.league-divisions summary span { display: block; margin-top: 4px; color: var(--text-tertiary); font-size: var(--fs-small); font-weight: 450; }
+.league-divisions > .grid { padding: 12px 18px 22px; }
+.league-table-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.league-table-head h2 { font: 750 23px/1.1 var(--font-display); }
+.league-table-head p { font-size: var(--fs-small); color: var(--text-secondary); }
+.league-comparison { min-width: 0; }
+
+/* Página de placar: manchete, séries por período e destaques em cards. */
+.game-detail-page .game-head-broadcast { position: relative; overflow: hidden; border-radius: 17px; min-height: 170px;
+  background: radial-gradient(circle at 50% -20%, color-mix(in srgb, var(--team) 9%, transparent), transparent 70%), var(--surface-1); }
+.game-detail-page .game-head-broadcast::before { position: absolute; content: ''; height: 3px; inset: 0 0 auto;
+  background: linear-gradient(90deg, transparent, var(--team), transparent); }
+.game-head-broadcast .final-side .display { font: 800 clamp(38px, 4.7vw, 68px)/1 var(--font-display);
+  font-variant-numeric: tabular-nums; letter-spacing: -.025em; }
+.game-head-broadcast .final-side:not(.win) .display { color: var(--text-secondary); }
+.game-head-broadcast .game-mid { gap: 8px; }
+.game-live-label { border: 1px solid color-mix(in srgb, var(--team) 38%, var(--border-default)); border-radius: 99px;
+  color: var(--text-primary); padding: 5px 10px; letter-spacing: .09em; font-size: var(--fs-micro); font-weight: 800; }
+.game-margin { color: var(--text-secondary); font-size: var(--fs-small); }
+.game-highlights { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; }
+.game-highlight { --club-color: var(--team); border: 1px solid var(--border-default); border-radius: 13px; background: var(--surface-2);
+  position: relative; overflow: hidden; padding: 18px; display: flex; flex-direction: column; gap: 9px; color: var(--text-primary); text-decoration: none;
+  transition: background var(--t-base), transform var(--t-base); }
+.game-highlight::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--club-color); }
+.game-highlight:hover { transform: translateY(-2px); background: var(--surface-3); }
+.game-highlight-title { display: flex; gap: 8px; align-items: center; color: var(--text-tertiary); font-size: var(--fs-micro); font-weight: 750; letter-spacing: .08em; }
+.game-highlight strong { font: 750 clamp(19px, 2vw, 25px)/1.15 var(--font-display); }
+.game-highlight > span { color: var(--text-secondary); }
+.game-periods { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 13px; }
+.game-period { padding: 14px; border: 1px solid var(--border-muted); border-radius: 11px; background: var(--surface-2); }
+.game-period-top { display: flex; justify-content: space-between; gap: 8px; margin-bottom: 12px; align-items: baseline; flex-wrap: wrap; }
+.game-period-label { font-size: var(--fs-small); color: var(--text-secondary); }
+.game-period-numbers { font: 760 18px/1 var(--font-display); font-variant-numeric: tabular-nums; }
+.game-period-track { display: flex; overflow: hidden; height: 7px; background: var(--surface-3); border-radius: 99px; }
+.game-period-track span { display: block; height: 100%; transform-origin: left; animation: e02-fill 700ms var(--ease) both; }
+.game-period-track .away { background: var(--info); }
+.game-period-track .home { background: var(--team); }
+.game-boxes { align-items: start; }
+@keyframes e02-fill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@media (max-width: 1280px) {
+  .league-gallery { grid-template-columns: repeat(3, minmax(0,1fr)); }
+  .game-periods { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width: 930px) {
+  .league-intro { align-items: flex-start; flex-direction: column; }
+  .league-gallery { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .game-head-broadcast { grid-template-columns: minmax(0,1fr); }
+  .game-head-broadcast .final-side:last-child { flex-direction: row; text-align: left; }
+  .game-head-broadcast .final-side:last-child .display { margin-right: 0; margin-left: auto; }
+  .game-head-broadcast .game-mid { order: -1; }
+}
+@media (max-width: 620px) {
+  .league-gallery { grid-template-columns: minmax(0,1fr); }
+  .league-filter-tabs, .league-filter-tools { width: 100%; }
+  .league-filter-btn { flex: 1; padding: 10px 6px; }
+  .league-search, .league-sort { width: 100%; flex: 1 1 160px; }
+  .league-intro { padding: 22px 18px; }
+  .league-card-name { min-height: auto; }
+  .league-card-foot { margin-top: 4px; }
+  .league-divisions > .grid { padding: 12px; }
+  .game-highlights, .game-periods { grid-template-columns: minmax(0,1fr); }
+  .game-detail-page .game-head-broadcast { padding: 17px; }
+  .game-head-broadcast .final-name { font-size: 19px; }
+  .game-head-broadcast .final-side .display { font-size: 43px; }
+  .game-head-broadcast .final-side { gap: 10px; }
+}
+/* Movimento opcional: respeitar o navegador E as preferências do próprio jogo. */
+:root[data-motion='off'] .league-card,
+:root[data-motion='off'] .game-highlight,
+:root[data-motion='off'] .league-strength-track span,
+:root[data-motion='off'] .game-period-track span { animation: none !important; transition: none !important; transform: none !important; }
+@media (prefers-reduced-motion: reduce) {
+  .league-card, .game-highlight, .league-strength-track span, .game-period-track span {
+    animation: none !important; transition: none !important; transform: none !important; }
+}

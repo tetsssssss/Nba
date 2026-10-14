@@ -1,0 +1,18 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { runWnbaDuelTournament } from '../src/wnba/duel-tournament.js';
+import { WNBA_PLAYERS } from '../src/wnba/catalog.js';
+import { createWnbaPlayer, defaultWnbaCreator, wnbaCreatorTeams } from '../src/wnba/player-creator.js';
+const stars=n=>WNBA_PLAYERS.slice(0,n);
+test('8 WNBA individual duels finish all 7 matches',()=>{const result=runWnbaDuelTournament(stars(8));assert.equal(result.played,7);assert.deepEqual(result.rounds.map(x=>x.length),[4,2,1]);assert.equal(result.persisted,false);});
+test('16 WNBA individual duels finish all 15 matches',()=>{const r=runWnbaDuelTournament(stars(16));assert.equal(r.played,15);assert.deepEqual(r.rounds.map(x=>x.length),[8,4,2,1]);});
+test('same seed produces identical WNBA individual bracket',()=>{assert.deepEqual(runWnbaDuelTournament(stars(8),{seed:'same'}),runWnbaDuelTournament(stars(8),{seed:'same'}));});
+test('champion comes from original roster',()=>{const selected=stars(16);const r=runWnbaDuelTournament(selected);assert.ok(selected.some(p=>p.id===r.champion));});
+test('every game winner corresponds to declared scoreboard',()=>{const r=runWnbaDuelTournament(stars(16));assert.ok(r.rounds.flat().every(g=>g.score[0]!==g.score[1]&&g.winner===(g.score[0]>g.score[1]?g.a:g.b)));});
+test('each duel actually simulates Street possessions',()=>{const r=runWnbaDuelTournament(stars(8));assert.ok(r.rounds.flat().every(g=>g.possessions>0));});
+test('duels can be played to 21',()=>{const r=runWnbaDuelTournament(stars(8),{target:21});assert.ok(r.rounds.flat().every(g=>Math.max(...g.score)>=21));});
+test('reject tournament with 5 participants',()=>assert.throws(()=>runWnbaDuelTournament(stars(5)),/8 ou 16/));
+test('reject duplicate individuals',()=>assert.throws(()=>runWnbaDuelTournament([stars(7)[0],...stars(7)]),/duplicadas/));
+test('reject invalid target',()=>assert.throws(()=>runWnbaDuelTournament(stars(8),{target:15}),/inválida/));
+test('duels do not mutate official attributes',()=>{const previous=structuredClone(WNBA_PLAYERS[0]);runWnbaDuelTournament(stars(8));assert.deepEqual(previous,WNBA_PLAYERS[0]);});
+test('duels accept individually created fictitious players',()=>{let data=defaultWnbaCreator();for(let i=0;i<10;i++)data=createWnbaPlayer(data,{name:`Inventada ${i}`,side:i%2});const players=wnbaCreatorTeams(data).flatMap(t=>t.roster);const out=runWnbaDuelTournament(players.slice(0,8));assert.ok(out.champion.startsWith('WCUSTOM'));});

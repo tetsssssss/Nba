@@ -1,0 +1,18 @@
+{
+  "id": "./",
+  "name": "NBA Universe Manager",
+  "short_name": "NBA Universe",
+  "description": "Gerencie temporadas de basquete e acompanhe partidas com NBA Universe TV.",
+  "start_url": "./#/start",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#08111f",
+  "theme_color": "#101b2d",
+  "lang": "pt-BR",
+  "orientation": "any",
+  "icons": [
+    {"src": "assets/icons/nba-universe-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "assets/icons/nba-universe-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "assets/icons/nba-universe-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}

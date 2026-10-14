@@ -1,0 +1,1480 @@
+{
+ "champions": [
+  {
+   "year": 1947,
+   "teamId": "GSW",
+   "opponent": "Chicago Stags"
+  },
+  {
+   "year": 1949,
+   "teamId": "LAL",
+   "opponent": "Washington Capitols"
+  },
+  {
+   "year": 1950,
+   "teamId": "LAL",
+   "opponent": "Syracuse Nationals (76ers)"
+  },
+  {
+   "year": 1951,
+   "teamId": "SAC",
+   "opponent": "New York Knicks"
+  },
+  {
+   "year": 1952,
+   "teamId": "LAL",
+   "opponent": "New York Knicks"
+  },
+  {
+   "year": 1953,
+   "teamId": "LAL",
+   "opponent": "New York Knicks"
+  },
+  {
+   "year": 1954,
+   "teamId": "LAL",
+   "opponent": "Syracuse Nationals (76ers)"
+  },
+  {
+   "year": 1955,
+   "teamId": "PHI",
+   "opponent": "Fort Wayne Pistons"
+  },
+  {
+   "year": 1956,
+   "teamId": "GSW",
+   "opponent": "Fort Wayne Pistons"
+  },
+  {
+   "year": 1957,
+   "teamId": "BOS",
+   "opponent": "St. Louis Hawks"
+  },
+  {
+   "year": 1958,
+   "teamId": "ATL",
+   "opponent": "Boston Celtics"
+  },
+  {
+   "year": 1959,
+   "teamId": "BOS",
+   "opponent": "Minneapolis Lakers"
+  },
+  {
+   "year": 1960,
+   "teamId": "BOS",
+   "opponent": "St. Louis Hawks"
+  },
+  {
+   "year": 1961,
+   "teamId": "BOS",
+   "opponent": "St. Louis Hawks"
+  },
+  {
+   "year": 1962,
+   "teamId": "BOS",
+   "opponent": "Los Angeles Lakers"
+  },
+  {
+   "year": 1963,
+   "teamId": "BOS",
+   "opponent": "Los Angeles Lakers"
+  },
+  {
+   "year": 1964,
+   "teamId": "BOS",
+   "opponent": "San Francisco Warriors"
+  },
+  {
+   "year": 1965,
+   "teamId": "BOS",
+   "opponent": "Los Angeles Lakers"
+  },
+  {
+   "year": 1966,
+   "teamId": "BOS",
+   "opponent": "Los Angeles Lakers"
+  },
+  {
+   "year": 1967,
+   "teamId": "PHI",
+   "opponent": "San Francisco Warriors"
+  },
+  {
+   "year": 1968,
+   "teamId": "BOS",
+   "opponent": "Los Angeles Lakers"
+  },
+  {
+   "year": 1969,
+   "teamId": "BOS",
+   "opponent": "Los Angeles Lakers"
+  },
+  {
+   "year": 1970,
+   "teamId": "NYK",
+   "opponent": "Los Angeles Lakers"
+  },
+  {
+   "year": 1971,
+   "teamId": "MIL",
+   "opponent": "Baltimore Bullets"
+  },
+  {
+   "year": 1972,
+   "teamId": "LAL",
+   "opponent": "New York Knicks"
+  },
+  {
+   "year": 1973,
+   "teamId": "NYK",
+   "opponent": "Los Angeles Lakers"
+  },
+  {
+   "year": 1974,
+   "teamId": "BOS",
+   "opponent": "Milwaukee Bucks"
+  },
+  {
+   "year": 1975,
+   "teamId": "GSW",
+   "opponent": "Washington Bullets"
+  },
+  {
+   "year": 1976,
+   "teamId": "BOS",
+   "opponent": "Phoenix Suns"
+  },
+  {
+   "year": 1977,
+   "teamId": "POR",
+   "opponent": "Philadelphia 76ers"
+  },
+  {
+   "year": 1978,
+   "teamId": "WAS",
+   "opponent": "Seattle SuperSonics"
+  },
+  {
+   "year": 1979,
+   "teamId": "SEA",
+   "opponent": "Washington Bullets"
+  },
+  {
+   "year": 1980,
+   "teamId": "LAL",
+   "opponent": "Philadelphia 76ers"
+  },
+  {
+   "year": 1981,
+   "teamId": "BOS",
+   "opponent": "Houston Rockets"
+  },
+  {
+   "year": 1982,
+   "teamId": "LAL",
+   "opponent": "Philadelphia 76ers"
+  },
+  {
+   "year": 1983,
+   "teamId": "PHI",
+   "opponent": "Los Angeles Lakers"
+  },
+  {
+   "year": 1984,
+   "teamId": "BOS",
+   "opponent": "Los Angeles Lakers"
+  },
+  {
+   "year": 1985,
+   "teamId": "LAL",
+   "opponent": "Boston Celtics"
+  },
+  {
+   "year": 1986,
+   "teamId": "BOS",
+   "opponent": "Houston Rockets"
+  },
+  {
+   "year": 1987,
+   "teamId": "LAL",
+   "opponent": "Boston Celtics"
+  },
+  {
+   "year": 1988,
+   "teamId": "LAL",
+   "opponent": "Detroit Pistons"
+  },
+  {
+   "year": 1989,
+   "teamId": "DET",
+   "opponent": "Los Angeles Lakers"
+  },
+  {
+   "year": 1990,
+   "teamId": "DET",
+   "opponent": "Portland Trail Blazers"
+  },
+  {
+   "year": 1991,
+   "teamId": "CHI",
+   "opponent": "Los Angeles Lakers"
+  },
+  {
+   "year": 1992,
+   "teamId": "CHI",
+   "opponent": "Portland Trail Blazers"
+  },
+  {
+   "year": 1993,
+   "teamId": "CHI",
+   "opponent": "Phoenix Suns"
+  },
+  {
+   "year": 1994,
+   "teamId": "HOU",
+   "opponent": "New York Knicks"
+  },
+  {
+   "year": 1995,
+   "teamId": "HOU",
+   "opponent": "Orlando Magic"
+  },
+  {
+   "year": 1996,
+   "teamId": "CHI",
+   "opponent": "Seattle SuperSonics"
+  },
+  {
+   "year": 1997,
+   "teamId": "CHI",
+   "opponent": "Utah Jazz"
+  },
+  {
+   "year": 1998,
+   "teamId": "CHI",
+   "opponent": "Utah Jazz"
+  },
+  {
+   "year": 1999,
+   "teamId": "SAS",
+   "opponent": "New York Knicks"
+  },
+  {
+   "year": 2000,
+   "teamId": "LAL",
+   "opponent": "Indiana Pacers"
+  },
+  {
+   "year": 2001,
+   "teamId": "LAL",
+   "opponent": "Philadelphia 76ers"
+  },
+  {
+   "year": 2002,
+   "teamId": "LAL",
+   "opponent": "New Jersey Nets"
+  },
+  {
+   "year": 2003,
+   "teamId": "SAS",
+   "opponent": "New Jersey Nets"
+  },
+  {
+   "year": 2004,
+   "teamId": "DET",
+   "opponent": "Los Angeles Lakers"
+  },
+  {
+   "year": 2005,
+   "teamId": "SAS",
+   "opponent": "Detroit Pistons"
+  },
+  {
+   "year": 2006,
+   "teamId": "MIA",
+   "opponent": "Dallas Mavericks"
+  },
+  {
+   "year": 2007,
+   "teamId": "SAS",
+   "opponent": "Cleveland Cavaliers"
+  },
+  {
+   "year": 2008,
+   "teamId": "BOS",
+   "opponent": "Los Angeles Lakers"
+  },
+  {
+   "year": 2009,
+   "teamId": "LAL",
+   "opponent": "Orlando Magic"
+  },
+  {
+   "year": 2010,
+   "teamId": "LAL",
+   "opponent": "Boston Celtics"
+  },
+  {
+   "year": 2011,
+   "teamId": "DAL",
+   "opponent": "Miami Heat"
+  },
+  {
+   "year": 2012,
+   "teamId": "MIA",
+   "opponent": "Oklahoma City Thunder"
+  },
+  {
+   "year": 2013,
+   "teamId": "MIA",
+   "opponent": "San Antonio Spurs"
+  },
+  {
+   "year": 2014,
+   "teamId": "SAS",
+   "opponent": "Miami Heat"
+  },
+  {
+   "year": 2015,
+   "teamId": "GSW",
+   "opponent": "Cleveland Cavaliers"
+  },
+  {
+   "year": 2016,
+   "teamId": "CLE",
+   "opponent": "Golden State Warriors"
+  },
+  {
+   "year": 2017,
+   "teamId": "GSW",
+   "opponent": "Cleveland Cavaliers"
+  },
+  {
+   "year": 2018,
+   "teamId": "GSW",
+   "opponent": "Cleveland Cavaliers"
+  },
+  {
+   "year": 2019,
+   "teamId": "TOR",
+   "opponent": "Golden State Warriors"
+  },
+  {
+   "year": 2020,
+   "teamId": "LAL",
+   "opponent": "Miami Heat"
+  },
+  {
+   "year": 2021,
+   "teamId": "MIL",
+   "opponent": "Phoenix Suns"
+  },
+  {
+   "year": 2022,
+   "teamId": "GSW",
+   "opponent": "Boston Celtics"
+  },
+  {
+   "year": 2023,
+   "teamId": "DEN",
+   "opponent": "Miami Heat"
+  },
+  {
+   "year": 2024,
+   "teamId": "BOS",
+   "opponent": "Dallas Mavericks"
+  },
+  {
+   "year": 2025,
+   "teamId": "OKC",
+   "opponent": "Indiana Pacers"
+  },
+  {
+   "year": 2026,
+   "teamId": "NYK",
+   "opponent": "San Antonio Spurs"
+  }
+ ],
+ "seattleRecord": {
+  "wins": 1745,
+  "losses": 1585,
+  "from": 1967,
+  "to": 2008,
+  "playoffAppearances": 22,
+  "divisionTitles": 6,
+  "conferenceTitles": 3
+ },
+ "lastSeason": {
+  "season": 2026,
+  "label": "2025-26",
+  "champion": "NYK",
+  "runnerUp": "SAS",
+  "finalsScore": "4-1",
+  "playoffSeries": [
+   {
+    "winner": "OKC",
+    "loser": "PHX",
+    "score": "4-0",
+    "ended": "2026-04-27",
+    "round": "Primeira rodada"
+   },
+   {
+    "winner": "SAS",
+    "loser": "POR",
+    "score": "4-1",
+    "ended": "2026-04-28",
+    "round": "Primeira rodada"
+   },
+   {
+    "winner": "NYK",
+    "loser": "ATL",
+    "score": "4-2",
+    "ended": "2026-04-30",
+    "round": "Primeira rodada"
+   },
+   {
+    "winner": "MIN",
+    "loser": "DEN",
+    "score": "4-2",
+    "ended": "2026-04-30",
+    "round": "Primeira rodada"
+   },
+   {
+    "winner": "LAL",
+    "loser": "HOU",
+    "score": "4-2",
+    "ended": "2026-05-01",
+    "round": "Primeira rodada"
+   },
+   {
+    "winner": "PHI",
+    "loser": "BOS",
+    "score": "4-3",
+    "ended": "2026-05-02",
+    "round": "Primeira rodada"
+   },
+   {
+    "winner": "CLE",
+    "loser": "TOR",
+    "score": "4-3",
+    "ended": "2026-05-03",
+    "round": "Primeira rodada"
+   },
+   {
+    "winner": "DET",
+    "loser": "ORL",
+    "score": "4-3",
+    "ended": "2026-05-03",
+    "round": "Primeira rodada"
+   },
+   {
+    "winner": "NYK",
+    "loser": "PHI",
+    "score": "4-0",
+    "ended": "2026-05-10",
+    "round": "Semifinal de conferência"
+   },
+   {
+    "winner": "OKC",
+    "loser": "LAL",
+    "score": "4-0",
+    "ended": "2026-05-11",
+    "round": "Semifinal de conferência"
+   },
+   {
+    "winner": "SAS",
+    "loser": "MIN",
+    "score": "4-2",
+    "ended": "2026-05-15",
+    "round": "Semifinal de conferência"
+   },
+   {
+    "winner": "CLE",
+    "loser": "DET",
+    "score": "4-3",
+    "ended": "2026-05-17",
+    "round": "Semifinal de conferência"
+   },
+   {
+    "winner": "NYK",
+    "loser": "CLE",
+    "score": "4-0",
+    "ended": "2026-05-25",
+    "round": "Final de conferência"
+   },
+   {
+    "winner": "SAS",
+    "loser": "OKC",
+    "score": "4-3",
+    "ended": "2026-05-30",
+    "round": "Final de conferência"
+   },
+   {
+    "winner": "NYK",
+    "loser": "SAS",
+    "score": "4-1",
+    "ended": "2026-06-13",
+    "round": "Finais da NBA"
+   }
+  ]
+ },
+ "drafts": {
+  "2025": [
+   {
+    "pick": 1,
+    "round": 1,
+    "playerId": 1642843,
+    "name": "Cooper Flagg",
+    "team": "DAL",
+    "from": "Duke"
+   },
+   {
+    "pick": 2,
+    "round": 1,
+    "playerId": 1642844,
+    "name": "Dylan Harper",
+    "team": "SAS",
+    "from": "Rutgers"
+   },
+   {
+    "pick": 3,
+    "round": 1,
+    "playerId": 1642845,
+    "name": "VJ Edgecombe",
+    "team": "PHI",
+    "from": "Baylor"
+   },
+   {
+    "pick": 4,
+    "round": 1,
+    "playerId": 1642851,
+    "name": "Kon Knueppel",
+    "team": "CHA",
+    "from": "Duke"
+   },
+   {
+    "pick": 5,
+    "round": 1,
+    "playerId": 1642846,
+    "name": "Ace Bailey",
+    "team": "UTA",
+    "from": "Rutgers"
+   },
+   {
+    "pick": 6,
+    "round": 1,
+    "playerId": 1642848,
+    "name": "Tre Johnson",
+    "team": "WAS",
+    "from": "Texas"
+   },
+   {
+    "pick": 7,
+    "round": 1,
+    "playerId": 1642847,
+    "name": "Jeremiah Fears",
+    "team": "NOP",
+    "from": "Oklahoma"
+   },
+   {
+    "pick": 8,
+    "round": 1,
+    "playerId": 1642856,
+    "name": "Egor Dëmin",
+    "team": "BKN",
+    "from": "Brigham Young"
+   },
+   {
+    "pick": 9,
+    "round": 1,
+    "playerId": 1642867,
+    "name": "Collin Murray-Boyles",
+    "team": "TOR",
+    "from": "South Carolina"
+   },
+   {
+    "pick": 10,
+    "round": 1,
+    "playerId": 1642863,
+    "name": "Khaman Maluach",
+    "team": "HOU",
+    "from": "Duke"
+   },
+   {
+    "pick": 11,
+    "round": 1,
+    "playerId": 1642907,
+    "name": "Cedric Coward",
+    "team": "POR",
+    "from": "Washington State"
+   },
+   {
+    "pick": 12,
+    "round": 1,
+    "playerId": 1642855,
+    "name": "Noa Essengue",
+    "team": "CHI",
+    "from": "Ratiopharm Ulm (Germany)"
+   },
+   {
+    "pick": 13,
+    "round": 1,
+    "playerId": 1642852,
+    "name": "Derik Queen",
+    "team": "ATL",
+    "from": "Maryland"
+   },
+   {
+    "pick": 14,
+    "round": 1,
+    "playerId": 1642868,
+    "name": "Carter Bryant",
+    "team": "SAS",
+    "from": "Arizona"
+   },
+   {
+    "pick": 15,
+    "round": 1,
+    "playerId": 1642850,
+    "name": "Thomas Sorber",
+    "team": "OKC",
+    "from": "Georgetown"
+   },
+   {
+    "pick": 16,
+    "round": 1,
+    "playerId": 1642905,
+    "name": "Yang Hansen",
+    "team": "MEM",
+    "from": "Qingdao (China)"
+   },
+   {
+    "pick": 17,
+    "round": 1,
+    "playerId": 1642866,
+    "name": "Joan Beringer",
+    "team": "MIN",
+    "from": "Cedevita Olimpija (Slovenia)"
+   },
+   {
+    "pick": 18,
+    "round": 1,
+    "playerId": 1642383,
+    "name": "Walter Clayton Jr.",
+    "team": "WAS",
+    "from": "Florida"
+   },
+   {
+    "pick": 19,
+    "round": 1,
+    "playerId": 1642849,
+    "name": "Nolan Traore",
+    "team": "BKN",
+    "from": "Saint-Quentin BB (France)"
+   },
+   {
+    "pick": 20,
+    "round": 1,
+    "playerId": 1642857,
+    "name": "Kasparas Jakučionis",
+    "team": "MIA",
+    "from": "Illinois"
+   },
+   {
+    "pick": 21,
+    "round": 1,
+    "playerId": 1642860,
+    "name": "Will Riley",
+    "team": "UTA",
+    "from": "Illinois"
+   },
+   {
+    "pick": 22,
+    "round": 1,
+    "playerId": 1642962,
+    "name": "Drake Powell",
+    "team": "ATL",
+    "from": "North Carolina"
+   },
+   {
+    "pick": 23,
+    "round": 1,
+    "playerId": 1642854,
+    "name": "Asa Newell",
+    "team": "NOP",
+    "from": "Georgia"
+   },
+   {
+    "pick": 24,
+    "round": 1,
+    "playerId": 1642363,
+    "name": "Nique Clifford",
+    "team": "OKC",
+    "from": "Colorado State"
+   },
+   {
+    "pick": 25,
+    "round": 1,
+    "playerId": 1642859,
+    "name": "Jase Richardson",
+    "team": "ORL",
+    "from": "Michigan State"
+   },
+   {
+    "pick": 26,
+    "round": 1,
+    "playerId": 1642879,
+    "name": "Ben Saraf",
+    "team": "BKN",
+    "from": "Ratiopharm Ulm (Germany)"
+   },
+   {
+    "pick": 27,
+    "round": 1,
+    "playerId": 1642874,
+    "name": "Danny Wolf",
+    "team": "BKN",
+    "from": "Michigan"
+   },
+   {
+    "pick": 28,
+    "round": 1,
+    "playerId": 1642864,
+    "name": "Hugo González",
+    "team": "BOS",
+    "from": "Real Madrid Baloncesto (Spain)"
+   },
+   {
+    "pick": 29,
+    "round": 1,
+    "playerId": 1642862,
+    "name": "Liam McNeeley",
+    "team": "PHX",
+    "from": "Connecticut"
+   },
+   {
+    "pick": 30,
+    "round": 1,
+    "playerId": 1642949,
+    "name": "Yanic Konan Niederhäuser",
+    "team": "LAC",
+    "from": "Penn State"
+   },
+   {
+    "pick": 31,
+    "round": 2,
+    "playerId": 1642853,
+    "name": "Rasheer Fleming",
+    "team": "MIN",
+    "from": "Saint Joseph's"
+   },
+   {
+    "pick": 32,
+    "round": 2,
+    "playerId": 1642869,
+    "name": "Noah Penda",
+    "team": "BOS",
+    "from": "Le Mans Sarthe Basket (France)"
+   },
+   {
+    "pick": 33,
+    "round": 2,
+    "playerId": 1642883,
+    "name": "Sion James",
+    "team": "CHA",
+    "from": "Duke"
+   },
+   {
+    "pick": 34,
+    "round": 2,
+    "playerId": 1641750,
+    "name": "Ryan Kalkbrenner",
+    "team": "CHA",
+    "from": "Creighton"
+   },
+   {
+    "pick": 35,
+    "round": 2,
+    "playerId": 1641780,
+    "name": "Johni Broome",
+    "team": "PHI",
+    "from": "Auburn"
+   },
+   {
+    "pick": 36,
+    "round": 2,
+    "playerId": 1642876,
+    "name": "Adou Thiero",
+    "team": "BKN",
+    "from": "Arkansas"
+   },
+   {
+    "pick": 37,
+    "round": 2,
+    "playerId": 1642404,
+    "name": "Chaz Lanier",
+    "team": "DET",
+    "from": "Tennessee"
+   },
+   {
+    "pick": 38,
+    "round": 2,
+    "playerId": 1642880,
+    "name": "Kam Jones",
+    "team": "SAS",
+    "from": "Marquette"
+   },
+   {
+    "pick": 39,
+    "round": 2,
+    "playerId": 1642918,
+    "name": "Alijah Martin",
+    "team": "TOR",
+    "from": "Florida"
+   },
+   {
+    "pick": 40,
+    "round": 2,
+    "playerId": 1642877,
+    "name": "Micah Peavy",
+    "team": "WAS",
+    "from": "Georgetown"
+   },
+   {
+    "pick": 41,
+    "round": 2,
+    "playerId": 1642886,
+    "name": "Koby Brea",
+    "team": "GSW",
+    "from": "Kentucky"
+   },
+   {
+    "pick": 42,
+    "round": 2,
+    "playerId": 1642875,
+    "name": "Maxime Raynaud",
+    "team": "SAC",
+    "from": "Stanford"
+   },
+   {
+    "pick": 43,
+    "round": 2,
+    "playerId": 1642364,
+    "name": "Jamir Watkins",
+    "team": "WAS",
+    "from": "Florida State"
+   },
+   {
+    "pick": 44,
+    "round": 2,
+    "playerId": 1642964,
+    "name": "Brooks Barnhizer",
+    "team": "OKC",
+    "from": "Northwestern"
+   },
+   {
+    "pick": 45,
+    "round": 2,
+    "playerId": 1642911,
+    "name": "Rocco Zikarsky",
+    "team": "CHI",
+    "from": "Brisbane (Australia)"
+   },
+   {
+    "pick": 46,
+    "round": 2,
+    "playerId": 1642873,
+    "name": "Amari Williams",
+    "team": "ORL",
+    "from": "Kentucky"
+   },
+   {
+    "pick": 47,
+    "round": 2,
+    "playerId": 1642881,
+    "name": "Bogoljub Marković",
+    "team": "MIL",
+    "from": "KK Mega Leks (Serbia)"
+   },
+   {
+    "pick": 48,
+    "round": 2,
+    "playerId": 1642914,
+    "name": "Javon Small",
+    "team": "MEM",
+    "from": "West Virginia"
+   },
+   {
+    "pick": 49,
+    "round": 2,
+    "playerId": 1642878,
+    "name": "Tyrese Proctor",
+    "team": "CLE",
+    "from": "Duke"
+   },
+   {
+    "pick": 50,
+    "round": 2,
+    "playerId": 1642920,
+    "name": "Kobe Sanders",
+    "team": "NYK",
+    "from": "Nevada-Reno"
+   },
+   {
+    "pick": 51,
+    "round": 2,
+    "playerId": 1642885,
+    "name": "Mohamed Diawara",
+    "team": "LAC",
+    "from": "Cholet Basket (France)"
+   },
+   {
+    "pick": 52,
+    "round": 2,
+    "playerId": 1642893,
+    "name": "Alex Toohey",
+    "team": "PHX",
+    "from": "Sydney (Australia)"
+   },
+   {
+    "pick": 53,
+    "round": 2,
+    "playerId": 1642910,
+    "name": "John Tonje",
+    "team": "UTA",
+    "from": "Wisconsin"
+   },
+   {
+    "pick": 54,
+    "round": 2,
+    "playerId": 1643007,
+    "name": "Taelon Peter",
+    "team": "IND",
+    "from": "Liberty"
+   },
+   {
+    "pick": 55,
+    "round": 2,
+    "playerId": 1642950,
+    "name": "Lachlan Olbrich",
+    "team": "LAL",
+    "from": "Illawarra (Australia)"
+   },
+   {
+    "pick": 56,
+    "round": 2,
+    "playerId": 1642954,
+    "name": "Will Richard",
+    "team": "MEM",
+    "from": "Florida"
+   },
+   {
+    "pick": 57,
+    "round": 2,
+    "playerId": 1642917,
+    "name": "Max Shulga",
+    "team": "ORL",
+    "from": "Virginia Commonwealth"
+   },
+   {
+    "pick": 58,
+    "round": 2,
+    "playerId": 1643008,
+    "name": "Saliou Niang",
+    "team": "CLE",
+    "from": "Trento (Italy)"
+   },
+   {
+    "pick": 59,
+    "round": 2,
+    "playerId": 1642942,
+    "name": "Jahmai Mashack",
+    "team": "HOU",
+    "from": "Tennessee"
+   }
+  ],
+  "2026": [
+   {
+    "pick": 1,
+    "round": 1,
+    "playerId": 1643407,
+    "name": "AJ Dybantsa",
+    "team": "WAS",
+    "from": "Brigham Young"
+   },
+   {
+    "pick": 2,
+    "round": 1,
+    "playerId": 1643408,
+    "name": "Darryn Peterson",
+    "team": "UTA",
+    "from": "Kansas"
+   },
+   {
+    "pick": 3,
+    "round": 1,
+    "playerId": 1643409,
+    "name": "Cameron Boozer",
+    "team": "MEM",
+    "from": "Duke"
+   },
+   {
+    "pick": 4,
+    "round": 1,
+    "playerId": 1643410,
+    "name": "Caleb Wilson",
+    "team": "CHI",
+    "from": "North Carolina"
+   },
+   {
+    "pick": 5,
+    "round": 1,
+    "playerId": 1643413,
+    "name": "Keaton Wagler",
+    "team": "LAC",
+    "from": "Illinois"
+   },
+   {
+    "pick": 6,
+    "round": 1,
+    "playerId": 1643414,
+    "name": "Mikel Brown Jr.",
+    "team": "BKN",
+    "from": "Louisville"
+   },
+   {
+    "pick": 7,
+    "round": 1,
+    "playerId": 1643411,
+    "name": "Darius Acuff Jr.",
+    "team": "SAC",
+    "from": "Arkansas"
+   },
+   {
+    "pick": 8,
+    "round": 1,
+    "playerId": 1643412,
+    "name": "Kingston Flemings",
+    "team": "ATL",
+    "from": "Houston"
+   },
+   {
+    "pick": 9,
+    "round": 1,
+    "playerId": 1643516,
+    "name": "Morez Johnson Jr.",
+    "team": "DAL",
+    "from": "Michigan"
+   },
+   {
+    "pick": 10,
+    "round": 1,
+    "playerId": 1643415,
+    "name": "Brayden Burries",
+    "team": "MIL",
+    "from": "Arizona"
+   },
+   {
+    "pick": 11,
+    "round": 1,
+    "playerId": 1642865,
+    "name": "Yaxel Lendeborg",
+    "team": "GSW",
+    "from": "Michigan"
+   },
+   {
+    "pick": 12,
+    "round": 1,
+    "playerId": 1643530,
+    "name": "Aday Mara",
+    "team": "OKC",
+    "from": "Michigan"
+   },
+   {
+    "pick": 13,
+    "round": 1,
+    "playerId": 1643417,
+    "name": "Nate Ament",
+    "team": "MIA",
+    "from": "Tennessee"
+   },
+   {
+    "pick": 14,
+    "round": 1,
+    "playerId": 1643419,
+    "name": "Hannes Steinbach",
+    "team": "CHA",
+    "from": "Washington"
+   },
+   {
+    "pick": 15,
+    "round": 1,
+    "playerId": 1643517,
+    "name": "Dailyn Swain",
+    "team": "CHI",
+    "from": "Texas"
+   },
+   {
+    "pick": 16,
+    "round": 1,
+    "playerId": 1642892,
+    "name": "Bennett Stirtz",
+    "team": "MEM",
+    "from": "Iowa"
+   },
+   {
+    "pick": 17,
+    "round": 1,
+    "playerId": 1643536,
+    "name": "Ebuka Okorie",
+    "team": "OKC",
+    "from": "Stanford"
+   },
+   {
+    "pick": 18,
+    "round": 1,
+    "playerId": 1643515,
+    "name": "Christian Anderson",
+    "team": "CHA",
+    "from": "Texas Tech"
+   },
+   {
+    "pick": 19,
+    "round": 1,
+    "playerId": 1643512,
+    "name": "Allen Graves",
+    "team": "TOR",
+    "from": "Santa Clara"
+   },
+   {
+    "pick": 20,
+    "round": 1,
+    "playerId": 1643519,
+    "name": "Jayden Quaintance",
+    "team": "SAS",
+    "from": "Kentucky"
+   },
+   {
+    "pick": 21,
+    "round": 1,
+    "playerId": 1643510,
+    "name": "Karim Lopez",
+    "team": "DET",
+    "from": "Breakers (New Zealand)"
+   },
+   {
+    "pick": 22,
+    "round": 1,
+    "playerId": 1642889,
+    "name": "Labaron Philon",
+    "team": "PHI",
+    "from": "Alabama"
+   },
+   {
+    "pick": 23,
+    "round": 1,
+    "playerId": 1643544,
+    "name": "Zuby Ejiofor",
+    "team": "ATL",
+    "from": "St. John's (NY)"
+   },
+   {
+    "pick": 24,
+    "round": 1,
+    "playerId": 1643418,
+    "name": "Cameron Carr",
+    "team": "NYK",
+    "from": "Baylor"
+   },
+   {
+    "pick": 25,
+    "round": 1,
+    "playerId": 1643547,
+    "name": "Sergio de Larrea",
+    "team": "LAL",
+    "from": "Valencia BC (Spain)"
+   },
+   {
+    "pick": 26,
+    "round": 1,
+    "playerId": 1643542,
+    "name": "Tarris Reed Jr.",
+    "team": "DEN",
+    "from": "Connecticut"
+   },
+   {
+    "pick": 27,
+    "round": 1,
+    "playerId": 1643416,
+    "name": "Chris Cenac Jr.",
+    "team": "BOS",
+    "from": "Houston"
+   },
+   {
+    "pick": 28,
+    "round": 1,
+    "playerId": 1643538,
+    "name": "Joshua Jefferson",
+    "team": "MIN",
+    "from": "Iowa State"
+   },
+   {
+    "pick": 29,
+    "round": 1,
+    "playerId": 1642284,
+    "name": "Alex Karaban",
+    "team": "CLE",
+    "from": "Houston"
+   },
+   {
+    "pick": 30,
+    "round": 1,
+    "playerId": 1643520,
+    "name": "Koa Peat",
+    "team": "DAL",
+    "from": "Arizona"
+   },
+   {
+    "pick": 31,
+    "round": 2,
+    "playerId": 1643570,
+    "name": "Bruce Thornton",
+    "team": "NYK",
+    "from": "Ohio State"
+   },
+   {
+    "pick": 32,
+    "round": 2,
+    "playerId": 1643563,
+    "name": "Richie Saunders",
+    "team": "MEM",
+    "from": "Brigham Young"
+   },
+   {
+    "pick": 33,
+    "round": 2,
+    "playerId": 1642912,
+    "name": "Isaiah Evans",
+    "team": "BKN",
+    "from": "Duke"
+   },
+   {
+    "pick": 34,
+    "round": 2,
+    "playerId": 1643509,
+    "name": "Meleek Thomas",
+    "team": "SAC",
+    "from": "Arkansas"
+   },
+   {
+    "pick": 35,
+    "round": 2,
+    "playerId": 1642350,
+    "name": "Trevon Brazile",
+    "team": "SAS",
+    "from": "Arkansas"
+   },
+   {
+    "pick": 36,
+    "round": 2,
+    "playerId": 1642394,
+    "name": "Baba Miller",
+    "team": "LAC",
+    "from": "Cincinnati"
+   },
+   {
+    "pick": 37,
+    "round": 2,
+    "playerId": 1643553,
+    "name": "Ryan Conwell",
+    "team": "OKC",
+    "from": "Louisville"
+   },
+   {
+    "pick": 38,
+    "round": 2,
+    "playerId": 1643552,
+    "name": "Braden Smith",
+    "team": "CHI",
+    "from": "Purdue"
+   },
+   {
+    "pick": 39,
+    "round": 2,
+    "playerId": 1643583,
+    "name": "Jack Kayil",
+    "team": "HOU",
+    "from": "Alba Berlin (Germany)"
+   },
+   {
+    "pick": 40,
+    "round": 2,
+    "playerId": 1641759,
+    "name": "Dillon Mitchell",
+    "team": "BOS",
+    "from": "St. John's (NY)"
+   },
+   {
+    "pick": 41,
+    "round": 2,
+    "playerId": 1642923,
+    "name": "Otega Oweh",
+    "team": "MIA",
+    "from": "Kentucky"
+   },
+   {
+    "pick": 42,
+    "round": 2,
+    "playerId": 1643551,
+    "name": "Ja'Kobi Gillespie",
+    "team": "SAS",
+    "from": "Tennessee"
+   },
+   {
+    "pick": 43,
+    "round": 2,
+    "playerId": 1643548,
+    "name": "Tyler Bilodeau",
+    "team": "BKN",
+    "from": "California-Los Angeles"
+   },
+   {
+    "pick": 44,
+    "round": 2,
+    "playerId": 1643576,
+    "name": "Maliq Brown",
+    "team": "SAS",
+    "from": "Duke"
+   },
+   {
+    "pick": 45,
+    "round": 2,
+    "playerId": 1643567,
+    "name": "Emanuel Sharp",
+    "team": "SAC",
+    "from": "Houston"
+   },
+   {
+    "pick": 46,
+    "round": 2,
+    "playerId": 1643590,
+    "name": "Felix Okpara",
+    "team": "ORL",
+    "from": "Tennessee"
+   },
+   {
+    "pick": 47,
+    "round": 2,
+    "playerId": 1643589,
+    "name": "Tyler Nickel",
+    "team": "PHX",
+    "from": "Vanderbilt"
+   },
+   {
+    "pick": 48,
+    "round": 2,
+    "playerId": 1643588,
+    "name": "Tobi Lawal",
+    "team": "DAL",
+    "from": "Virginia Tech"
+   },
+   {
+    "pick": 49,
+    "round": 2,
+    "playerId": 1643624,
+    "name": "Bryce Hopkins",
+    "team": "DEN",
+    "from": "St. John's (NY)"
+   },
+   {
+    "pick": 50,
+    "round": 2,
+    "playerId": 1643558,
+    "name": "Jaden Bradley",
+    "team": "TOR",
+    "from": "Arizona"
+   },
+   {
+    "pick": 51,
+    "round": 2,
+    "playerId": 1643593,
+    "name": "Izaiyah Nelson",
+    "team": "WAS",
+    "from": "South Florida"
+   },
+   {
+    "pick": 52,
+    "round": 2,
+    "playerId": 1643539,
+    "name": "Henri Veesaar",
+    "team": "LAC",
+    "from": "North Carolina"
+   },
+   {
+    "pick": 53,
+    "round": 2,
+    "playerId": 1642391,
+    "name": "Ugonna Onyenso",
+    "team": "HOU",
+    "from": "Virginia"
+   },
+   {
+    "pick": 54,
+    "round": 2,
+    "playerId": 1643650,
+    "name": "Lajae Jones",
+    "team": "GSW",
+    "from": "Florida State"
+   },
+   {
+    "pick": 55,
+    "round": 2,
+    "playerId": 1643568,
+    "name": "Nick Martinelli",
+    "team": "NYK",
+    "from": "Northwestern"
+   },
+   {
+    "pick": 56,
+    "round": 2,
+    "playerId": 1643585,
+    "name": "Vsevolod Ishchenko",
+    "team": "CHI",
+    "from": "Lokomotiv Kuban (Russia)"
+   },
+   {
+    "pick": 57,
+    "round": 2,
+    "playerId": 1643712,
+    "name": "Narcisse Ngoy",
+    "team": "ATL",
+    "from": "Poitiers Basket 86 (France)"
+   },
+   {
+    "pick": 58,
+    "round": 2,
+    "playerId": 1643555,
+    "name": "Jaron Pierre Jr.",
+    "team": "NOP",
+    "from": "Southern Methodist"
+   },
+   {
+    "pick": 59,
+    "round": 2,
+    "playerId": 1643626,
+    "name": "Trey Kaufman-Renn",
+    "team": "MIN",
+    "from": "Purdue"
+   },
+   {
+    "pick": 60,
+    "round": 2,
+    "playerId": 1641831,
+    "name": "Malique Lewis",
+    "team": "WAS",
+    "from": "South East Melbourne Magic (Australia)"
+   }
+  ]
+ }
+}

@@ -1,0 +1,40 @@
+/* Evolution 701–1000: scoped WNBA Studio, Observatory and Festival. */
+.wnba-page .w-fantasy-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;min-width:0}
+.wnba-page .w-fantasy-grid>.w-panel{min-width:0}
+.wnba-page .w-mini-list,.wnba-page .w-roster-pool{display:grid;gap:7px;max-height:390px;overflow-y:auto;overscroll-behavior:contain;padding:4px}
+.wnba-page .w-mini-person,.wnba-page .w-pool-row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px;border:1px solid var(--w-line);border-radius:11px;background:var(--surface-2);min-width:0}
+.wnba-page .w-pool-row>div{display:grid;gap:4px;flex:1;min-width:0}
+.wnba-page .w-pool-row>div strong{font-size:12px;overflow-wrap:anywhere}
+.wnba-page .w-pool-row>div small{font-size:10px;color:var(--text-secondary)}
+.wnba-page .w-pool-row .w-btn{white-space:normal;min-width:85px;max-width:155px}
+.wnba-page .w-mini-person{font-size:12px}
+.wnba-page .w-mini-person .w-btn{padding:6px 11px}
+.wnba-page .w-btn.w-selected{border-color:#b97be3;color:var(--w-accent)}
+.wnba-page .w-file-input{display:none}
+.wnba-page .w-lab-results{display:grid;gap:6px;max-height:600px;overflow-y:auto}
+.wnba-page .w-lab-row{display:grid;grid-template-columns:25px minmax(95px,1.5fr) minmax(55px,2fr) 45px;gap:10px;align-items:center;padding:9px 12px;border-radius:9px;background:var(--surface-2);font-size:12px}
+.wnba-page .w-lab-rank{color:var(--text-secondary);font-weight:700}
+.wnba-page .w-lab-bar{display:block;position:relative;height:7px;border-radius:9px;background:var(--surface-3);overflow:hidden}
+.wnba-page .w-lab-bar span{display:block;height:100%;border-radius:9px;background:linear-gradient(90deg,#a266e7,#e0a1e7);transition:width .25s}
+.wnba-page .w-stat-compare{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 12px;border-bottom:1px solid var(--w-line);font-size:12px}
+.wnba-page .w-stat-compare strong{font-variant-numeric:tabular-nums}
+.wnba-page .w-team-analytic-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:9px}
+.wnba-page .w-league-brief{border-left:4px solid var(--w-primary);display:grid;gap:8px;background:var(--surface-2);padding:12px;border-radius:9px;font-size:12px}
+.wnba-page .w-league-brief small{color:var(--text-secondary)}
+.wnba-page .w-roster-pool{margin-top:9px}
+@media(max-width:780px){.wnba-page .w-fantasy-grid{grid-template-columns:minmax(0,1fr)}.wnba-page .w-pool-row{flex-wrap:wrap}.wnba-page .w-pool-row .w-btn{flex:1}}
+@media(max-width:420px){.wnba-page .w-lab-row{grid-template-columns:20px minmax(90px,1fr) 56px}.wnba-page .w-lab-bar{display:none}}
+@media(prefers-reduced-motion:reduce){.wnba-page .w-lab-bar span{transition:none}}
+.wnba-page .w-street-figure{margin:14px 0;min-width:0}
+.wnba-page .w-street-svg{display:block;width:100%;max-height:310px;aspect-ratio:420/245;border-radius:13px}
+.wnba-page .w-street-figure figcaption{color:var(--text-secondary);font-size:11px;line-height:1.5;margin-top:7px}
+.wnba-page .w-photo-audit{display:flex;align-items:center;gap:10px;border:1px solid var(--w-line);border-radius:13px;padding:10px;min-width:0;background:var(--surface-2)}
+.wnba-page .w-photo-audit>div:last-child{display:grid;gap:5px;min-width:0;overflow-wrap:anywhere}
+.wnba-page .w-photo-audit>div:last-child strong{font-size:12px}
+.wnba-page .w-photo-audit>div:last-child small,.wnba-page .w-photo-audit a{font-size:11px}
+
+/* Box score Street WNBA: tabelas legíveis também em telas estreitas. */
+.wnba-page .w-street-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:12px;min-width:0}
+.wnba-page .w-street-table-scroll{max-width:100%;overflow-x:auto}
+.wnba-page .w-street-table-scroll .w-data{min-width:340px;font-variant-numeric:tabular-nums}
+.wnba-page .w-street-table-scroll caption{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}

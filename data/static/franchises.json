@@ -1,0 +1,106 @@
+{
+  "_about": "Definição do universo do jogo: 32 franquias, alinhamento pós-expansão, identidade visual, mercado e cultura de torcida. 'market' e 'fans' são valores de balanceamento do jogo (0-100), não estatísticas oficiais. Dados oficiais (arena, dono, títulos) vêm de data/seed/teams.json.",
+  "alignment": {
+    "note": "Seattle e Las Vegas entram no Oeste; New Orleans passa para o Leste; Minnesota permanece no Oeste. 16 + 16, quatro divisões de quatro equipes por conferência (decisão de design).",
+    "East": {
+      "Atlantic": ["BOS", "BKN", "NYK", "TOR"],
+      "Mid-Atlantic": ["CHA", "CLE", "PHI", "WAS"],
+      "Central": ["CHI", "DET", "IND", "MIL"],
+      "Southeast": ["ATL", "MIA", "NOP", "ORL"]
+    },
+    "West": {
+      "Northwest": ["MIN", "OKC", "POR", "SEA"],
+      "Mountain": ["DEN", "LVJ", "PHX", "UTA"],
+      "Pacific": ["GSW", "LAC", "LAL", "SAC"],
+      "Southwest": ["DAL", "HOU", "MEM", "SAS"]
+    }
+  },
+  "franchises": [
+    { "id": "ATL", "nbaTeamId": 1610612737, "espnId": 1, "city": "Atlanta", "name": "Hawks", "colors": ["#E03A3E", "#C1D32F"], "market": 80, "fans": { "expectation": 55, "passion": 58, "patience": 60, "note": "Mercado grande e exigente com entretenimento; torcida responde rápido a times empolgantes." }, "rivals": ["BOS", "MIA", "ORL"] },
+    { "id": "BOS", "nbaTeamId": 1610612738, "espnId": 2, "city": "Boston", "name": "Celtics", "colors": ["#007A33", "#BA9653"], "market": 82, "fans": { "expectation": 97, "passion": 95, "patience": 30, "note": "Alta exigência histórica: aqui o padrão é banner. Temporada sem disputar título é tratada como fracasso." }, "rivals": ["LAL", "PHI", "NYK", "MIA"] },
+    { "id": "BKN", "nbaTeamId": 1610612751, "espnId": 17, "city": "Brooklyn", "name": "Nets", "colors": ["#000000", "#FFFFFF"], "market": 94, "fans": { "expectation": 55, "passion": 55, "patience": 55, "note": "Mercado gigantesco, torcida ainda disputando espaço com o vizinho de Manhattan." }, "rivals": ["NYK", "BOS", "PHI"] },
+    { "id": "CHA", "nbaTeamId": 1610612766, "espnId": 30, "city": "Charlotte", "name": "Hornets", "colors": ["#1D1160", "#00788C"], "market": 58, "fans": { "expectation": 40, "passion": 60, "patience": 70, "note": "Torcida carente de playoffs; qualquer campanha competitiva é celebrada." }, "rivals": ["ATL", "WAS", "MIA"] },
+    { "id": "CHI", "nbaTeamId": 1610612741, "espnId": 4, "city": "Chicago", "name": "Bulls", "colors": ["#CE1141", "#000000"], "market": 90, "fans": { "expectation": 70, "passion": 88, "patience": 45, "note": "Arena sempre cheia e memória da dinastia dos anos 90: mediocridade prolongada incomoda." }, "rivals": ["DET", "CLE", "NYK", "MIL"] },
+    { "id": "CLE", "nbaTeamId": 1610612739, "espnId": 5, "city": "Cleveland", "name": "Cavaliers", "colors": ["#860038", "#FDBB30"], "market": 60, "fans": { "expectation": 70, "passion": 82, "patience": 55, "note": "Cidade apaixonada e leal, com casca grossa de quem já sofreu muito." }, "rivals": ["GSW", "CHI", "DET", "BOS"] },
+    { "id": "DAL", "nbaTeamId": 1610612742, "espnId": 6, "city": "Dallas", "name": "Mavericks", "colors": ["#00538C", "#B8C4CA"], "market": 86, "fans": { "expectation": 72, "passion": 78, "patience": 45, "note": "Mercado grande e torcida que cobra a diretoria publicamente." }, "rivals": ["SAS", "HOU", "PHX"] },
+    { "id": "DEN", "nbaTeamId": 1610612743, "espnId": 7, "city": "Denver", "name": "Nuggets", "colors": ["#0E2240", "#FEC524"], "market": 66, "fans": { "expectation": 82, "passion": 80, "patience": 50, "note": "Janela de título aberta: a torcida quer aproveitar o auge do seu astro." }, "rivals": ["LAL", "MIN", "UTA", "PHX"] },
+    { "id": "DET", "nbaTeamId": 1610612765, "espnId": 8, "city": "Detroit", "name": "Pistons", "colors": ["#C8102E", "#1D42BA"], "market": 70, "fans": { "expectation": 62, "passion": 78, "patience": 55, "note": "Identidade operária: a torcida valoriza defesa, esforço e dureza." }, "rivals": ["CHI", "CLE", "BOS", "IND"] },
+    { "id": "GSW", "nbaTeamId": 1610612744, "espnId": 9, "city": "Golden State", "name": "Warriors", "colors": ["#1D428A", "#FFC72C"], "market": 88, "fans": { "expectation": 85, "passion": 85, "patience": 40, "note": "Acostumada a dinastia e a ingressos caros: espera espetáculo e relevância." }, "rivals": ["CLE", "LAL", "SAC", "LAC"] },
+    { "id": "HOU", "nbaTeamId": 1610612745, "espnId": 10, "city": "Houston", "name": "Rockets", "colors": ["#CE1141", "#C4CED4"], "market": 84, "fans": { "expectation": 75, "passion": 72, "patience": 50, "note": "Mercado enorme que voltou a sonhar alto com o novo núcleo." }, "rivals": ["SAS", "DAL", "GSW"] },
+    { "id": "IND", "nbaTeamId": 1610612754, "espnId": 11, "city": "Indiana", "name": "Pacers", "colors": ["#002D62", "#FDBB30"], "market": 54, "fans": { "expectation": 68, "passion": 86, "patience": 62, "note": "Estado que respira basquete: valoriza jogo coletivo e entrega." }, "rivals": ["NYK", "DET", "CHI", "MIA"] },
+    { "id": "LAC", "nbaTeamId": 1610612746, "espnId": 12, "city": "LA", "name": "Clippers", "colors": ["#C8102E", "#1D428A"], "market": 88, "fans": { "expectation": 70, "passion": 62, "patience": 45, "note": "Dono bilionário, arena nova e a eterna comparação com o vizinho." }, "rivals": ["LAL", "GSW", "PHX"] },
+    { "id": "LAL", "nbaTeamId": 1610612747, "espnId": 13, "city": "Los Angeles", "name": "Lakers", "colors": ["#552583", "#FDB927"], "market": 98, "fans": { "expectation": 96, "passion": 92, "patience": 25, "note": "Franquia de estrelas: a torcida espera astros, holofotes e títulos." }, "rivals": ["BOS", "LAC", "SAC", "GSW", "DEN"] },
+    { "id": "MEM", "nbaTeamId": 1610612763, "espnId": 29, "city": "Memphis", "name": "Grizzlies", "colors": ["#5D76A9", "#12173F"], "market": 44, "fans": { "expectation": 55, "passion": 74, "patience": 65, "note": "Grit and grind: mercado pequeno que abraça times brigadores." }, "rivals": ["GSW", "SAS", "DAL"] },
+    { "id": "MIA", "nbaTeamId": 1610612748, "espnId": 14, "city": "Miami", "name": "Heat", "colors": ["#98002E", "#F9A01B"], "market": 76, "fans": { "expectation": 82, "passion": 70, "patience": 45, "note": "Cultura Heat: disciplina, preparo físico e ambição permanente por estrelas." }, "rivals": ["BOS", "NYK", "ORL", "IND"] },
+    { "id": "MIL", "nbaTeamId": 1610612749, "espnId": 15, "city": "Milwaukee", "name": "Bucks", "colors": ["#00471B", "#EEE1C6"], "market": 50, "fans": { "expectation": 68, "passion": 80, "patience": 55, "note": "Mercado pequeno e fiel que viveu o topo recentemente." }, "rivals": ["CHI", "BOS", "IND"] },
+    { "id": "MIN", "nbaTeamId": 1610612750, "espnId": 16, "city": "Minnesota", "name": "Timberwolves", "colors": ["#0C2340", "#78BE20"], "market": 68, "fans": { "expectation": 74, "passion": 76, "patience": 55, "note": "Depois de décadas de frustração, a torcida finalmente acredita." }, "rivals": ["DEN", "OKC", "SEA"] },
+    { "id": "NOP", "nbaTeamId": 1610612740, "espnId": 3, "city": "New Orleans", "name": "Pelicans", "colors": ["#0C2340", "#C8102E"], "market": 42, "fans": { "expectation": 48, "passion": 60, "patience": 60, "note": "Recém-chegado ao Leste: novos adversários, novas viagens e a chance de recomeçar." }, "rivals": ["ATL", "MIA", "MEM", "SAS"] },
+    { "id": "NYK", "nbaTeamId": 1610612752, "espnId": 18, "city": "New York", "name": "Knicks", "colors": ["#006BB6", "#F58426"], "market": 100, "fans": { "expectation": 92, "passion": 97, "patience": 28, "note": "Pressão gigantesca: Madison Square Garden, imprensa implacável e torcida que vive cada posse." }, "rivals": ["BKN", "BOS", "MIA", "IND", "PHI"] },
+    { "id": "OKC", "nbaTeamId": 1610612760, "espnId": 25, "city": "Oklahoma City", "name": "Thunder", "colors": ["#007AC1", "#EF3B24"], "market": 46, "fans": { "expectation": 88, "passion": 90, "patience": 55, "note": "Única grande liga da cidade: ginásio ensurdecedor e orgulho do time montado via draft." }, "rivals": ["SEA", "DEN", "MIN", "DAL"] },
+    { "id": "ORL", "nbaTeamId": 1610612753, "espnId": 19, "city": "Orlando", "name": "Magic", "colors": ["#0077C0", "#C4CED4"], "market": 62, "fans": { "expectation": 68, "passion": 68, "patience": 58, "note": "Núcleo jovem criou expectativa real de disputar o Leste." }, "rivals": ["MIA", "ATL", "NOP"] },
+    { "id": "PHI", "nbaTeamId": 1610612755, "espnId": 20, "city": "Philadelphia", "name": "76ers", "colors": ["#006BB6", "#ED174C"], "market": 84, "fans": { "expectation": 80, "passion": 93, "patience": 22, "note": "Torcida mais impaciente do país: vaia o próprio time, mas nunca abandona." }, "rivals": ["BOS", "NYK", "BKN", "WAS"] },
+    { "id": "PHX", "nbaTeamId": 1610612756, "espnId": 21, "city": "Phoenix", "name": "Suns", "colors": ["#1D1160", "#E56020"], "market": 74, "fans": { "expectation": 68, "passion": 74, "patience": 42, "note": "Franquia tradicional sem título: cada janela perdida pesa." }, "rivals": ["LAL", "LVJ", "DAL", "DEN"] },
+    { "id": "POR", "nbaTeamId": 1610612757, "espnId": 22, "city": "Portland", "name": "Trail Blazers", "colors": ["#E03A3E", "#000000"], "market": 58, "fans": { "expectation": 58, "passion": 90, "patience": 65, "note": "Rip City: uma das torcidas mais leais da liga — e a rivalidade da I-5 com Seattle voltou." }, "rivals": ["SEA", "LAL", "DEN"] },
+    { "id": "SAC", "nbaTeamId": 1610612758, "espnId": 23, "city": "Sacramento", "name": "Kings", "colors": ["#5A2D81", "#63727A"], "market": 58, "fans": { "expectation": 50, "passion": 88, "patience": 60, "note": "Torcida barulhenta que lutou para manter o time na cidade." }, "rivals": ["LAL", "GSW", "LVJ"] },
+    { "id": "SAS", "nbaTeamId": 1610612759, "espnId": 24, "city": "San Antonio", "name": "Spurs", "colors": ["#C4CED4", "#000000"], "market": 56, "fans": { "expectation": 86, "passion": 86, "patience": 60, "note": "Cultura de excelência silenciosa — e um talento geracional que reacendeu tudo." }, "rivals": ["DAL", "HOU", "LAL", "PHX"] },
+    { "id": "TOR", "nbaTeamId": 1610612761, "espnId": 28, "city": "Toronto", "name": "Raptors", "colors": ["#CE1141", "#000000"], "market": 86, "fans": { "expectation": 62, "passion": 86, "patience": 55, "note": "O time de um país inteiro: mercado nacional e torcida que lota a praça em frente à arena." }, "rivals": ["BOS", "BKN", "PHI", "CLE"] },
+    { "id": "UTA", "nbaTeamId": 1610612762, "espnId": 26, "city": "Utah", "name": "Jazz", "colors": ["#4E2A84", "#6CAEDF"], "market": 52, "fans": { "expectation": 55, "passion": 84, "patience": 62, "note": "Ginásio hostil e torcida fiel, à espera do fim da reconstrução." }, "rivals": ["DEN", "LVJ", "HOU", "LAL"] },
+    { "id": "WAS", "nbaTeamId": 1610612764, "espnId": 27, "city": "Washington", "name": "Wizards", "colors": ["#002B5C", "#E31837"], "market": 80, "fans": { "expectation": 50, "passion": 55, "patience": 55, "note": "Mercado grande adormecido: resultados trazem o público de volta rapidamente." }, "rivals": ["PHI", "CHA", "CLE", "ATL"] },
+    {
+      "id": "SEA", "nbaTeamId": null, "espnId": null, "city": "Seattle", "name": "SuperSonics", "colors": ["#00653A", "#FFC200"], "market": 76, "expansion": true,
+      "fans": { "expectation": 60, "passion": 96, "patience": 85, "note": "Forte vínculo emocional pelo retorno: a cidade esperou 18 anos. A paciência é enorme no começo — mas a memória de 1979 e dos anos Payton-Kemp cobra identidade." },
+      "rivals": ["OKC", "POR", "LVJ"],
+      "identity": {
+        "returning": true,
+        "founded": 1967,
+        "lastSeasonBeforeHiatus": "2007-08",
+        "returnSeason": "2026-27",
+        "summary": "Seattle retorna oficialmente à NBA e recupera nome, cores, títulos, recordes e números aposentados da franquia original (1967-2008). No universo do jogo, a história anterior a 2008 pertence aos SuperSonics; o Thunder mantém apenas a história construída em Oklahoma City.",
+        "arena": { "name": "Climate Pledge Arena", "capacity": 18300, "opened": 2021, "note": "Antigo Seattle Center Coliseum / KeyArena, casa histórica dos Sonics, totalmente reconstruída." },
+        "ownership": { "name": "Emerald City Basketball Partners", "fictional": true, "profile": "pragmatico", "note": "Grupo de investidores locais (fictício). Prioridade: reconstruir o vínculo com a cidade antes de gastar por resultados imediatos." },
+        "championships": [1979],
+        "finalsAppearances": [1978, 1979, 1996],
+        "retiredNumbers": [
+          { "number": "1", "name": "Gus Williams" },
+          { "number": "10", "name": "Nate McMillan" },
+          { "number": "19", "name": "Lenny Wilkens" },
+          { "number": "24", "name": "Spencer Haywood" },
+          { "number": "32", "name": "Fred Brown" },
+          { "number": "43", "name": "Jack Sikma" },
+          { "number": "MIC", "name": "Bob Blackburn (narrador)" }
+        ],
+        "legends": ["Gary Payton", "Shawn Kemp", "Jack Sikma", "Gus Williams", "Fred Brown", "Dennis Johnson", "Lenny Wilkens", "Spencer Haywood", "Ray Allen", "Detlef Schrempf", "Rashard Lewis", "Dale Ellis", "Tom Chambers", "Xavier McDaniel", "Nate McMillan", "Kevin Durant"],
+        "milestones": [
+          { "year": 1967, "text": "Fundação da franquia; estreia na temporada 1967-68." },
+          { "year": 1978, "text": "Primeira final da NBA: derrota para o Washington Bullets em sete jogos." },
+          { "year": 1979, "text": "Campeão da NBA sobre o Washington Bullets (4-1). Dennis Johnson, MVP das finais." },
+          { "year": 1996, "text": "Campanha de 64-18 com Gary Payton e Shawn Kemp; vice-campeão diante do Chicago Bulls." },
+          { "year": 2008, "text": "A franquia é transferida para Oklahoma City após 41 temporadas em Seattle." },
+          { "year": 2026, "text": "A NBA aprova a expansão e Seattle retorna à liga recuperando sua história." }
+        ],
+        "needsValidation": ["Recorde histórico e líderes estatísticos da era Seattle serão importados de fonte oficial na fase de História."]
+      }
+    },
+    {
+      "id": "LVJ", "nbaTeamId": null, "espnId": null, "city": "Las Vegas", "name": "Jokers", "colors": ["#7B2CFF", "#F2C14E"], "market": 60, "expansion": true,
+      "fans": { "expectation": 62, "passion": 70, "patience": 50, "note": "Expectativa por espetáculo e competitividade: na capital do entretenimento, o time concorre com todos os shows da cidade. Precisa vencer e divertir." },
+      "rivals": ["PHX", "SEA", "LAL", "UTA"],
+      "identity": {
+        "returning": false,
+        "founded": 2026,
+        "returnSeason": "2026-27",
+        "summary": "Nova franquia da NBA. Identidade inspirada em Las Vegas — cartas, neon e espetáculo — tratada com sobriedade: preto-meia-noite, roxo neon e ouro, com o coringa como símbolo de imprevisibilidade.",
+        "palette": { "midnight": "#0D0B14", "neonPurple": "#7B2CFF", "magenta": "#FF2E88", "gold": "#F2C14E" },
+        "arena": { "name": "T-Mobile Arena", "capacity": 18000, "opened": 2016, "note": "Arena existente na Strip, já usada pela NBA em jogos de torneio. Projeto de arena própria pode surgir na carreira." },
+        "ownership": { "name": "Neon Mile Sports & Entertainment", "fictional": true, "profile": "gastador", "note": "Consórcio de entretenimento (fictício). Quer relevância imediata e aceita gastar por estrelas." },
+        "championships": [],
+        "finalsAppearances": [],
+        "retiredNumbers": [],
+        "legends": [],
+        "milestones": [
+          { "year": 2026, "text": "A NBA aprova a expansão para 32 equipes; nasce o Las Vegas Jokers." }
+        ]
+      }
+    }
+  ]
+}

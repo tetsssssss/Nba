@@ -1,0 +1,1062 @@
+{
+ "generatedAt": "2026-10-05T23:13:29.442Z",
+ "counts": {
+  "error": 0,
+  "warn": 2,
+  "info": 143
+ },
+ "rosterSizes": {
+  "ATL": 21,
+  "BOS": 21,
+  "BKN": 20,
+  "CHA": 21,
+  "CHI": 21,
+  "CLE": 21,
+  "DAL": 20,
+  "DEN": 21,
+  "DET": 20,
+  "GSW": 21,
+  "HOU": 18,
+  "IND": 20,
+  "LAC": 21,
+  "LAL": 21,
+  "MEM": 20,
+  "MIA": 21,
+  "MIL": 21,
+  "MIN": 21,
+  "NOP": 21,
+  "NYK": 21,
+  "OKC": 21,
+  "ORL": 21,
+  "PHI": 21,
+  "PHX": 21,
+  "POR": 19,
+  "SAC": 19,
+  "SAS": 21,
+  "TOR": 22,
+  "UTA": 21,
+  "WAS": 21
+ },
+ "payroll": {
+  "ATL": {
+   "live": 197084718,
+   "dead": 5158080,
+   "total": 202242798
+  },
+  "BOS": {
+   "live": 209014875,
+   "dead": 0,
+   "total": 209014875
+  },
+  "BKN": {
+   "live": 162771509,
+   "dead": 0,
+   "total": 162771509
+  },
+  "CHA": {
+   "live": 168222753,
+   "dead": 9040237,
+   "total": 177262990
+  },
+  "CHI": {
+   "live": 177117934,
+   "dead": 1075459,
+   "total": 178193393
+  },
+  "CLE": {
+   "live": 215282754,
+   "dead": 2244109,
+   "total": 217526863
+  },
+  "DAL": {
+   "live": 183255450,
+   "dead": 10871533,
+   "total": 194126983
+  },
+  "DEN": {
+   "live": 229823216,
+   "dead": 666667,
+   "total": 230489883
+  },
+  "DET": {
+   "live": 193464145,
+   "dead": 3815861,
+   "total": 197280006
+  },
+  "GSW": {
+   "live": 232618934,
+   "dead": 0,
+   "total": 232618934
+  },
+  "HOU": {
+   "live": 207179901,
+   "dead": 764182,
+   "total": 207944083
+  },
+  "IND": {
+   "live": 213526968,
+   "dead": 75000,
+   "total": 213601968
+  },
+  "LAC": {
+   "live": 189644456,
+   "dead": 0,
+   "total": 189644456
+  },
+  "LAL": {
+   "live": 208998456,
+   "dead": 1448763,
+   "total": 210447219
+  },
+  "MEM": {
+   "live": 131114407,
+   "dead": 34900166,
+   "total": 166014573
+  },
+  "MIA": {
+   "live": 214420347,
+   "dead": 0,
+   "total": 214420347
+  },
+  "MIL": {
+   "live": 172127779,
+   "dead": 23183270,
+   "total": 195311049
+  },
+  "MIN": {
+   "live": 224180032,
+   "dead": 2055000,
+   "total": 226235032
+  },
+  "NOP": {
+   "live": 207091405,
+   "dead": 239828,
+   "total": 207331233
+  },
+  "NYK": {
+   "live": 241365633,
+   "dead": 0,
+   "total": 241365633
+  },
+  "OKC": {
+   "live": 220802513,
+   "dead": 90700,
+   "total": 220893213
+  },
+  "ORL": {
+   "live": 231309399,
+   "dead": 0,
+   "total": 231309399
+  },
+  "PHI": {
+   "live": 217424414,
+   "dead": 2150917,
+   "total": 219575331
+  },
+  "PHX": {
+   "live": 200817235,
+   "dead": 23197051,
+   "total": 224014286
+  },
+  "POR": {
+   "live": 196636124,
+   "dead": 1625795,
+   "total": 198261919
+  },
+  "SAC": {
+   "live": 203444472,
+   "dead": 3424333,
+   "total": 206868805
+  },
+  "SAS": {
+   "live": 206202466,
+   "dead": 0,
+   "total": 206202466
+  },
+  "TOR": {
+   "live": 212769633,
+   "dead": 0,
+   "total": 212769633
+  },
+  "UTA": {
+   "live": 187037409,
+   "dead": 0,
+   "total": 187037409
+  },
+  "WAS": {
+   "live": 204436521,
+   "dead": 2625627,
+   "total": 207062148
+  }
+ },
+ "issues": [
+  {
+   "level": "info",
+   "code": "no-espn-match",
+   "message": "Jaden Akins (NYK) não está nos elencos da ESPN — sem status de lesão e sem carreira por temporada.",
+   "playerId": 1643022
+  },
+  {
+   "level": "info",
+   "code": "no-espn-match",
+   "message": "Michael Ajayi (CHA) não está nos elencos da ESPN — sem status de lesão e sem carreira por temporada.",
+   "playerId": 1642369
+  },
+  {
+   "level": "info",
+   "code": "no-espn-match",
+   "message": "Tony Bradley (NYK) não está nos elencos da ESPN — sem status de lesão e sem carreira por temporada.",
+   "playerId": 1628396
+  },
+  {
+   "level": "info",
+   "code": "no-espn-match",
+   "message": "Jalen Bridges (CHI) não está nos elencos da ESPN — sem status de lesão e sem carreira por temporada.",
+   "playerId": 1641779
+  },
+  {
+   "level": "info",
+   "code": "no-espn-match",
+   "message": "Tyson Degenhart (TOR) não está nos elencos da ESPN — sem status de lesão e sem carreira por temporada.",
+   "playerId": 1643091
+  },
+  {
+   "level": "info",
+   "code": "no-espn-match",
+   "message": "Taylor Funk (UTA) não está nos elencos da ESPN — sem status de lesão e sem carreira por temporada.",
+   "playerId": 1641917
+  },
+  {
+   "level": "info",
+   "code": "no-espn-match",
+   "message": "Jazian Gortman (WAS) não está nos elencos da ESPN — sem status de lesão e sem carreira por temporada.",
+   "playerId": 1641789
+  },
+  {
+   "level": "info",
+   "code": "no-espn-match",
+   "message": "Ben Humrichous (BKN) não está nos elencos da ESPN — sem status de lesão e sem carreira por temporada.",
+   "playerId": 1643750
+  },
+  {
+   "level": "info",
+   "code": "no-espn-match",
+   "message": "Keba Keita (IND) não está nos elencos da ESPN — sem status de lesão e sem carreira por temporada.",
+   "playerId": 1643627
+  },
+  {
+   "level": "info",
+   "code": "no-espn-match",
+   "message": "Jaylen Martin (POR) não está nos elencos da ESPN — sem status de lesão e sem carreira por temporada.",
+   "playerId": 1641798
+  },
+  {
+   "level": "info",
+   "code": "no-espn-match",
+   "message": "Rienk Mast (IND) não está nos elencos da ESPN — sem status de lesão e sem carreira por temporada.",
+   "playerId": 1643792
+  },
+  {
+   "level": "info",
+   "code": "no-espn-match",
+   "message": "Isaac McKneely (ATL) não está nos elencos da ESPN — sem status de lesão e sem carreira por temporada.",
+   "playerId": 1643724
+  },
+  {
+   "level": "info",
+   "code": "no-espn-match",
+   "message": "Mike Sharavjamts (ORL) não está nos elencos da ESPN — sem status de lesão e sem carreira por temporada.",
+   "playerId": 1641814
+  },
+  {
+   "level": "info",
+   "code": "no-espn-match",
+   "message": "Isaiah Stevens (CHI) não está nos elencos da ESPN — sem status de lesão e sem carreira por temporada.",
+   "playerId": 1641815
+  },
+  {
+   "level": "info",
+   "code": "no-espn-match",
+   "message": "John Ukomadu (DET) não está nos elencos da ESPN — sem status de lesão e sem carreira por temporada.",
+   "playerId": 1642578
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Ochai Agbaji (NYK): contrato estimado (mínimo não garantido).",
+   "playerId": 1630534
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Rashaun Agee (CLE): contrato estimado (mínimo não garantido).",
+   "playerId": 1643772
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Jonas Aidoo (UTA): contrato estimado (mínimo não garantido).",
+   "playerId": 1643265
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Jaden Akins (NYK): contrato estimado (mínimo não garantido).",
+   "playerId": 1643022
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Zack Austin (CLE): contrato estimado (mínimo não garantido).",
+   "playerId": 1643113
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Reece Beekman (WAS): contrato estimado (mínimo não garantido).",
+   "playerId": 1641736
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Leaky Black (SAC): contrato estimado (mínimo não garantido).",
+   "playerId": 1641778
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Brandon Boston (CHI): contrato estimado (mínimo não garantido).",
+   "playerId": 1630527
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Tony Bradley (NYK): contrato estimado (mínimo não garantido).",
+   "playerId": 1628396
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Jalen Bridges (CHI): contrato estimado (mínimo não garantido).",
+   "playerId": 1641779
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Bruce Brown (NYK): contrato estimado (mínimo não garantido).",
+   "playerId": 1628971
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Nimari Burnett (TOR): contrato estimado (mínimo não garantido).",
+   "playerId": 1643718
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Kennedy Chandler (PHX): contrato estimado (mínimo não garantido).",
+   "playerId": 1631113
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Carson Cooper (MEM): contrato estimado (mínimo não garantido).",
+   "playerId": 1643721
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Cameron Corhen (ATL): contrato estimado (mínimo não garantido).",
+   "playerId": 1643723
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Dain Dainja (BKN): contrato estimado (mínimo não garantido).",
+   "playerId": 1643120
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "R.J. Davis (SAS): contrato estimado (mínimo não garantido).",
+   "playerId": 1642930
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "JD Davison (ORL): contrato estimado (mínimo não garantido).",
+   "playerId": 1631120
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Tyson Degenhart (TOR): contrato estimado (mínimo não garantido).",
+   "playerId": 1643091
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Jon Elmore (SAS): contrato estimado (mínimo não garantido).",
+   "playerId": 1631399
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Drew Eubanks (NYK): contrato estimado (mínimo não garantido).",
+   "playerId": 1629234
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Wyatt Fricks (CHA): contrato estimado (mínimo não garantido).",
+   "playerId": 1643769
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Taylor Funk (UTA): contrato estimado (mínimo não garantido).",
+   "playerId": 1641917
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Anthony Gill (WAS): contrato estimado (mínimo não garantido).",
+   "playerId": 1630264
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Dane Goodwin (DEN): contrato estimado (mínimo não garantido).",
+   "playerId": 1641863
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Jazian Gortman (WAS): contrato estimado (mínimo não garantido).",
+   "playerId": 1641789
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Hayden Gray (BOS): contrato estimado (mínimo não garantido).",
+   "playerId": 1643060
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Coleman Hawkins (DEN): contrato estimado (mínimo não garantido).",
+   "playerId": 1641746
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Andrew Holifield (OKC): contrato estimado (mínimo não garantido).",
+   "playerId": 1643808
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Ben Humrichous (BKN): contrato estimado (mínimo não garantido).",
+   "playerId": 1643750
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Graham Ike (GSW): contrato estimado (mínimo não garantido).",
+   "playerId": 1643633
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "James Johnson (IND): contrato estimado (mínimo não garantido).",
+   "playerId": 201949
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Kobe Johnson (ATL): contrato estimado (mínimo não garantido).",
+   "playerId": 1642937
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Jarkel Joiner (CHA): contrato estimado (mínimo não garantido).",
+   "playerId": 1641935
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Curtis Jones (CLE): contrato estimado (mínimo não garantido).",
+   "playerId": 1642938
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Trevor Keels (WAS): contrato estimado (mínimo não garantido).",
+   "playerId": 1631211
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Keba Keita (IND): contrato estimado (mínimo não garantido).",
+   "playerId": 1643627
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Miles Kelly (GSW): contrato estimado (mínimo não garantido).",
+   "playerId": 1642939
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Tyreke Key (TOR): contrato estimado (mínimo não garantido).",
+   "playerId": 1642615
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Kevin Knox II (ORL): contrato estimado (mínimo não garantido).",
+   "playerId": 1628995
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "William Kyle (LAL): contrato estimado (mínimo não garantido).",
+   "playerId": 1643759
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Chris Livingston (WAS): contrato estimado (mínimo não garantido).",
+   "playerId": 1641753
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Fletcher Loyer (LAC): contrato estimado (mínimo não garantido).",
+   "playerId": 1643630
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Seth Lundy (DAL): contrato estimado (mínimo não garantido).",
+   "playerId": 1641754
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Jaylen Martin (POR): contrato estimado (mínimo não garantido).",
+   "playerId": 1641798
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "KJ Martin (MIN): contrato estimado (mínimo não garantido).",
+   "playerId": 1630231
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Rienk Mast (IND): contrato estimado (mínimo não garantido).",
+   "playerId": 1643792
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Bez Mbeng (MIA): contrato estimado (mínimo não garantido).",
+   "playerId": 1643016
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Robert McCray V (OKC): contrato estimado (mínimo não garantido).",
+   "playerId": 1643597
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Kevin McCullar Jr. (NYK): contrato estimado (mínimo não garantido).",
+   "playerId": 1641755
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Gabe McGlothan (BOS): contrato estimado (mínimo não garantido).",
+   "playerId": 1642440
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Isaac McKneely (ATL): contrato estimado (mínimo não garantido).",
+   "playerId": 1643724
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Emanuel Miller (DEN): contrato estimado (mínimo não garantido).",
+   "playerId": 1641801
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Tristen Newton (SAC): contrato estimado (mínimo não garantido).",
+   "playerId": 1641803
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Tyler Nickel (NYK): contrato estimado (mínimo não garantido).",
+   "playerId": 1643589
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Norchad Omier (MIN): contrato estimado (mínimo não garantido).",
+   "playerId": 1641807
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Elfrid Payton (SAC): contrato estimado (mínimo não garantido).",
+   "playerId": 203901
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Drew Peterson (CHI): contrato estimado (mínimo não garantido).",
+   "playerId": 1641809
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Dwight Powell (DAL): contrato estimado (mínimo não garantido).",
+   "playerId": 203939
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Lester Quinones (MIA): contrato estimado (mínimo não garantido).",
+   "playerId": 1631311
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Duop Reath (PHX): contrato estimado (mínimo não garantido).",
+   "playerId": 1641871
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Julian Reese (NOP): contrato estimado (mínimo não garantido).",
+   "playerId": 1642882
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Antonio Reeves (MIN): contrato estimado (mínimo não garantido).",
+   "playerId": 1641810
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Kadary Richmond (CLE): contrato estimado (mínimo não garantido).",
+   "playerId": 1642955
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Orlando Robinson (CHI): contrato estimado (mínimo não garantido).",
+   "playerId": 1631115
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Ian Schieffelin (MIA): contrato estimado (mínimo não garantido).",
+   "playerId": 1643867
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Mike Sharavjamts (ORL): contrato estimado (mínimo não garantido).",
+   "playerId": 1641814
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Javon Small (MEM): contrato estimado (mínimo não garantido).",
+   "playerId": 1642914
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Zhaire Smith (OKC): contrato estimado (mínimo não garantido).",
+   "playerId": 1629015
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Jake Stephens (MIL): contrato estimado (mínimo não garantido).",
+   "playerId": 1641868
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Isaiah Stevens (CHI): contrato estimado (mínimo não garantido).",
+   "playerId": 1641815
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Cole Swider (LAL): contrato estimado (mínimo não garantido).",
+   "playerId": 1631306
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Christoph Tilly (OKC): contrato estimado (mínimo não garantido).",
+   "playerId": 1643754
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Drew Timme (MIN): contrato estimado (mínimo não garantido).",
+   "playerId": 1631166
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "John Ukomadu (DET): contrato estimado (mínimo não garantido).",
+   "playerId": 1642578
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Blake Wesley (LAC): contrato estimado (mínimo não garantido).",
+   "playerId": 1631104
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Phillip Wheeler (PHX): contrato estimado (mínimo não garantido).",
+   "playerId": 1630762
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Brice Williams (DET): contrato estimado (mínimo não garantido).",
+   "playerId": 1642924
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "Malik Williams (SAS): contrato estimado (mínimo não garantido).",
+   "playerId": 1642013
+  },
+  {
+   "level": "info",
+   "code": "contract-estimated",
+   "message": "James Wiseman (NYK): contrato estimado (mínimo não garantido).",
+   "playerId": 1630164
+  },
+  {
+   "level": "info",
+   "code": "dead-money",
+   "message": "ATL: Devin Carter fora do elenco oficial — 5.16 mi em 2026-27 tratados como dead money (dispensa confirmada na fonte).",
+   "teamId": "ATL"
+  },
+  {
+   "level": "info",
+   "code": "dead-money",
+   "message": "CHA: Rob Dillingham fora do elenco oficial — 6.89 mi em 2026-27 tratados como dead money (dispensa confirmada na fonte).",
+   "teamId": "CHA"
+  },
+  {
+   "level": "info",
+   "code": "dead-money",
+   "message": "CHA: Ryan Nembhard fora do elenco oficial — 2.15 mi em 2026-27 tratados como dead money (dispensa confirmada na fonte).",
+   "teamId": "CHA"
+  },
+  {
+   "level": "info",
+   "code": "dead-money",
+   "message": "CHI: Kam Jones fora do elenco oficial — 1.08 mi em 2026-27 tratados como dead money.",
+   "teamId": "CHI"
+  },
+  {
+   "level": "info",
+   "code": "dead-money",
+   "message": "CLE: Cameron Whitmore fora do elenco oficial — 1.82 mi em 2026-27 tratados como dead money.",
+   "teamId": "CLE"
+  },
+  {
+   "level": "info",
+   "code": "dead-money",
+   "message": "CLE: Ricky Rubio fora do elenco oficial — 0.42 mi em 2026-27 tratados como dead money.",
+   "teamId": "CLE"
+  },
+  {
+   "level": "info",
+   "code": "dead-money",
+   "message": "DAL: Klay Thompson fora do elenco oficial — 7.66 mi em 2026-27 tratados como dead money (dispensa confirmada na fonte).",
+   "teamId": "DAL"
+  },
+  {
+   "level": "info",
+   "code": "dead-money",
+   "message": "DAL: JaVale McGee fora do elenco oficial — 2.21 mi em 2026-27 tratados como dead money.",
+   "teamId": "DAL"
+  },
+  {
+   "level": "info",
+   "code": "dead-money",
+   "message": "DAL: Olivier-Maxence Prosper fora do elenco oficial — 1.00 mi em 2026-27 tratados como dead money.",
+   "teamId": "DAL"
+  },
+  {
+   "level": "info",
+   "code": "dead-money",
+   "message": "DEN: Jonas Valanciunas fora do elenco oficial — 0.67 mi em 2026-27 tratados como dead money.",
+   "teamId": "DEN"
+  },
+  {
+   "level": "info",
+   "code": "dead-money",
+   "message": "DET: Gary Harris fora do elenco oficial — 3.82 mi em 2026-27 tratados como dead money.",
+   "teamId": "DET"
+  },
+  {
+   "level": "info",
+   "code": "dead-money",
+   "message": "HOU: Rafael Castro fora do elenco oficial — 0.68 mi em 2026-27 tratados como dead money.",
+   "teamId": "HOU"
+  },
+  {
+   "level": "info",
+   "code": "dead-money",
+   "message": "HOU: Tyler Smith fora do elenco oficial — 0.09 mi em 2026-27 tratados como dead money.",
+   "teamId": "HOU"
+  },
+  {
+   "level": "info",
+   "code": "dead-money",
+   "message": "IND: Ethan Thompson fora do elenco oficial — 0.07 mi em 2026-27 tratados como dead money.",
+   "teamId": "IND"
+  },
+  {
+   "level": "info",
+   "code": "dead-money",
+   "message": "LAL: Meechie Johnson fora do elenco oficial — 1.36 mi em 2026-27 tratados como dead money.",
+   "teamId": "LAL"
+  },
+  {
+   "level": "info",
+   "code": "dead-money",
+   "message": "LAL: Peter Suder fora do elenco oficial — 0.09 mi em 2026-27 tratados como dead money.",
+   "teamId": "LAL"
+  },
+  {
+   "level": "info",
+   "code": "dead-money",
+   "message": "MEM: Kentavious Caldwell-Pope fora do elenco oficial — 17.74 mi em 2026-27 tratados como dead money (dispensa confirmada na fonte).",
+   "teamId": "MEM"
+  },
+  {
+   "level": "info",
+   "code": "dead-money",
+   "message": "MEM: Jordan Hawkins fora do elenco oficial — 7.02 mi em 2026-27 tratados como dead money (dispensa confirmada na fonte).",
+   "teamId": "MEM"
+  },
+  {
+   "level": "info",
+   "code": "dead-money",
+   "message": "MEM: D'Angelo Russell fora do elenco oficial — 5.97 mi em 2026-27 tratados como dead money (dispensa confirmada na fonte).",
+   "teamId": "MEM"
+  },
+  {
+   "level": "info",
+   "code": "dead-money",
+   "message": "MEM: Cole Anthony fora do elenco oficial — 3.70 mi em 2026-27 tratados como dead money.",
+   "teamId": "MEM"
+  },
+  {
+   "level": "info",
+   "code": "dead-money",
+   "message": "MEM: Mamadi Diakite fora do elenco oficial — 0.46 mi em 2026-27 tratados como dead money.",
+   "teamId": "MEM"
+  },
+  {
+   "level": "info",
+   "code": "dead-money",
+   "message": "MIL: Damian Lillard fora do elenco oficial — 22.52 mi em 2026-27 tratados como dead money.",
+   "teamId": "MIL"
+  },
+  {
+   "level": "info",
+   "code": "dead-money",
+   "message": "MIL: Vasilije Micic fora do elenco oficial — 0.67 mi em 2026-27 tratados como dead money.",
+   "teamId": "MIL"
+  },
+  {
+   "level": "info",
+   "code": "dead-money",
+   "message": "MIN: John Konchar fora do elenco oficial — 2.06 mi em 2026-27 tratados como dead money.",
+   "teamId": "MIN"
+  },
+  {
+   "level": "info",
+   "code": "dead-money",
+   "message": "NOP: Taj Gibson fora do elenco oficial — 0.15 mi em 2026-27 tratados como dead money.",
+   "teamId": "NOP"
+  },
+  {
+   "level": "info",
+   "code": "dead-money",
+   "message": "NOP: Hunter Dickinson fora do elenco oficial — 0.09 mi em 2026-27 tratados como dead money.",
+   "teamId": "NOP"
+  },
+  {
+   "level": "info",
+   "code": "dead-money",
+   "message": "OKC: Payton Sandfort fora do elenco oficial — 0.09 mi em 2026-27 tratados como dead money.",
+   "teamId": "OKC"
+  },
+  {
+   "level": "info",
+   "code": "dead-money",
+   "message": "PHI: Johni Broome fora do elenco oficial — 2.15 mi em 2026-27 tratados como dead money.",
+   "teamId": "PHI"
+  },
+  {
+   "level": "info",
+   "code": "dead-money",
+   "message": "PHX: Bradley Beal fora do elenco oficial — 19.38 mi em 2026-27 tratados como dead money.",
+   "teamId": "PHX"
+  },
+  {
+   "level": "info",
+   "code": "dead-money",
+   "message": "PHX: Nassir Little fora do elenco oficial — 3.11 mi em 2026-27 tratados como dead money.",
+   "teamId": "PHX"
+  },
+  {
+   "level": "info",
+   "code": "dead-money",
+   "message": "PHX: EJ Liddell fora do elenco oficial — 0.71 mi em 2026-27 tratados como dead money.",
+   "teamId": "PHX"
+  },
+  {
+   "level": "info",
+   "code": "dead-money",
+   "message": "POR: Hyunjung Lee fora do elenco oficial — 1.36 mi em 2026-27 tratados como dead money.",
+   "teamId": "POR"
+  },
+  {
+   "level": "info",
+   "code": "dead-money",
+   "message": "POR: Didi Louzada fora do elenco oficial — 0.27 mi em 2026-27 tratados como dead money.",
+   "teamId": "POR"
+  },
+  {
+   "level": "info",
+   "code": "dead-money",
+   "message": "SAC: DeMar DeRozan fora do elenco oficial — 3.33 mi em 2026-27 tratados como dead money.",
+   "teamId": "SAC"
+  },
+  {
+   "level": "info",
+   "code": "dead-money",
+   "message": "SAC: Isaiah Stevens fora do elenco oficial — 0.09 mi em 2026-27 tratados como dead money.",
+   "teamId": "SAC"
+  },
+  {
+   "level": "info",
+   "code": "dead-money",
+   "message": "WAS: Alondes Williams fora do elenco oficial — 2.63 mi em 2026-27 tratados como dead money.",
+   "teamId": "WAS"
+  },
+  {
+   "level": "info",
+   "code": "arena-capacity-missing",
+   "message": "BKN: capacidade da arena não informada pela fonte oficial.",
+   "teamId": "BKN"
+  },
+  {
+   "level": "info",
+   "code": "arena-capacity-missing",
+   "message": "DEN: capacidade da arena não informada pela fonte oficial.",
+   "teamId": "DEN"
+  },
+  {
+   "level": "info",
+   "code": "arena-capacity-missing",
+   "message": "DET: capacidade da arena não informada pela fonte oficial.",
+   "teamId": "DET"
+  },
+  {
+   "level": "info",
+   "code": "arena-capacity-missing",
+   "message": "GSW: capacidade da arena não informada pela fonte oficial.",
+   "teamId": "GSW"
+  },
+  {
+   "level": "info",
+   "code": "arena-capacity-missing",
+   "message": "NOP: capacidade da arena não informada pela fonte oficial.",
+   "teamId": "NOP"
+  },
+  {
+   "level": "info",
+   "code": "arena-capacity-missing",
+   "message": "OKC: capacidade da arena não informada pela fonte oficial.",
+   "teamId": "OKC"
+  },
+  {
+   "level": "info",
+   "code": "arena-capacity-missing",
+   "message": "PHI: capacidade da arena não informada pela fonte oficial.",
+   "teamId": "PHI"
+  },
+  {
+   "level": "info",
+   "code": "arena-capacity-missing",
+   "message": "PHX: capacidade da arena não informada pela fonte oficial.",
+   "teamId": "PHX"
+  },
+  {
+   "level": "warn",
+   "code": "coach-mismatch",
+   "message": "POR: a ESPN lista Tiago Splitter como técnico; o cadastro oficial da NBA lista Micah Nori. Usando o cadastro oficial — confirmar.",
+   "teamId": "POR"
+  },
+  {
+   "level": "info",
+   "code": "arena-capacity-missing",
+   "message": "TOR: capacidade da arena não informada pela fonte oficial.",
+   "teamId": "TOR"
+  },
+  {
+   "level": "info",
+   "code": "arena-capacity-missing",
+   "message": "UTA: capacidade da arena não informada pela fonte oficial.",
+   "teamId": "UTA"
+  },
+  {
+   "level": "info",
+   "code": "espn-only",
+   "message": "Jordan Hawkins aparece no elenco da ESPN (MEM) mas não no índice oficial da NBA — não incluído."
+  },
+  {
+   "level": "info",
+   "code": "espn-only",
+   "message": "Steve Settle III aparece no elenco da ESPN (WAS) mas não no índice oficial da NBA — não incluído."
+  },
+  {
+   "level": "warn",
+   "code": "roster-large",
+   "message": "TOR com 22 jogadores (limite de offseason: 21).",
+   "teamId": "TOR"
+  }
+ ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "nba-universe-manager",
+  "version": "0.2.0",
+  "description": "NBA Universe Manager — gestão de basquete no navegador (Canvas 2D, WebGL2 experimental e IndexedDB).",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test \"tests/*.test.mjs\"",
+    "release:verify": "node tools/verify-release.mjs",
+    "data:fetch": "node tools/fetch-universe.mjs",
+    "data:build": "node tools/build-seed.mjs",
+    "data:all": "node tools/fetch-universe.mjs && node tools/build-seed.mjs",
+    "photos:audit": "node tools/audit-photos.mjs",
+    "build:netlify": "node tools/build-netlify.mjs",
+    "pwa:verify": "node tools/verify-pwa.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

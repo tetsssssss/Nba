@@ -1,0 +1,22 @@
+/* New WNBA exhibition areas, strictly scoped to WNBA markup. */
+.wnba-page .w-league-slot-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,195px),1fr));gap:10px;margin:12px 0}
+.wnba-page .w-scroll-table {overflow-x:auto;overscroll-behavior:contain;width:100%;border:1px solid var(--w-line);border-radius:12px}
+.wnba-page .w-scroll-table table {width:100%;min-width:510px;font-variant-numeric:tabular-nums}
+.wnba-page .w-scroll-table th,.wnba-page .w-scroll-table td {padding:9px 11px;text-align:center;white-space:nowrap}
+.wnba-page .w-scroll-table th:nth-child(2),.wnba-page .w-scroll-table td:nth-child(2) {text-align:left}
+.wnba-page .w-scroll-table tbody tr:nth-child(-n+4) {background:rgba(152,108,215,.065)}
+.wnba-page .w-game-round {margin:6px 0;background:var(--surface-2);border:1px solid var(--w-line);border-radius:10px;padding:10px 12px}
+.wnba-page .w-game-round summary {font-weight:750;cursor:pointer;padding:4px}
+.wnba-page .w-game-round .w-bracket-row {margin:5px 0}
+.wnba-page .w-tactic-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:12px;margin:10px 0}
+.wnba-page .w-tactic-card {border:1px solid var(--w-line);border-radius:13px;background:var(--surface-2);padding:15px;display:grid;gap:9px;min-width:0}
+.wnba-page .w-tactic-card strong {font-variant-numeric:tabular-nums}
+.wnba-page .w-tactic-card small {color:var(--text-secondary)}
+.wnba-page .w-tactic-meter {height:10px;background:var(--surface-3);border-radius:99px;overflow:hidden}
+.wnba-page .w-tactic-meter>span {display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#7863c4,#d07dc8);transition:width 240ms ease-out}
+.wnba-page input:focus-visible,.wnba-page select:focus-visible,.wnba-page button:focus-visible,.wnba-page summary:focus-visible {outline:3px solid #ce97ff;outline-offset:2px}
+@media(max-width:600px){.wnba-page .w-scroll-table{margin-inline:-4px;width:calc(100% + 8px)}.wnba-page .w-tactic-card{padding:12px}}
+@media(prefers-reduced-motion:reduce){.wnba-page .w-tactic-meter>span{transition:none}}
+.wnba-page .w-replay-frame {display:grid;place-items:center;gap:9px;text-align:center;background:var(--surface-2);border:1px solid var(--w-line);border-radius:14px;padding:24px 16px}
+.wnba-page .w-replay-score {font-size:clamp(26px,5vw,43px);font-variant-numeric:tabular-nums}
+.wnba-page .w-replay-frame p {font-size:14px;line-height:1.6}

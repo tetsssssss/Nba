@@ -1,0 +1,25 @@
+# NBA Universe Manager — camisa low-poly original
+# Contrato: Blender export OBJ, Z para cima, origem nos pés, escala humana.
+o NBA_Jersey_LowPoly
+v -0.48 -0.28 0.00
+v 0.48 -0.28 0.00
+v 0.48 0.28 0.00
+v -0.48 0.28 0.00
+v -0.67 -0.31 0.82
+v 0.67 -0.31 0.82
+v 0.67 0.31 0.82
+v -0.67 0.31 0.82
+v -0.43 -0.25 1.00
+v 0.43 -0.25 1.00
+v 0.43 0.25 1.00
+v -0.43 0.25 1.00
+f 1 2 3 4
+f 1 5 6 2
+f 2 6 7 3
+f 3 7 8 4
+f 4 8 5 1
+f 5 9 10 6
+f 6 10 11 7
+f 7 11 12 8
+f 8 12 9 5
+f 9 12 11 10
