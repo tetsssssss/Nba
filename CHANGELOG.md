@@ -8,7 +8,7 @@
 - God Mode ampliado (`#/commissioner`): Forçar aceitação, Override Total com registro de intervenções, revisão de trades da IA.
 - Stores `draftPicks`/`prospects`/`finances` e documentos `meta.market/draft/offseason` entram em backup e validação; saves antigos migram sem perda (`ensureWorldSystems`).
 - `futurePickYearsAhead=1` mantido; ampliação opcional por carreira. Regras do CBA marcadas `needsValidation`.
-- Testes: 828 (758 originais + 71 novos); `fake-indexeddb` vendorizado em `tests/vendor/`. Cache PWA `nuv-management-20261014-r1`.
+- Testes: 829 (758 originais + 71 novos); `fake-indexeddb` vendorizado em `tests/vendor/`. Cache PWA `nuv-management-20261014-r1`.
 - Documentação: `docs/GESTAO-TRADE-DRAFT-FINANCAS-OFFSEASON.md` e `docs/CODEX-RELATORIO-GESTAO-2026-10-14.md`.
 
 ## 2026-10-14 | Street NBA/WNBA, All-Star e acessibilidade (camada independente)

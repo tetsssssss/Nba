@@ -12,7 +12,7 @@ Os cinco sistemas pedidos no PROMPT MESTRE foram implementados **sobre** o proje
 | Item | Resultado |
 | --- | --- |
 | Baseline do código original (CODIGO-COMPLETO) | 758/758 |
-| Suíte após as mudanças | 829/829 (70 novos) |
+| Suíte após as mudanças | 829/829 (71 novos) |
 | `npm run build:netlify` | 216 assets, VERSION `nuv-management-20261014-r1` |
 | `npm run pwa:verify` | passou |
 | `npm run release:verify` | passou (manifesto atualizado) |
