@@ -5,14 +5,14 @@ Design e mapa de módulos: `docs/GESTAO-TRADE-DRAFT-FINANCAS-OFFSEASON.md`.
 
 ## 1. Resultado em uma linha
 
-Os cinco sistemas pedidos no PROMPT MESTRE foram implementados **sobre** o projeto existente (mesmas stores, mesmo `career.godMode`, mesmo `cap.js`, mesmo `development.js`) e as telas `#/market`, `#/draft`, `#/finance`, `#/offseason` e `#/commissioner` estão operacionais. **Suíte: 828/828** (758 originais + 70 novos). `pwa:verify` e `release:verify` verdes.
+Os cinco sistemas pedidos no PROMPT MESTRE foram implementados **sobre** o projeto existente (mesmas stores, mesmo `career.godMode`, mesmo `cap.js`, mesmo `development.js`) e as telas `#/market`, `#/draft`, `#/finance`, `#/offseason` e `#/commissioner` estão operacionais. **Suíte: 829/829** (758 originais + 71 novos). `pwa:verify` e `release:verify` verdes.
 
 ## 2. Baseline e verificação
 
 | Item | Resultado |
 | --- | --- |
 | Baseline do código original (CODIGO-COMPLETO) | 758/758 |
-| Suíte após as mudanças | 828/828 (70 novos) |
+| Suíte após as mudanças | 829/829 (70 novos) |
 | `npm run build:netlify` | 216 assets, VERSION `nuv-management-20261014-r1` |
 | `npm run pwa:verify` | passou |
 | `npm run release:verify` | passou (manifesto atualizado) |
@@ -50,8 +50,8 @@ O zip NETLIFY enviado pelo usuário é idêntico ao primeiro; o CODIGO-COMPLETO 
 | `src/ui/views/{team,devtools,settings,new-career}.js` | Aba Mercado vira lançador; aba Picks com propriedade real; Dev Tools usa o God Mode novo |
 | `index.html`, `sw.js`, `tools/build-netlify.mjs`, `offline-assets.json` | CSS novo e versão de cache |
 
-### Testes novos (70)
-`management-baseline` (3), `picks` (6), `lottery` (5), `trades` (11), `ai` (7), `draft` (7), `offseason` (7), `contracts-finance` (10), `godmode` (6), `management-persistence` (3), `management-dom` (5).
+### Testes novos (71)
+`management-baseline` (3), `picks` (6), `lottery` (5), `trades` (11), `ai` (7), `draft` (7), `offseason` (7), `contracts-finance` (10), `godmode` (6), `management-persistence` (3), `management-dom` (5), `long-career` (1: cinco temporadas, cinco Drafts, recarga no meio).
 Infraestrutura: `tests/helpers/{env,career}.js` e **`tests/vendor/fake-indexeddb/`** (cópia vendorizada, Apache-2.0, 47 arquivos) para rodar carreiras reais em memória sem dependências npm. O `package.json` não ganhou dependências.
 
 ## 4. Decisões de design que o Codex precisa conhecer

@@ -106,7 +106,7 @@ Grupo "Gestão" no menu: Trade Machine (`/market`), Draft (`/draft`), Finanças 
 ## 10. Como testar
 
 ```
-npm test                 # 828 testes (758 originais + 70 novos)
+npm test                 # 829 testes (758 originais + 71 novos)
 npm run build:netlify    # regenera dist/netlify e offline-assets.json
 npm run pwa:verify
 npm run release:verify

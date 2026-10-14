@@ -1,7 +1,7 @@
 {
   "label": "NBA Universe Manager • Gestão (Trade Machine 3.0, Draft Night, Finanças, Offseason, God Mode) • 2026-10-14",
   "reference_base": "STREET-WNBA-ALLSTAR 2026-10-14 CODIGO-COMPLETO (758 testes); preservar saves e versões privadas",
-  "release": "Trade Machine 3.0, IA de GMs, Draft Night, finanças e contratos, offseason de 11 fases, God Mode ampliado; testes 828/828; Chromium localhost e Xiaomi pendentes",
+  "release": "Trade Machine 3.0, IA de GMs, Draft Night, finanças e contratos, offseason de 11 fases, God Mode ampliado; testes 829/829; Chromium localhost e Xiaomi pendentes",
   "files": [
     {
       "path": "_headers",
@@ -61,7 +61,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "090e6368dc79d6ff2eca25674b63b80b3978456678279e9eb1681744b976fd22"
+      "sha256": "64aaddd516cb7f795b856f4dc9063866a636c1925228d7389d6a683561d46e80"
     },
     {
       "path": "css/audio.css",
@@ -229,7 +229,7 @@
     },
     {
       "path": "docs/CODEX-RELATORIO-GESTAO-2026-10-14.md",
-      "sha256": "eb917d0d60562d3cc2a7cff72daec724ed8123583dbec4ed0932aa75e75c0318"
+      "sha256": "14912725b59eac02a367176382970af106fa212541164289f1aad3f2c1015e04"
     },
     {
       "path": "docs/EVOLUCAO-ARCADE-WNBA-2026-10-13.md",
@@ -317,7 +317,7 @@
     },
     {
       "path": "docs/GESTAO-TRADE-DRAFT-FINANCAS-OFFSEASON.md",
-      "sha256": "c5fe7981843a0606ce77856ddf3f2359f645a1529362cd59d0c0d8b156c30b5c"
+      "sha256": "b50223754881cdbac71e4128fcf32507f39af40b9b0c12b68633371d18bbb064"
     },
     {
       "path": "docs/HANDOFF.md",
@@ -401,11 +401,11 @@
     },
     {
       "path": "PROJECT-STATE.md",
-      "sha256": "e64b1293601b78deed2d1a1c57d571aa30b02a9d346566519f2ac717d8f95f89"
+      "sha256": "d46e34d1a733017fca9f257525db3dd78b7b1506fdfe6eff2ffa2afb1b437d1f"
     },
     {
       "path": "README.md",
-      "sha256": "d0df18eab648bd3fa8e73717475a452737dd2a30fc036fb3aae031aaa9d1217d"
+      "sha256": "f4906479d8792fd5606ec35e60b173f65d38da2625206be90c5701a7f6b6935e"
     },
     {
       "path": "server.mjs",
@@ -1242,6 +1242,10 @@
     {
       "path": "tests/international-photos.test.mjs",
       "sha256": "af26ed746eea4c469e3956cf82e978d7a8c4a1d23cbd15fa08be49d7140e45d1"
+    },
+    {
+      "path": "tests/long-career.test.mjs",
+      "sha256": "ef6ff725a8a33a42d4b71f905f09d449551e8d4dbf49b93cc29d7b250bc3a6b2"
     },
     {
       "path": "tests/lottery.test.mjs",
