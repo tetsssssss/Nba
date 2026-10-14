@@ -227,7 +227,9 @@ export function autoPick(world, { by = 'ai' } = {}) {
   assertCanAct(world);
   const entry = currentEntry(world);
   const pick = world.draftPicks.get(entry.pickId);
-  const prospect = aiChoice(world, pick.ownerTeamId, entry, availableProspects(world));
+  const forcedId = world.draft.forced?.[entry.number];
+  const forced = forcedId ? world.prospects.get(forcedId) : null; // escolha definida pelo comissário (God Mode)
+  const prospect = forced?.status === 'available' ? forced : aiChoice(world, pick.ownerTeamId, entry, availableProspects(world));
   if (!prospect) throw new Error('Não há prospectos disponíveis.');
   return makePick(world, { prospectId: prospect.id, by: by === 'auto' ? 'auto' : 'ai', teamId: pick.ownerTeamId });
 }

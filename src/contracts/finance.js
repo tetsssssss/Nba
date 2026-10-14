@@ -53,7 +53,7 @@ export function revenueModel(world, teamId, { season = capSeason(world), playoff
   const stars = rosterOf(world, teamId).slice(0, 2).reduce((a, p) => a + Math.max(0, p.ovr - 80), 0);
   const capacity = arena?.capacity ?? 18000;
   const fill = Math.min(1, 0.78 + (team.fans.passion / 100) * 0.12 + (winPct - 0.5) * 0.35);
-  const avgTicket = (0.00085 + (team.market / 100) * 0.00055 + stars * 0.00001) * cap.salaryCap; // US$ por ingresso
+  const avgTicket = (8.5e-7 + (team.market / 100) * 5.5e-7 + stars * 1e-8) * cap.salaryCap; // US$ por ingresso (~US$ 150 a 230 com o cap de 2026-27)
   const gate = capacity * fill * avgTicket * 41;
   const media = cap.salaryCap * 1.06; // divisão igualitária de TV nacional
   const sponsors = cap.salaryCap * (0.22 + (team.market / 100) * 0.62);
@@ -70,14 +70,16 @@ export function revenueModel(world, teamId, { season = capSeason(world), playoff
   return { season, items, total: items.reduce((a, i) => a + i.amount, 0) };
 }
 
-export function operatingExpenses(world, teamId) {
+export function operatingExpenses(world, teamId, { revenue = null } = {}) {
   const team = world.teams.get(teamId);
   const cap = world.league.cap;
   const items = [
-    { key: 'arena', label: 'Operação da arena', amount: cap.salaryCap * (0.2 + team.market / 100 * 0.06) },
-    { key: 'staff', label: 'Comissão técnica, scouts e saúde', amount: cap.salaryCap * 0.13 },
-    { key: 'gleague', label: 'G League e desenvolvimento', amount: cap.salaryCap * 0.045 },
-    { key: 'admin', label: 'Administração e marketing', amount: cap.salaryCap * (0.09 + team.market / 100 * 0.05) },
+    { key: 'arena', label: 'Operação da arena', amount: cap.salaryCap * (0.22 + (team.market / 100) * 0.08) },
+    { key: 'staff', label: 'Comissão técnica, scouts e saúde', amount: cap.salaryCap * 0.18 },
+    { key: 'gleague', label: 'G League e desenvolvimento', amount: cap.salaryCap * 0.06 },
+    { key: 'admin', label: 'Administração e marketing', amount: cap.salaryCap * (0.12 + (team.market / 100) * 0.06) },
+    { key: 'travel', label: 'Viagens, benefícios e seguros', amount: cap.salaryCap * 0.45 },
+    { key: 'league', label: 'Contribuição à liga (revenue sharing)', amount: (revenue ?? revenueModel(world, teamId).total) * 0.04 },
   ].map((i) => ({ ...i, kind: 'estimated', amount: Math.round(i.amount) }));
   return { items, total: items.reduce((a, i) => a + i.amount, 0) };
 }
@@ -98,7 +100,7 @@ export function financeOverview(world, teamId) {
   const repeater = Boolean(team.taxHistory?.repeater);
   const tax = luxuryTaxBill(payroll.total, cap, { repeater, capMode: world.career.capMode });
   const revenue = revenueModel(world, teamId, { season });
-  const expenses = operatingExpenses(world, teamId);
+  const expenses = operatingExpenses(world, teamId, { revenue: revenue.total });
   const profit = revenue.total - payroll.total - tax - expenses.total;
   const owner = ownerBudget(world, teamId);
   const lines = capLines(world.career.capMode);
@@ -125,7 +127,7 @@ export function projectFinances(world, teamId, years = 4) {
     const tax = luxuryTaxBill(payroll.total, world.league.cap, { repeater: Boolean(team.taxHistory?.repeater), capMode: world.career.capMode });
     // receita projetada: cresce com o cap (~7% ao ano) a partir do modelo atual
     const revenue = revenueModel(world, teamId, { season }).total * Math.pow(1.07, i);
-    const expenses = operatingExpenses(world, teamId).total * Math.pow(1.05, i);
+    const expenses = operatingExpenses(world, teamId, { revenue }).total * Math.pow(1.05, i);
     out.push({ season, payroll: payroll.total, tax, revenue, expenses, profit: revenue - payroll.total - tax - expenses, status: payroll.status, committed: roster(world, teamId).filter((p) => (world.contracts.get(p.id)?.years.some((y) => y.season === season))).length });
   }
   return out;
@@ -145,7 +147,7 @@ export function closeSeasonBooks(world, season = world.calendar.season) {
     const gp = rec.wins + rec.losses;
     const finalsRun = world.calendar.postseason?.champion === team.id ? 14 : world.calendar.postseason?.runnerUp === team.id ? 11 : world.calendar.postseason?.qualified?.[team.conference]?.includes(team.id) ? 4 : 0;
     const revenue = revenueModel(world, team.id, { season, playoffHomeGames: finalsRun });
-    const expenses = operatingExpenses(world, team.id);
+    const expenses = operatingExpenses(world, team.id, { revenue: revenue.total });
     const profit = revenue.total - payroll.total - tax - expenses.total;
     const record = { id, teamId: team.id, season, wins: rec.wins, losses: rec.losses, games: gp, payroll: payroll.total, dead: payroll.dead, tax, revenue: revenue.total, revenueItems: revenue.items, expenses: expenses.total, profit, status: payroll.status, closed: true, kind: 'estimated' };
     world.finances.set(id, record);

@@ -10,7 +10,7 @@ import { createRng } from '../core/rng.js';
 import { modeShows } from '../core/modes.js';
 import { checkLegality, normalizeProposal, teamSummaries, assetKey } from './trade-rules.js';
 import { addSwapRight, pickLabel, transferPick } from './picks.js';
-import { claimAiEvent, ensureMarket, nextMarketId, pushHistory } from './market-state.js';
+import { claimAiEvent, ensureMarket, logAdmin, nextMarketId, pushHistory } from './market-state.js';
 import { capSeason, tradeRules } from './rules-config.js';
 import { fitFactor, ovrValue, pickValue, playerValue, swapValue, tradeMargin, utility } from './valuation.js';
 import { profileOf } from '../gm/personality.js';
@@ -299,6 +299,10 @@ export function executeProposal(world, rawProposal, { by = 'user', force = false
   }).join('; ');
   addNews({ category: 'mercado', title: p.teams.length === 2 ? `${names[0]} e ${names[1]} fecham troca` : `Troca entre ${p.teams.length} franquias: ${names.join(', ')}`, body: `${body}.${override ? ' Operação aprovada pelo comissário fora das regras tradicionais.' : ''}`, teamIds: p.teams, playerIds: playerAssets.map((a) => a.playerId) });
   pushHistory(world, { id: tradeId, type: 'executed', by, teams: p.teams, assets: summary, forced: Boolean(force), override: override === 'total' ? legality.ignored.map((i) => i.rule) : null, label });
+  if (force || override) {
+    const ignored = legality.ignored.map((i) => ({ rule: i.rule, label: i.label, teamId: i.teamId, message: i.message }));
+    logAdmin(world, override === 'total' ? 'trade-override' : 'trade-force', { tradeId, teams: p.teams, assets: summary.map((a) => a.label), rulesIgnored: ignored, text: override === 'total' ? `Troca fora das regras (${ignored.length} regra(s) ignorada(s)).` : 'Troca com aceitação forçada (legalidade mantida).' });
+  }
   bumpRosters();
   emit('roster:changed', { teamIds: p.teams });
   emit('trade:executed', { tradeId, teams: p.teams });

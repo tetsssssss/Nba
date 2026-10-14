@@ -98,6 +98,12 @@ export function marketAsk(world, player, { teamId = null } = {}) {
   const ageMult = age >= 34 ? 0.82 : age >= 32 ? 0.9 : age <= 23 ? 1.05 : 1;
   const formMult = 1 + clamp((value.production.factor - 1) * 3, -0.1, 0.1);
   let salary = marketSalary(player.ovr, cap) * ageMult * formMult * (teamId && teamId === world.career.teamId ? 1 + (demand - 1) * 0.12 : 1);
+  // O mercado esfria: quem continua livre baixa a pedida (até −22% ao fim dos 30 dias; −22% fixos durante a temporada).
+  if (!player.teamId) {
+    const off = world.offseason;
+    const cooling = world.calendar.phase === 'offseason' && off?.leagueYearStarted ? Math.min(0.22, (off.faDay ?? 0) * 0.0075) : world.calendar.phase === 'offseason' ? 0 : 0.22;
+    salary *= 1 - cooling;
+  }
   salary = clamp(salary, minSalaryFor(world, player), maxSalaryFor(world, player));
   return { salary: round(salary, 10000), years: BASE_YEARS(age), minSalary: minSalaryFor(world, player), maxSalary: maxSalaryFor(world, player), age, marketValue: marketSalary(player.ovr, cap) };
 }
