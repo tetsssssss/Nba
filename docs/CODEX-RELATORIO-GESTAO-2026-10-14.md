@@ -81,7 +81,7 @@ Infraestrutura: `tests/helpers/{env,career}.js` e **`tests/vendor/fake-indexeddb
 - A IA usa perfil + utilidade; sem memória de relacionamento entre GMs.
 - Mobile: layout testado em viewport estreito (sem overflow), mas não em hardware real.
 - `tests/vendor/` aumenta o pacote (47 arquivos); pode ser removido se o Codex preferir adicionar `fake-indexeddb` como `devDependency`.
-- O remoto `origin` estava vazio (sem branch base) quando o PR foi tentado; ver a seção 8 se o PR não foi aberto.
+- O remoto `origin` (tetsssssss/Nba) só contém a branch `ccr-370690a2-3tzp2r`; não há branch base, então não foi possível abrir PR automaticamente. Para revisar, crie uma branch base a partir do commit `7c1f4b6` (baseline do CODIGO-COMPLETO original) e abra o PR contra ela, ou promova esta branch a principal.
 
 ## 7. Sugestões de próximos passos
 1. Conferir `trade.rules` e `draft` contra o CBA oficial e remover `needsValidation`.
