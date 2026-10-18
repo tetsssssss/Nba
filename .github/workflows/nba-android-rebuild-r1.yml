@@ -27,8 +27,11 @@ jobs:
       - name: Use the pre-installed runner Android SDK
         run: |
           echo "ANDROID_HOME=$ANDROID_HOME"
-          command -v sdkmanager
           test -d "$ANDROID_HOME"
+          SDKMGR=$(find "$ANDROID_HOME/cmdline-tools" -type f -name sdkmanager | head -1)
+          test -n "$SDKMGR"
+          echo "$(dirname "$SDKMGR")" >> "$GITHUB_PATH"
+          "$SDKMGR" --version
       - name: Install Android API 35 and build tools
         run: sdkmanager "platforms;android-35" "build-tools;35.0.0"
       - name: Configure Gradle 8.10.2
