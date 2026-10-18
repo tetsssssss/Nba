@@ -1,0 +1,65 @@
+name: NBA Android reconstruction (Netlify F9 CP1)
+on:
+  push:
+    branches:
+      - nba-android-rebuild-netlify-r1
+    paths:
+      - "android-rebuild-r1/**"
+      - ".github/workflows/nba-android-rebuild-r1.yml"
+  workflow_dispatch:
+jobs:
+  native-debug-apk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    permissions:
+      contents: read
+    defaults:
+      run:
+        working-directory: android-rebuild-r1
+    steps:
+      - name: Checkout dedicated rebuild branch
+        uses: actions/checkout@v4
+      - name: Configure Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - name: Prepare Android SDK
+        uses: android-actions/setup-android@v3
+      - name: Install Android API 35 and build tools
+        run: sdkmanager "platforms;android-35" "build-tools;35.0.0"
+      - name: Configure Gradle 8.10.2
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.10.2"
+      - name: Collect game files from the verified Netlify release
+        run: python3 scripts/fetch_site.py
+      - name: Check HTML, JavaScript, and packaged game resources
+        run: |
+          python3 - <<'PY'
+          import pathlib,json
+          root=pathlib.Path("app/src/main/assets/www")
+          data=json.loads((root/"offline-assets.json").read_text())
+          missing=[p for p in data["files"] if not (root/p).is_file()]
+          assert not missing, missing
+          assert (root/"src/main.js").is_file()
+          assert (root/"index.html").is_file()
+          print(len(data["files"]), "resources accounted for")
+          PY
+      - name: Compile NEW native Android APK using official Gradle plugin
+        run: gradle --no-daemon --stacktrace assembleDebug
+      - name: Verify signature, Android manifest, alignment, ZIP integrity
+        run: |
+          APK=app/build/outputs/apk/debug/app-debug.apk
+          test -s "$APK"
+          unzip -t "$APK" | tail -1
+          "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose --print-certs "$APK"
+          "$ANDROID_HOME/build-tools/35.0.0/zipalign" -c -v 4 "$APK" | tail -3
+          "$ANDROID_HOME/build-tools/35.0.0/aapt" dump badging "$APK" | head -6
+          "$ANDROID_HOME/build-tools/35.0.0/aapt" dump badging "$APK" | grep -q "com.nbauniverse.manager.rebuild"
+      - name: Publish APK for download from run artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: NBA-Universe-F9-CP1-Android-Rebuild-R1
+          path: android-rebuild-r1/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
