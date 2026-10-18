@@ -24,8 +24,11 @@ jobs:
         with:
           distribution: temurin
           java-version: "17"
-      - name: Prepare Android SDK
-        uses: android-actions/setup-android@v3
+      - name: Use the pre-installed runner Android SDK
+        run: |
+          echo "ANDROID_HOME=$ANDROID_HOME"
+          command -v sdkmanager
+          test -d "$ANDROID_HOME"
       - name: Install Android API 35 and build tools
         run: sdkmanager "platforms;android-35" "build-tools;35.0.0"
       - name: Configure Gradle 8.10.2
